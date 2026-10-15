@@ -1,0 +1,21 @@
+family_id,family,n,typesafe/jev-1.14,openai/gpt-6-luna-decisions,openai/gpt-6-luna,openai/gpt-5.4-nano,google/gemini-2.5-flash-lite
+V01,Attribute binding and set logic,10,10,9,8,6,5
+V02,Conditional counting,10,9,5,5,4,3
+V03,Spatial relationships,10,9,6,5,3,4
+V04,Connectivity and reachability,10,4,3,3,3,4
+V05,Navigation and planning,10,7,3,5,3,1
+V06,Rotation and reflection,10,3,8,4,4,3
+V07,"Geometry, folding and fit",10,4,4,2,2,4
+V08,Visual rule application,10,3,4,6,4,1
+V09,Sequential state tracking,10,6,7,7,3,5
+V10,Constraint satisfaction,10,6,1,4,1,4
+V11,Flowcharts and decision trees,10,9,3,5,3,2
+V12,Causal and counterfactual reasoning,10,7,6,3,4,2
+V13,Charts and quantitative comparisons,10,7,8,7,1,1
+V14,Document reconciliation,10,6,6,6,3,4
+V15,Interface state decisions,10,10,9,10,7,8
+V16,Inspection against a reference,10,10,9,10,5,6
+V17,Matching across images,10,7,6,7,5,4
+V18,Image and text consistency,10,10,8,6,2,5
+V19,Perspective and knowledge tracking,10,4,6,5,3,2
+V20,Insufficient evidence,10,10,10,9,4,7

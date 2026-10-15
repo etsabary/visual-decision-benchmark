@@ -1,0 +1,26 @@
+{
+  "version": "visual-decisions-2026-10-15-v1-compressed-c1",
+  "original_benchmark_digest": "9c67d7024b70fe471afa9dd364c1d09478ae4cba11b8c2189fa56bc822a65ab4",
+  "public_questions_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "questions": 200,
+  "families": 20,
+  "tested_image_files": 227,
+  "included_image_files": 221,
+  "withheld_image_files": 6,
+  "fully_packaged_questions": 194,
+  "compression": {
+    "exact_pixel_equivalence": 202,
+    "candidate_images_actually_visually_inspected": 25,
+    "original_bytes": 79406383,
+    "candidate_bytes": 56998376,
+    "percent_bytes_saved": 28.2194,
+    "resized_inputs": [
+      "CCA0131"
+    ],
+    "billed_image_token_savings_measured": false
+  },
+  "private_source_packet_sha256": "f80354acdabbbc5a85afb23537caa788b8a28e7b152d57246efb54101b7ca389",
+  "public_release_authorized": true,
+  "answer_key_included": false,
+  "original_frozen_bank_modified": false
+}

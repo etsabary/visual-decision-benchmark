@@ -1,0 +1,263 @@
+{
+  "test_date": "2026-10-15",
+  "timezone": "America/Toronto",
+  "models": {
+    "typesafe/jev-1.14": {
+      "identities": [
+        [
+          "typesafe/jev-1.14-20261014",
+          "TypeSafe"
+        ]
+      ],
+      "test_window": {
+        "first": "2026-10-15T10:07:11.395723-04:00",
+        "last": "2026-10-15T10:18:02.646747-04:00"
+      }
+    },
+    "openai/gpt-6-luna-decisions": {
+      "identities": [
+        [
+          "openai/gpt-6-luna-decisions-20261006",
+          "OpenAI"
+        ]
+      ],
+      "test_window": {
+        "first": "2026-10-15T10:07:11.994059-04:00",
+        "last": "2026-10-15T10:18:02.345676-04:00"
+      }
+    },
+    "openai/gpt-6-luna": {
+      "identities": [
+        [
+          "openai/gpt-6-luna",
+          "OpenAI"
+        ]
+      ],
+      "test_window": {
+        "first": "2026-10-15T10:34:21.852048-04:00",
+        "last": "2026-10-15T11:03:31.672835-04:00"
+      }
+    },
+    "openai/gpt-5.4-nano": {
+      "identities": [
+        [
+          "openai/gpt-5.4-nano",
+          "OpenAI"
+        ]
+      ],
+      "test_window": {
+        "first": "2026-10-15T10:34:19.268947-04:00",
+        "last": "2026-10-15T11:03:33.731149-04:00"
+      }
+    },
+    "google/gemini-2.5-flash-lite": {
+      "identities": [
+        [
+          "google/gemini-2.5-flash-lite",
+          "Google AI Studio"
+        ]
+      ],
+      "test_window": {
+        "first": "2026-10-15T10:34:24.116351-04:00",
+        "last": "2026-10-15T11:03:32.479724-04:00"
+      }
+    }
+  },
+  "pinned_llm_endpoints": {
+    "openai/gpt-6-luna": [
+      {
+        "name": "OpenAI | openai/gpt-6-luna-20260922",
+        "model_id": "openai/gpt-6-luna",
+        "model_name": "OpenAI: GPT-6 Luna",
+        "context_length": 1050000,
+        "pricing": {
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.00000075",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
+            }
+          ]
+        },
+        "provider_name": "OpenAI",
+        "tag": "openai",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 128000,
+        "max_prompt_tokens": 922000,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "seed",
+          "max_tokens",
+          "response_format",
+          "structured_outputs",
+          "tools",
+          "tool_choice",
+          "verbosity",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": true,
+          "function": true
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": false,
+        "native_tools": {
+          "openrouter:web_search": {
+            "type": "web_search"
+          },
+          "openrouter:apply_patch": {
+            "type": "apply_patch"
+          }
+        },
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    ],
+    "openai/gpt-5.4-nano": [
+      {
+        "name": "OpenAI | openai/gpt-5.4-nano-20260317",
+        "model_id": "openai/gpt-5.4-nano",
+        "model_name": "OpenAI: GPT-5.4 Nano",
+        "context_length": 400000,
+        "pricing": {
+          "prompt": "0.0000002",
+          "completion": "0.00000125",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        },
+        "provider_name": "OpenAI",
+        "tag": "openai",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 128000,
+        "max_prompt_tokens": null,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "seed",
+          "max_tokens",
+          "response_format",
+          "structured_outputs",
+          "tools",
+          "tool_choice",
+          "verbosity",
+          "reasoning_effort"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": true,
+          "function": true
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 100,
+        "supports_implicit_caching": true,
+        "native_tools": {
+          "openrouter:web_search": {
+            "type": "web_search"
+          },
+          "openrouter:apply_patch": {
+            "type": "apply_patch"
+          }
+        },
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    ],
+    "google/gemini-2.5-flash-lite": [
+      {
+        "name": "Google AI Studio | google/gemini-2.5-flash-lite",
+        "model_id": "google/gemini-2.5-flash-lite",
+        "model_name": "Google: Gemini 2.5 Flash Lite",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "0.0000001",
+          "completion": "0.0000004",
+          "image": "0.0000001",
+          "audio": "0.0000003",
+          "input_audio_cache": "0.00000003",
+          "web_search": "0.014",
+          "internal_reasoning": "0.0000004",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.0000000833333333333333",
+          "discount": 0
+        },
+        "provider_name": "Google AI Studio",
+        "tag": "google-ai-studio",
+        "service_tier": null,
+        "quantization": "unknown",
+        "max_completion_tokens": 65535,
+        "max_prompt_tokens": null,
+        "supported_parameters": [
+          "reasoning",
+          "include_reasoning",
+          "structured_outputs",
+          "response_format",
+          "max_tokens",
+          "temperature",
+          "top_p",
+          "seed",
+          "tools",
+          "tool_choice",
+          "stop"
+        ],
+        "supports_tool_choice": {
+          "none": true,
+          "auto": true,
+          "required": true,
+          "function": true
+        },
+        "status": 0,
+        "uptime_last_30m": 100,
+        "uptime_last_5m": 100,
+        "uptime_last_1d": 99.93055555555556,
+        "supports_implicit_caching": false,
+        "native_tools": {},
+        "supports_voice_cloning": false,
+        "supports_multiple_audio_references": false,
+        "supports_image_reference": false,
+        "supports_diarization": false,
+        "latency_last_30m": null,
+        "throughput_last_30m": null
+      }
+    ]
+  },
+  "decisions_route": "https://openrouter.ai/api/alpha/decisions",
+  "llm_route": "https://openrouter.ai/api/v1/chat/completions",
+  "llm_profile": {
+    "reasoning": "disabled",
+    "openai_effort": "none",
+    "max_tokens": 32,
+    "stream": false,
+    "provider_fallback": false,
+    "sampling": "provider defaults",
+    "image_detail": "provider defaults"
+  },
+  "identity_caveat": "Undated LLM response aliases and equal live metadata do not prove immutable hidden weights. Luna regular endpoint advertises 20260922; Decisions returns 20261006."
+}

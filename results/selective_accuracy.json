@@ -1,0 +1,84 @@
+{
+  "status": "EXPLORATORY_POSTHOC_THRESHOLDS",
+  "denominator_scheduled": 200,
+  "signal": "Provider-reported confidence, not selected-option probability",
+  "models": {
+    "typesafe/jev-1.14": {
+      "0.5": {
+        "retained": 110,
+        "correct": 100,
+        "accuracy_retained": 0.9090909090909091,
+        "coverage_scheduled": 0.55
+      },
+      "0.8": {
+        "retained": 86,
+        "correct": 83,
+        "accuracy_retained": 0.9651162790697675,
+        "coverage_scheduled": 0.43
+      },
+      "0.9": {
+        "retained": 64,
+        "correct": 63,
+        "accuracy_retained": 0.984375,
+        "coverage_scheduled": 0.32
+      },
+      "0.95": {
+        "retained": 59,
+        "correct": 59,
+        "accuracy_retained": 1.0,
+        "coverage_scheduled": 0.295
+      },
+      "0.99": {
+        "retained": 42,
+        "correct": 42,
+        "accuracy_retained": 1.0,
+        "coverage_scheduled": 0.21
+      },
+      "1.0": {
+        "retained": 36,
+        "correct": 36,
+        "accuracy_retained": 1.0,
+        "coverage_scheduled": 0.18
+      }
+    },
+    "openai/gpt-6-luna-decisions": {
+      "0.5": {
+        "retained": 76,
+        "correct": 70,
+        "accuracy_retained": 0.9210526315789473,
+        "coverage_scheduled": 0.38
+      },
+      "0.8": {
+        "retained": 46,
+        "correct": 45,
+        "accuracy_retained": 0.9782608695652174,
+        "coverage_scheduled": 0.23
+      },
+      "0.9": {
+        "retained": 31,
+        "correct": 30,
+        "accuracy_retained": 0.967741935483871,
+        "coverage_scheduled": 0.155
+      },
+      "0.95": {
+        "retained": 22,
+        "correct": 21,
+        "accuracy_retained": 0.9545454545454546,
+        "coverage_scheduled": 0.11
+      },
+      "0.99": {
+        "retained": 8,
+        "correct": 8,
+        "accuracy_retained": 1.0,
+        "coverage_scheduled": 0.04
+      },
+      "1.0": {
+        "retained": 7,
+        "correct": 7,
+        "accuracy_retained": 1.0,
+        "coverage_scheduled": 0.035
+      }
+    }
+  },
+  "limitation": "Thresholds were examined on these results, not selected and validated on an independent holdout. No comparable confidence signal was requested from the general LLMs."
+}

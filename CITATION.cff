@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this repository and its dated benchmark version when using these results. Individual image credits and licenses remain in THIRD_PARTY_NOTICES.md."
+title: "Visual decision benchmark: 200 image grounded questions across five model configurations"
+type: dataset
+authors:
+  - family-names: Tsabary
+    given-names: Eldad
+repository-code: "https://github.com/etsabary/visual-decision-benchmark"
+url: "https://github.com/etsabary/visual-decision-benchmark"
+version: "2026-10-15-c1"
+date-released: 2026-10-15
+abstract: "A dated comparison of Jev 1.14 Decisions, GPT-6 Luna Decisions, regular GPT-6 Luna, GPT-5.4 nano and Gemini 2.5 Flash-Lite on the same 200 multiple-choice visual decisions. Results include accuracy, coverage, latency, returned cost, ability profiles and exploratory confidence thresholds. The public release includes 221 of 227 tested image files; six charts are referenced pending third-party terms review. The gold key remains external."
