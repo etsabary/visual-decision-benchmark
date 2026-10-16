@@ -29,4 +29,12 @@ The external-key policy matches the companion text benchmark. It means readers c
 
 The public validator verifies checksums, all 221 included image hashes, 200 questions, 1,000 distinct item/model pairs, the attempt/retry ledger, image ordering, cost arithmetic and internal aggregate consistency. It reconstructs 970 exact historical request payloads. The remaining thirty require the six withheld images. Re-scoring with the external key reproduced the published five-model totals before publication.
 
-No additional paid inference, resized replacement test or new model configuration was run to prepare this release. The original twenty-item pilot, full extension and earlier Decisions measurements remain identifiable in the exported records. Future changes to keys, images or prompts should receive a new version and must not silently rewrite this reference.
+No additional paid inference, resized replacement test or new model configuration was run to prepare the October 15 release. The original twenty-item pilot, full extension and earlier Decisions measurements remain identifiable in the exported records. Future changes to keys, images or prompts should receive a new version and must not silently rewrite this reference.
+
+## October 16 model input support review
+
+Microsoft-Decision-1, Nimble v4 and Nimble v4 Max were added to the general model comparison after their complete 1,136-question text runs. The image report now includes their input-support status alongside the five scored configurations. No original image, question, model answer, reference key, timing or score was changed.
+
+One original native-image compatibility request was sent per new service after the text measurements finished. Microsoft explicitly rejected the image input. Nimble accepted the JSON, but its current API schema specifies JSON-to-text handling; an HTTP 200 response was not counted as evidence of vision. No 200-question image run, zero accuracy or image-benchmark latency was assigned to the new services. OCR and captions were not substituted.
+
+The three probe records and their costs are published separately from the 1,000 scored image cases. The cost chart retains its labelled per-1,000 normalization. The [text comparison](https://github.com/etsabary/jev-1.14-comparison-benchmark) includes all fourteen services in its overall ranking, function tables and graphics, with October 16 dates for the additions.

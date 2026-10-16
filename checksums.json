@@ -1,13 +1,13 @@
 {
-  "version": "visual-decision-public-2026-10-15-v1",
+  "version": "visual-decision-public-2026-10-16-capability-review-v2",
   "files": {
     ".gitattributes": "d366a0c4958b508384b30f8f81d9311d53542ee7e15f94f13d9fec65e89ecb45",
     ".gitignore": "99d3dc3ef077581f957f88a0aba4f5fe8e3c504dfcc543f9fb26370b8880f641",
     "CITATION.cff": "d05d07aab22ce7cfa3cf27d0c1ba65cd8992ab8302106ab066d00a6d80f3a38e",
     "LICENSE": "c0bbb612283a2743d755831b475fd0df6f92873fbdfad80b78f3cb52f3e898d3",
     "METHODOLOGY.md": "186c99e889938a6a386dedb0e8886341f7f3c520b40965e6332b5281e9be70eb",
-    "README.md": "3838093dab6bebc4af25883e2510d2abfc8e39b41c59c6f53f06620f3aac356a",
-    "RELEASE_NOTES.md": "7c5ebf2348403ef0904652c1cf54446fef041284242efe0e76490ae8d0bc8615",
+    "README.md": "dee69746840c900af679809a2dafe5dc23dfe3509ee724cde1839874f6da4826",
+    "RELEASE_NOTES.md": "95e44eac2a1c3dc66073c0107bdd31a8dd0f17b4c6a55eae484f1f333c709ec8",
     "THIRD_PARTY_NOTICES.md": "5999e7ed648d772d40b0c14a987e6d75f137d4be2dd9c167086cddadc41c74f2",
     "benchmark.py": "6a821445652a955c4cec7b2e1aa811c636ef3b1666f2cf70fffa2749f2c041f5",
     "data/assets.jsonl": "e008b87be78adf1db65d1b52cedb99028c9d47aad92070fa8cb20899c75ca062",
@@ -15,6 +15,8 @@
     "data/benchmark_manifest.json": "26c0a139d9cec6bd9f655367ae191dfbf149c16353146e7c89b9e438f9b7de1e",
     "data/compatibility_probes.jsonl": "985f759f6a12712ad11e920f5f6d628eb651a05c4b11b8c2d25c9ce83ce5a42a",
     "data/model_manifest.json": "96afb4b43192ca06f86f98db5a808b33e4b6790bfe0ef1ffc69ae638405dd7dc",
+    "data/october_16_capabilities.json": "ac5725a24bbf270515fd67fa7f1a512a93116e7035de33962ff8217984a78891",
+    "data/october_16_compatibility_probes.jsonl": "11545af4dc42d77cb9239915cdbc20927e1f9e784d5025ce6c3bc7c72a0ed86e",
     "data/provenance.jsonl": "5d0c7834b8a2847d4a04b4e3318dae044235c9f14ef90d2cc4033ee61c8c40f6",
     "data/questions.jsonl": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
     "data/request_plan.jsonl": "99da7d2289cdaf8e0954b85662c9296b43f2fce27554af01f34729c463b70a0a",
@@ -22,6 +24,7 @@
     "figures/abilities.svg": "696b7b45dbaf1021d16c2bec180143f55eec9a2aea72ebdc1b8892539244dbc9",
     "figures/tradeoffs.png": "24a9c63265cc89df537c32479a9c4cc8a87d41baf85aa20a94e1c4e410cd4188",
     "figures/tradeoffs.svg": "96e947b9760b22bd79eca5c853c17be2fa8c364cf3a30303f4b7398aa6af9012",
+    "freeze_checksums.py": "67ff2b743ac45993c88e051af7a0bd32050920b15ad5a41b1c6ee9f237800259",
     "gallery.html": "6010ef6756e9c54b4c045229e145235314a00e3187b67521b9d1937315bb875e",
     "images/CCA0001.png": "c1c215084603ea3336903a802be6c0c4c6f2663e582ae64ada4e0a2bf19a03b3",
     "images/CCA0002.png": "ddf55ce84e56f072e582be142b25e0de4d0aadb966e02d5f22dfcb7f9acfab96",
@@ -272,7 +275,7 @@
     "results/summary.json": "680fbbbe4264b8519f5fe9f6ae4f133d9ba0fbe699034d27a96c27384ba05063",
     "score.py": "0e136082aaf964c73c0749d771a3b68c8d9cff11b1a03eb7e83409e1946aa144",
     "selective.py": "9175afe156a94a65e804a51ef361630eacb1962aeaf6d8c0a48671c126522932",
-    "test_benchmark.py": "80702efcfcd7bdd54ed64326b2d0b42eb07328a6bd8ec613c14dd7451684779d",
+    "test_benchmark.py": "c56bea0052fc7cf85d459662c45b6406bfdfc32ea4b23b7df955d0d2face4f7c",
     "validate.py": "a1ad660129b6e3a20fac5aa1ed174ca210e3e47b63edf1ec6ddbaa238b1fd770"
   }
 }

@@ -72,5 +72,26 @@ class PublicPacket(unittest.TestCase):
         d=confidence_profile({'fixture':'1'},records,thresholds=(.9,))
         self.assertEqual(d[MODELS[0]]['0.9']['retained'],0)
 
+    def test_october_16_capability_exclusions_are_not_zero_scores(self):
+        capability=json.loads((ROOT/'data/october_16_capabilities.json').read_text())
+        self.assertEqual(capability['review_date_toronto'],'2026-10-16')
+        self.assertEqual(capability['scored_image_questions_added'],0)
+        self.assertEqual(len(capability['models']),3)
+        for value in capability['models'].values():
+            self.assertIsNone(value['accuracy'])
+            self.assertEqual(value['scheduled_image_cases'],0)
+        self.assertEqual(len(rows(ROOT/'data/attempts.jsonl')),1003)
+
+    def test_http_200_does_not_establish_native_image_support(self):
+        probes={r['model_id']:r for r in rows(ROOT/'data/october_16_compatibility_probes.jsonl')}
+        self.assertEqual(len(probes),3)
+        self.assertEqual(probes['microsoft_decision']['http_status'],400)
+        for model in ('nimble_v4','nimble_v4_max'):
+            self.assertEqual(probes[model]['http_status'],200)
+            self.assertEqual(probes[model]['usage']['input_tokens'],26253)
+        capability=json.loads((ROOT/'data/october_16_capabilities.json').read_text())
+        self.assertIn('JSON text',capability['nimble_contract']['state_description_excerpt'])
+        self.assertFalse(capability['probe_cost']['included_in_scored_benchmark_costs'])
+
 
 if __name__=='__main__':unittest.main()

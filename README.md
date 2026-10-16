@@ -1,8 +1,8 @@
-# Image grounded decisions across five model configurations
+# Image decision benchmark and model input support
 
 Jev 1.14 answered **141/200 questions correctly (70.5%)**, compared with **121/200 (60.5%)** for Luna 6 Decisions and **117/200 (58.5%)** for regular Luna 6. The two Decisions configurations had lower observed response latency than the three general LLMs. Gemini 2.5 Flash-Lite was the cheapest configuration, but answered only 75/200 correctly. GPT-5.4 nano answered 70/200 and had the highest reported cost.
 
-I wanted to test whether fast, typed decision models offer a useful advantage when a choice depends on reading an image and applying a rule. The bank includes counting, spatial relations, planning, diagrams, documents, interface states and inspection against a reference. Every model received the same 200 questions, answer choices and ordered image bytes. The test date was **October 15, 2026**, in the America/Toronto time zone.
+I wanted to test whether fast, typed decision models offer a useful advantage when a choice depends on reading an image and applying a rule. The bank includes counting, spatial relations, planning, diagrams, documents, interface states and inspection against a reference. Every scored configuration received the same 200 questions, answer choices and ordered image bytes. The image test date was **October 15, 2026**, in the America/Toronto time zone. **Added October 16:** Microsoft-Decision-1, Nimble v4 and Nimble v4 Max are included in the overall input-support review below and in the [expanded 14-model text comparison](https://github.com/etsabary/jev-1.14-comparison-benchmark). Their tested APIs do not provide a valid native-image condition, so they have no image score.
 
 ![First attempt accuracy, median complete response latency and reported cost](figures/tradeoffs.png)
 
@@ -15,12 +15,25 @@ I wanted to test whether fast, typed decision models offer a useful advantage wh
 | Luna 6 regular | 117 | 58.5% | 200/200 | 2.354 s | 5.057 s | $0.029581700 |
 | GPT-5.4 nano | 70 | 35.0% | 196/200 | 1.605 s | 2.978 s | $0.050524500 |
 | Gemini 2.5 Flash-Lite | 75 | 37.5% | 180/200 | 0.873 s | 1.743 s | $0.008640400* |
+| Microsoft-Decision-1 (added Oct 16) | n/a | n/a | n/a | n/a | n/a | n/a |
+| Nimble v4 (added Oct 16) | n/a | n/a | n/a | n/a | n/a | n/a |
+| Nimble v4 Max (added Oct 16) | n/a | n/a | n/a | n/a | n/a | n/a |
+
+The first five rows are completed 200-question image measurements. The three October 16 rows are capability exclusions, not zero scores or failed 200-question runs. Only configurations with actual image measurements appear in the graphics. Their normalized per-1,000 cost scale is unchanged.
 
 Accuracy uses all 200 scheduled questions. An input rejection, transport error or invalid answer format is unsuccessful in that denominator. A usable answer is an allowed option ID; it can still be wrong. Timing runs from request dispatch through receipt of the complete response body, including connection and upload, and excludes local request construction. Cost includes text, images, output, default cache writes and permitted retries. An asterisk marks missing error-response charges: the displayed amount is a known sum, not a complete bill.
 
-The three general LLMs used reasoning off, an instruction to return only an option ID, and a 32-token output ceiling. Their outputs were plain text, without schema-constrained decoding. These results describe that economical decision profile, rather than the best accuracy each LLM might reach with longer reasoning or output. All five configurations used OpenRouter, with the two Decisions models on its alpha Decisions endpoint and the three general LLMs on standard Chat Completions.
+The three general LLMs used reasoning off, an instruction to return only an option ID, and a 32-token output ceiling. Their outputs were plain text, without schema-constrained decoding. These results describe that economical decision profile, rather than the best accuracy each LLM might reach with longer reasoning or output. All five scored configurations used OpenRouter, with the two Decisions models on its alpha Decisions endpoint and the three general LLMs on standard Chat Completions.
 
 The 20-question general-LLM pilot was retained, then extended with the remaining 180 questions per model. This added 540 first requests and one transient-error retry, with **$0.080447325** in reported charges and one unreported error charge. The three general LLMs together, including the pilot, have known reported cost of **$0.088746600**. The earlier Decisions results were reused, not billed again.
+
+## The October 16 additions do not supply a native-image comparison
+
+After completing all three new 1,136-question text runs, I sent each service one compatibility request using the original image bytes, question and answer options for VB0001. Microsoft-Decision-1 on OpenRouter/Azure returned HTTP 400 and explicitly rejected `image_url` parts in `state`. Its endpoint metadata also lists text-only input.
+
+Both Nimble versions returned HTTP 200 with a typed choice, but that does not establish that they processed the picture. Their [current API schema](https://docs.bespokelabs.ai/api-reference/systemone) states: “Nimble reads a JSON state as JSON text.” Each image-shaped request was billed as 26,253 input tokens, with a low returned confidence (about 0.016 for v4 and 0.011 for Max). These responses are consistent with treating the encoded image data as text, not a documented pixel-decoding path. A successful request is not itself a vision capability test.
+
+I therefore did not send the remaining image bank through these text-only API contracts, substitute OCR or captions, or treat their responses as image accuracy. This conclusion concerns the tested routes and documented interfaces on October 16, not every possible base-model capability or future endpoint. The [capability record](data/october_16_capabilities.json) and [three sanitized probe responses](data/october_16_compatibility_probes.jsonl) preserve what was actually checked. The probes have $0.00341289 in calculated Nimble tariff cost and one Microsoft error charge unreported; they are separate from the scored image and text run totals.
 
 ## Similar Luna totals conceal different answers
 
