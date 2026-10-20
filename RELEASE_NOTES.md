@@ -1,3 +1,16 @@
+# October 20, 2026: specialized image decision cohort
+
+- Reviewed16 image-declared specialized models. Twelve new models completed200 cases; Jev1.14 and Luna Decisions retain their earlier200-case runs, producing14 complete comparable question-bank results.
+- Span-02 stopped at21 first attempts when cumulative median reached2.166 seconds. It has no full-bank rank. ScaleDown's pinned current image route rejected the compatibility input; no scored cases or caption substitute.
+- Published exact-image/choice bindings, sanitized attempts, separate compatibility probes, identity and provider records, exact-decimal costs, mean/median/p95, named category scores and colour-coded figures/report.
+- Preserved the three original general LLM runs as historical evidence, outside the specialized primary graphics and ranking. They were not rerun, deleted or relabelled as frontier LLMs.
+- No new key edits, question edits, image resizing, compression or image substitutions. All227 private original tested image hashes were checked. The same221 public images are redistributed; the six chart rights exclusions remain.
+- Superseded original presentation files are archived byte-for-byte; original `checksums.json`, data and original result files remain unchanged. The expansion is separately sealed and validated.
+- Native interface output-token telemetry is recorded, not used as an architecture claim. Before scoring, an overly strict probe parser and d3 image-wire encoding were corrected with old control evidence retained. No scored question was repeated for either correction.
+- Added an explicit-public-files-only GitHub Pages deployment, with offline regression and checksum checks before publication. Credentials, private raw ledgers, local paths, gold labels and live account state are excluded.
+
+## Earlier release notes (historical)
+
 # Public release on October 15 2026
 
 ## What is included

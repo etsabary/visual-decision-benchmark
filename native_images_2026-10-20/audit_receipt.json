@@ -1,0 +1,17 @@
+{
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "question_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "all_five_original_scores_reproduced": true,
+  "no_key_or_item_correctness_in_public_packet": true,
+  "note": "Scored offline against unchanged external key; this reproduces the reference, not an independent new key audit.",
+  "scored_first_attempts": 2800,
+  "new_complete_first_attempts": 2400,
+  "excluded_first_attempts": 21,
+  "software": {
+    "image_models_2026_10_20.py": "591e35f1d080abca50cdf64fbc81adcec1de4d0348de336f3388c000ae8a6341",
+    "test_image_models_2026_10_20.py": "884e17524261cf2629fdd0a9ff9e9e0d13be9841cbe05a60c53483572a71fe96",
+    "benchmark.py": "6a821445652a955c4cec7b2e1aa811c636ef3b1666f2cf70fffa2749f2c041f5"
+  },
+  "original_attempts_sha256": "6d65c87aca3541b1425f5fe86371ce01e89fc9ac2a4dc2b0510e7c65b48acb81",
+  "original_checksums_sha256": "db095bce706694518622803ac3fc8fa32299c7f78eb90e9f2c85e39bca0d1f31"
+}

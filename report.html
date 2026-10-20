@@ -1,0 +1,294 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image decisions · 14 specialized models · 200 questions</title><style>*{box-sizing:border-box}body{margin:0;color:#183044;background:#f3f7fa;font:17px/1.65 system-ui,-apple-system,sans-serif}main{max-width:1480px;margin:auto;padding:32px 42px 90px;background:white}h1{font-size:clamp(30px,4vw,48px);line-height:1.13;max-width:1050px;letter-spacing:-.03em}h2{margin-top:2.4em;line-height:1.25;color:#163e5b}h3{margin-top:1.8em}p,li{max-width:1100px}a{color:#06669a}nav{position:sticky;top:0;background:#123d58;color:white;z-index:5;padding:12px 28px;display:flex;gap:24px;flex-wrap:wrap;font-size:14px}nav a{color:white;text-decoration:none}img{display:block;width:100%;height:auto;margin:24px 0}table{border-collapse:separate;border-spacing:0;width:100%;font-size:15px;line-height:1.45;margin:18px 0 32px}th,td{padding:13px 12px;border-bottom:1px solid #dce5eb;text-align:right;vertical-align:middle}th{color:#183c56;background:#edf3f7}th:first-child,td:first-child{text-align:left}thead th{position:sticky;top:0;z-index:2}tbody tr:hover td,tbody tr:hover th{outline:1px solid #8199aa;outline-offset:-1px}small{display:block;font-weight:400;margin-top:5px;font-size:12px;color:#526b80}.table-scroll{overflow:auto;max-width:100%;margin:18px 0 36px;max-height:780px;border:1px solid #dce5eb;border-radius:10px}.table-scroll table{margin:0;min-width:840px}.family-table{table-layout:fixed}.family-table th:first-child{width:220px;position:sticky;left:0;z-index:1}.family-table thead th:first-child{z-index:3}.family-table td{font-weight:650;font-size:19px;text-align:center}.family-table thead th{text-align:center;min-width:140px}.filter{display:block;background:#edf5fa;border-radius:8px;padding:15px}input{font:inherit;border:1px solid #93adbf;border-radius:6px;padding:9px 12px;margin-left:12px}pre{overflow:auto;padding:20px;background:#edf3f7;border-radius:9px;font-size:14px}code{font-size:.88em}details{margin:24px 0}footer{font-size:13px;margin-top:50px;color:#587083}@media(max-width:700px){main{padding:20px 16px 60px}nav{gap:14px;padding:10px 16px;font-size:12px}body{font-size:16px}th,td{padding:10px}input{margin:8px 0 0;width:100%}}</style></head><body><nav><a href="#">Overview</a><a href="#overall-results">Scores, speed & cost</a><a href="#results-by-named-category">Named categories</a><a href="#excluded-routes-and-eligibility">Exclusions</a><a href="gallery.html">Questions & images</a><a href="https://github.com/etsabary/visual-decision-benchmark">GitHub evidence</a></nav><main><h1>Image-grounded System 1 decision benchmark</h1>
+<p>Amos 1 Large recorded the highest image score: <strong>159/200 (79.5%)</strong>, with a <strong>340 ms median</strong> complete response. d3-turbo followed at <strong>155/200 (77.5%)</strong>, then Perplexity Decider v1.2 at <strong>152/200 (76%)</strong>. All three returned usable typed choices on every question. These are the highest observed scores in this bank, not a universal intelligence ranking.</p>
+<p>The expanded comparison now contains <strong>14 specialized decision models</strong>, each measured on the same 200 image-grounded questions. Twelve completed new runs on October 20; Jev 1.14 and Luna Decisions retain their completed October 15 results. Span- 02 crossed the prespecified two-second median limit and was stopped; ScaleDown's current route rejected images. The earlier general LLM runs remain accessible as reference results rather than the focus of the current comparison.</p>
+<p><a href="https://etsabary.github.io/visual-decision-benchmark/report.html">Open the readable, colour-coded report</a></p>
+<p><img alt="Accuracy, speed and cost for the native decision models" src="native_images_2026-10-20/overview.png" /></p>
+<h2>Overall results</h2>
+<table>
+<thead>
+<tr>
+<th>Decision model</th>
+<th style="text-align: right;">Correct / 200</th>
+<th style="text-align: right;">Accuracy</th>
+<th style="text-align: right;">Usable</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">p95</th>
+<th style="text-align: right;">Actual 200 cost</th>
+<th style="text-align: right;">Cost / 1,000</th>
+<th>Test date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amos 1 Large</td>
+<td style="text-align: right;">159/200</td>
+<td style="text-align: right;">79.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.381 s</td>
+<td style="text-align: right;">0.340 s</td>
+<td style="text-align: right;">0.630 s</td>
+<td style="text-align: right;">Free access†</td>
+<td style="text-align: right;">Free access†</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>d3-turbo</td>
+<td style="text-align: right;">155/200</td>
+<td style="text-align: right;">77.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.510 s</td>
+<td style="text-align: right;">0.431 s</td>
+<td style="text-align: right;">0.975 s</td>
+<td style="text-align: right;">Free access†</td>
+<td style="text-align: right;">Free access†</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Perplexity Decider v1.2</td>
+<td style="text-align: right;">152/200</td>
+<td style="text-align: right;">76.0%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.573 s</td>
+<td style="text-align: right;">0.476 s</td>
+<td style="text-align: right;">0.970 s</td>
+<td style="text-align: right;">$0.004316</td>
+<td style="text-align: right;">$0.021582</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Liquid d1-ultra</td>
+<td style="text-align: right;">149/200</td>
+<td style="text-align: right;">74.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.393 s</td>
+<td style="text-align: right;">0.343 s</td>
+<td style="text-align: right;">0.727 s</td>
+<td style="text-align: right;">$0.012692</td>
+<td style="text-align: right;">$0.063462</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>kettei-fat</td>
+<td style="text-align: right;">147/200</td>
+<td style="text-align: right;">73.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.467 s</td>
+<td style="text-align: right;">0.410 s</td>
+<td style="text-align: right;">0.775 s</td>
+<td style="text-align: right;">$0.002131</td>
+<td style="text-align: right;">$0.010655</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Cloudflare Clef</td>
+<td style="text-align: right;">145/200</td>
+<td style="text-align: right;">72.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.685 s</td>
+<td style="text-align: right;">0.567 s</td>
+<td style="text-align: right;">1.440 s</td>
+<td style="text-align: right;">$0.050310</td>
+<td style="text-align: right;">$0.251552</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Jev 1.13</td>
+<td style="text-align: right;">142/200</td>
+<td style="text-align: right;">71.0%</td>
+<td style="text-align: right;">195/200</td>
+<td style="text-align: right;">0.270 s</td>
+<td style="text-align: right;">0.229 s</td>
+<td style="text-align: right;">0.515 s</td>
+<td style="text-align: right;">$0.023976*</td>
+<td style="text-align: right;">$0.119881*</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Mercury Decide</td>
+<td style="text-align: right;">142/200</td>
+<td style="text-align: right;">71.0%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.575 s</td>
+<td style="text-align: right;">0.498 s</td>
+<td style="text-align: right;">1.100 s</td>
+<td style="text-align: right;">$0.003839</td>
+<td style="text-align: right;">$0.019197</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Jev 1.14</td>
+<td style="text-align: right;">141/200</td>
+<td style="text-align: right;">70.5%</td>
+<td style="text-align: right;">195/200</td>
+<td style="text-align: right;">0.358 s</td>
+<td style="text-align: right;">0.307 s</td>
+<td style="text-align: right;">0.724 s</td>
+<td style="text-align: right;">$0.023977*</td>
+<td style="text-align: right;">$0.119884*</td>
+<td>2026-10-15 (reused)</td>
+</tr>
+<tr>
+<td>Liquid d1</td>
+<td style="text-align: right;">135/200</td>
+<td style="text-align: right;">67.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.277 s</td>
+<td style="text-align: right;">0.240 s</td>
+<td style="text-align: right;">0.509 s</td>
+<td style="text-align: right;">$0.006044</td>
+<td style="text-align: right;">$0.030220</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Perplexity Decider Flash v1.2</td>
+<td style="text-align: right;">129/200</td>
+<td style="text-align: right;">64.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.303 s</td>
+<td style="text-align: right;">0.275 s</td>
+<td style="text-align: right;">0.552 s</td>
+<td style="text-align: right;">$0.002158</td>
+<td style="text-align: right;">$0.010791</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Cloudflare Clef Flash</td>
+<td style="text-align: right;">126/200</td>
+<td style="text-align: right;">63.0%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.827 s</td>
+<td style="text-align: right;">0.761 s</td>
+<td style="text-align: right;">1.595 s</td>
+<td style="text-align: right;">$0.007966</td>
+<td style="text-align: right;">$0.039829</td>
+<td>2026-10-20</td>
+</tr>
+<tr>
+<td>Luna 6 Decisions</td>
+<td style="text-align: right;">121/200</td>
+<td style="text-align: right;">60.5%</td>
+<td style="text-align: right;">198/200</td>
+<td style="text-align: right;">0.479 s</td>
+<td style="text-align: right;">0.383 s</td>
+<td style="text-align: right;">0.799 s</td>
+<td style="text-align: right;">$0.022546*</td>
+<td style="text-align: right;">$0.112731*</td>
+<td>2026-10-15 (reused)</td>
+</tr>
+<tr>
+<td>Cloudflare Clef Omni</td>
+<td style="text-align: right;">105/200</td>
+<td style="text-align: right;">52.5%</td>
+<td style="text-align: right;">200/200</td>
+<td style="text-align: right;">0.562 s</td>
+<td style="text-align: right;">0.455 s</td>
+<td style="text-align: right;">1.202 s</td>
+<td style="text-align: right;">$0.031330</td>
+<td style="text-align: right;">$0.156650</td>
+<td>2026-10-20</td>
+</tr>
+</tbody>
+</table>
+<p>Every ranked model has the same <strong>200 questions</strong>, original options, original order and exact reviewed image bytes. Accuracy uses all 200 first attempts; HTTP errors and unusable choices are unsuccessful. Wrong choices and invalid formatting are not retried. One recovery is allowed only for transport failures or HTTP 408/429/5xx, with recovery charges included in core cost. All reported accuracy here is first-attempt accuracy.</p>
+<p>The speed rule was set before these runs: after the first 20 questions, and after every subsequent question, stop a route if its cumulative <strong>median exceeds 2 seconds</strong>. This is a median cutoff, not a mean or p95 cutoff. Partial runs do not enter the full-bank ranking. No accuracy cutoff was applied to the eligible native decision models.</p>
+<p>Timing includes a fresh HTTPS connection, image upload and the complete response body; it excludes local image encoding, request construction and deliberate rate/retry waits. At most four model streams ran together, with one request at a time per model. Different labs, endpoints, dates and image preprocessors remain part of the observed route comparison. This is not an isolated comparison of weights or architecture.</p>
+<p><strong>Cost / 1,000 is a normalization of each actual 200-question run</strong>, not an additional 1,000 questions per model. * Asterisked prices are known sums with missing error charges, so they are lower bounds. † d3 and Amos currently offer free public access; that is <strong>not an API-reported metered price of $0</strong>, and it is not a promise of future free service. Admission probes and stopped runs are accounted separately from ranked-model core totals.</p>
+<p>Speed colours: green ≤0.5 s, yellow ≤1 s, orange ≤2 s, red &gt;2 s. Cost colours per 1,000: green ≤$0.05, yellow ≤$0.15, orange ≤$0.50, red above $0.50. Free access is neutral grey. These are display thresholds, not provider performance guarantees. Accuracy colours use the same fixed 0–100% scale across all categories.</p>
+<p>Jev 1.14 and Luna Decisions retain their completed <strong>October 15</strong> measurements; the other ranked image runs are from <strong>October 20, 2026 (America/Toronto)</strong>. Reusing them avoids paying to ask unchanged questions again, but means the entire table is not contemporaneous. Explicit returned identities and routes are preserved in the evidence.</p>
+<p>The models use native typed-choice interfaces. Output-token telemetry is recorded rather than assumed to be zero; a token count alone does not establish internal reasoning or model architecture. The benchmark measures a bounded decision interface, not audio generation, agentic iteration or extended chain-of-thought performance.</p>
+<h2>What changed in the picture</h2>
+<p>Jev 1.14 led the original image comparison at 70.5%. Amos's 79.5% adds 18 correct answers on the unchanged bank. The result also changes the order seen in text: Amos is sixth among specialized models in the current text benchmark, behind d3 and Perplexity, but has the highest image score here. Span remains the text leader and has no completed image score because it failed this run's speed screen. Nimble's text result has no native-image counterpart through its documented interface.</p>
+<p>Amos, d3 and Perplexity are close enough that their exact order needs more evidence. Amos answered 14 questions correctly that d3 missed; d3 answered 10 that Amos missed. Against Perplexity, the corresponding counts are 20 and 13. The unadjusted paired exact p-values are 0.541 and 0.296; neither difference is statistically resolved on this selected 200-question bank. These item-level tests also do not remove dependence between related visual tasks or uncertainty about future inputs.</p>
+<h2>Different strengths behind similar totals</h2>
+<p><strong>Amos has a broad profile rather than one dominant specialty.</strong> It scored 9/10 on conditional counting, sequential state tracking, cross-image matching and image/text consistency;8/10 on perspective/knowledge tracking; and 10/10 on interface states and reference inspection. No category fell below 6/10. It still missed 41 of 200 questions. Connectivity, rotation and constraint satisfaction each remained 6/10. Its 13/13 perception controls and 146/187 reasoning/grounded decisions separate straightforward visual recognition from the more demanding part of the bank.</p>
+<p><strong>d3 is particularly strong on charts and correspondence.</strong> It scored 10/10 on charts, sequential state tracking, interface states, reference inspection, matching across images and image/text consistency. For example, matching asks whether an object in one image corresponds to a reference in another; sequential tracking asks what state remains after a series of visible changes. Its visual-rule and constraint-satisfaction scores were each 5/10, and perspective/knowledge tracking was 6/10. High performance on reading and matching does not establish dependable abstract rule execution.</p>
+<p><strong>Perplexity is the strongest observed metered option overall.</strong> Its 152/200 cost$0.00431642 for the entire 200, equivalent to$0.0215821 per 1,000. It reached 9/10 on causal/counterfactual questions and 10/10 on charts, but only 4/10 on connectivity and constraint satisfaction. Its Flash counterpart was faster at 275 ms versus 476 ms median, but scored 129/200 rather than 152/200. The speed saving came with 23 fewer correct decisions in this run.</p>
+<p><strong>Sqwish kettei-fat is the least expensive metered route in this cohort.</strong> Its 147/200 (73.5%) cost$0.00213102 for 200, or$0.0106551 per 1,000, with a410 ms median and 775 ms p95. It scored 9/10 on spatial relations and flowcharts, and 8/10 on perspective/knowledge tracking. Connectivity was 4/10; document reconciliation and constraint satisfaction were 5/10. Its low price and aggregate score do not make every application category equally suitable.</p>
+<p><strong>Liquid d1-ultra trades more cost and latency for more correct answers than d1.</strong> Ultra scored 149/200 at 343 ms median, versus 135/200 at 240 ms for d1. Ultra's flowchart score was 9/10 and its document reconciliation score 8/10, but visual rules were 3/10 and perspective/knowledge tracking 4/10. A flowchart question means following branches such as “if the measurement exceeds this limit, use the left path” to the final action; it is a different demand from merely recognizing a symbol.</p>
+<p><strong>Several lower-ranked models retain category-specific value.</strong> Cloudflare Clef scored 10/10 on spatial relations and sequential state tracking, and 7/10 on constraint satisfaction, above Amos's 6/10 in that category. Luna Decisions recorded the highest rotation/reflection score,8/10, compared with Amos and d3 at 6/10. Luna's measurement is from October 15. Each comparison is only ten questions per category; one answer changes a displayed percentage by ten points.</p>
+<p><strong>Cloudflare's names do not predict its order here.</strong> Clef scored 145/200, Clef Flash 126/200 and Clef Omni 105/200. Flash's observed median was 761 ms, slower than Clef's 567 ms, while Omni's 455 ms did not compensate for its lower accuracy. These are endpoint/date observations, not conclusions about all workloads or why the models differ.</p>
+<h2>Where the bank separates useful vision from dependable decisions</h2>
+<p>Across the 14 complete models, interface states and reference inspection averaged 9.57/10, while visual-rule application averaged 4.21/10, connectivity 4.64/10 and constraint satisfaction 4.71/10. In a constraint question, several visible placements or relationships must all hold simultaneously; satisfying most of them is not enough. The best model's total remains below 80%, despite near-perfect scores on some simpler visual functions.</p>
+<p>Jev 1.13 scored 142/200 and the earlier Jev 1.14 run 141/200. Both rejected the same five images through their tested OpenRouter routes, and both returned 195 usable first answers. Jev 1.13 was faster in the October 20 measurement (229 ms median versus the earlier 307 ms for 1.14), but the different dates and routes' operational conditions prevent attributing that speed difference to the model version. One extra correct answer does not establish a meaningful version-level intelligence change. The files were not resized to remove these failures.</p>
+<p>Eleven of the 12 newly completed routes returned valid probability distributions for every usable first answer; Jev 1.13 had one probability warning, retained as a usable choice rather than retried. None of the 12 needed a scored transient retry. Returning a valid choice is not the same as choosing the correct one. Confidence filtering illustrates a possible narrower workflow: at a provider-reported cutoff of 0.9, Amos retained 77/200 and answered 76 correctly; Perplexity retained 84 and answered 83 correctly. Those are exploratory, post-run thresholds, not independently calibrated production settings. Calls rejected by a confidence filter still cost money and time.</p>
+<h2>Cost, speed and exclusions</h2>
+<p>The new scored work—including Span's stopped 21 questions—has <strong>$0.144871244 in known API charges</strong>. Admission probes add <strong>$0.001893180</strong>, for <strong>$0.146764424 known total</strong>. Five scored Jev 1.13 error charges and one ScaleDown admission error charge were not reported; this is not a complete invoice. Amos and d3's 400 scored calls and five admission calls used currently free public access rather than priced receipts. The earlier reused results were not billed again.</p>
+<p>Among fully priced completed runs, Perplexity costs roughly 5.6 times less than Jev 1.14's known cost while recording 11 more correct answers. Sqwish costs roughly 11.3 times less than that Jev amount and records six more correct answers. Jev's error charges are incomplete and the runs have different dates. These comparisons describe the observed routes and this image mix, not guaranteed future tariffs or throughput.</p>
+<p>Span's image median reached 2.166 seconds after 21 questions (mean 1.400 seconds), triggering the declared median rule. Its 14/21 correct partial result is not a200-question accuracy estimate and is excluded from the main graphics. ScaleDown was not speed-screened: its current pinned route rejected native image parts with HTTP 400 despite catalog support. Neither exclusion is a zero accuracy score.</p>
+<p>The completed primary cohort has 2,800 first decisions:2,400 new and 400 reused. Span contributes 21 separate partial decisions. The three older LLMs remain outside that count and the current specialized ranking. No new general LLMs were tested overnight.</p>
+<h2>Results by named category</h2>
+<p>Every category has ten questions. Cells show correct / 10; one answer is ten percentage points. Full names and definitions are included below and in the interactive report.</p>
+<label class="filter">Find a model <input id="model-filter" placeholder="Type a model name…" autocomplete="off"></label><div class="table-scroll"><table class="family-table"><thead><tr><th>Decision model</th><th title="Find objects that satisfy several visible properties at once.">Attribute binding and set logic<small>V01 · n=10</small></th><th title="Count only the objects meeting the stated visual rule.">Conditional counting<small>V02 · n=10</small></th><th title="Apply left/right, above/below or relative-position constraints.">Spatial relationships<small>V03 · n=10</small></th><th title="Follow connected paths or directed arrows between nodes.">Connectivity and reachability<small>V04 · n=10</small></th><th title="Choose a feasible route under movement and obstacle rules.">Navigation and planning<small>V05 · n=10</small></th></tr></thead><tbody><tr data-model="Amos 1 Large"><th scope="row">Amos 1 Large</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="d3-turbo"><th scope="row">d3-turbo</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Perplexity Decider v1.2"><th scope="row">Perplexity Decider v1.2</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Liquid d1-ultra"><th scope="row">Liquid d1-ultra</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="kettei-fat"><th scope="row">kettei-fat</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="Cloudflare Clef"><th scope="row">Cloudflare Clef</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="Jev 1.13"><th scope="row">Jev 1.13</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.4">4/10</td></tr><tr data-model="Mercury Decide"><th scope="row">Mercury Decide</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="Jev 1.14"><th scope="row">Jev 1.14</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Liquid d1"><th scope="row">Liquid d1</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="Perplexity Decider Flash v1.2"><th scope="row">Perplexity Decider Flash v1.2</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.4">4/10</td></tr><tr data-model="Cloudflare Clef Flash"><th scope="row">Cloudflare Clef Flash</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.2">2/10</td></tr><tr data-model="Luna 6 Decisions"><th scope="row">Luna 6 Decisions</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.3">3/10</td></tr><tr data-model="Cloudflare Clef Omni"><th scope="row">Cloudflare Clef Omni</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.2">2/10</td></tr></tbody></table></div><div class="table-scroll"><table class="family-table"><thead><tr><th>Decision model</th><th title="Recognize the result of a rotation or mirror transformation.">Rotation and reflection<small>V06 · n=10</small></th><th title="Reason about shapes, folds, dimensions or what fits.">Geometry, folding and fit<small>V07 · n=10</small></th><th title="Infer or apply a rule across symbols and pictured patterns.">Visual rule application<small>V08 · n=10</small></th><th title="Track how successive visible actions change a state.">Sequential state tracking<small>V09 · n=10</small></th><th title="Find the arrangement satisfying all the stated restrictions.">Constraint satisfaction<small>V10 · n=10</small></th></tr></thead><tbody><tr data-model="Amos 1 Large"><th scope="row">Amos 1 Large</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="d3-turbo"><th scope="row">d3-turbo</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="Perplexity Decider v1.2"><th scope="row">Perplexity Decider v1.2</th><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td></tr><tr data-model="Liquid d1-ultra"><th scope="row">Liquid d1-ultra</th><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="kettei-fat"><th scope="row">kettei-fat</th><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="Cloudflare Clef"><th scope="row">Cloudflare Clef</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Jev 1.13"><th scope="row">Jev 1.13</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="Mercury Decide"><th scope="row">Mercury Decide</th><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="Jev 1.14"><th scope="row">Jev 1.14</th><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr><tr data-model="Liquid d1"><th scope="row">Liquid d1</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.4">4/10</td></tr><tr data-model="Perplexity Decider Flash v1.2"><th scope="row">Perplexity Decider Flash v1.2</th><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.4">4/10</td></tr><tr data-model="Cloudflare Clef Flash"><th scope="row">Cloudflare Clef Flash</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.5">5/10</td></tr><tr data-model="Luna 6 Decisions"><th scope="row">Luna 6 Decisions</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.1">1/10</td></tr><tr data-model="Cloudflare Clef Omni"><th scope="row">Cloudflare Clef Omni</th><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.1">1/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.2">2/10</td></tr></tbody></table></div><div class="table-scroll"><table class="family-table"><thead><tr><th>Decision model</th><th title="Follow conditional branches to their final outcome.">Flowcharts and decision trees<small>V11 · n=10</small></th><th title="Determine what changes when a pictured condition is altered.">Causal and counterfactual reasoning<small>V12 · n=10</small></th><th title="Read plotted values and compare or calculate the required quantity.">Charts and quantitative comparisons<small>V13 · n=10</small></th><th title="Combine entries across forms, receipts or tables and apply a rule.">Document reconciliation<small>V14 · n=10</small></th><th title="Choose an action or identify a state from a screenshot.">Interface state decisions<small>V15 · n=10</small></th></tr></thead><tbody><tr data-model="Amos 1 Large"><th scope="row">Amos 1 Large</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="d3-turbo"><th scope="row">d3-turbo</th><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Perplexity Decider v1.2"><th scope="row">Perplexity Decider v1.2</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Liquid d1-ultra"><th scope="row">Liquid d1-ultra</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="kettei-fat"><th scope="row">kettei-fat</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Cloudflare Clef"><th scope="row">Cloudflare Clef</th><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Jev 1.13"><th scope="row">Jev 1.13</th><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Mercury Decide"><th scope="row">Mercury Decide</th><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Jev 1.14"><th scope="row">Jev 1.14</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Liquid d1"><th scope="row">Liquid d1</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Perplexity Decider Flash v1.2"><th scope="row">Perplexity Decider Flash v1.2</th><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Cloudflare Clef Flash"><th scope="row">Cloudflare Clef Flash</th><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Luna 6 Decisions"><th scope="row">Luna 6 Decisions</th><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Cloudflare Clef Omni"><th scope="row">Cloudflare Clef Omni</th><td class="accuracy" data-ratio="0.3">3/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.8">8/10</td></tr></tbody></table></div><div class="table-scroll"><table class="family-table"><thead><tr><th>Decision model</th><th title="Compare an object or scene against a supplied reference.">Inspection against a reference<small>V16 · n=10</small></th><th title="Identify a corresponding object across two or three images.">Matching across images<small>V17 · n=10</small></th><th title="Check whether a written claim agrees with the visible evidence.">Image and text consistency<small>V18 · n=10</small></th><th title="Apply line-of-sight constraints or track what an observer has seen.">Perspective and knowledge tracking<small>V19 · n=10</small></th><th title="Recognize when the image cannot determine the requested answer.">Insufficient evidence<small>V20 · n=10</small></th></tr></thead><tbody><tr data-model="Amos 1 Large"><th scope="row">Amos 1 Large</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="d3-turbo"><th scope="row">d3-turbo</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Perplexity Decider v1.2"><th scope="row">Perplexity Decider v1.2</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Liquid d1-ultra"><th scope="row">Liquid d1-ultra</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="kettei-fat"><th scope="row">kettei-fat</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Cloudflare Clef"><th scope="row">Cloudflare Clef</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Jev 1.13"><th scope="row">Jev 1.13</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Mercury Decide"><th scope="row">Mercury Decide</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Jev 1.14"><th scope="row">Jev 1.14</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.7">7/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Liquid d1"><th scope="row">Liquid d1</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.8">8/10</td></tr><tr data-model="Perplexity Decider Flash v1.2"><th scope="row">Perplexity Decider Flash v1.2</th><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.9">9/10</td></tr><tr data-model="Cloudflare Clef Flash"><th scope="row">Cloudflare Clef Flash</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.4">4/10</td><td class="accuracy" data-ratio="0.7">7/10</td></tr><tr data-model="Luna 6 Decisions"><th scope="row">Luna 6 Decisions</th><td class="accuracy" data-ratio="0.9">9/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.6">6/10</td><td class="accuracy" data-ratio="1.0">10/10</td></tr><tr data-model="Cloudflare Clef Omni"><th scope="row">Cloudflare Clef Omni</th><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="0.8">8/10</td><td class="accuracy" data-ratio="1.0">10/10</td><td class="accuracy" data-ratio="0.5">5/10</td><td class="accuracy" data-ratio="0.6">6/10</td></tr></tbody></table></div><h2>What the categories test</h2>
+<ul>
+<li><strong><a href="questions/V01.md">V01 Attribute binding and set logic</a></strong>: Find objects that satisfy several visible properties at once.</li>
+<li><strong><a href="questions/V02.md">V02 Conditional counting</a></strong>: Count only the objects meeting the stated visual rule.</li>
+<li><strong><a href="questions/V03.md">V03 Spatial relationships</a></strong>: Apply left/right, above/below or relative-position constraints.</li>
+<li><strong><a href="questions/V04.md">V04 Connectivity and reachability</a></strong>: Follow connected paths or directed arrows between nodes.</li>
+<li><strong><a href="questions/V05.md">V05 Navigation and planning</a></strong>: Choose a feasible route under movement and obstacle rules.</li>
+<li><strong><a href="questions/V06.md">V06 Rotation and reflection</a></strong>: Recognize the result of a rotation or mirror transformation.</li>
+<li><strong><a href="questions/V07.md">V07 Geometry, folding and fit</a></strong>: Reason about shapes, folds, dimensions or what fits.</li>
+<li><strong><a href="questions/V08.md">V08 Visual rule application</a></strong>: Infer or apply a rule across symbols and pictured patterns.</li>
+<li><strong><a href="questions/V09.md">V09 Sequential state tracking</a></strong>: Track how successive visible actions change a state.</li>
+<li><strong><a href="questions/V10.md">V10 Constraint satisfaction</a></strong>: Find the arrangement satisfying all the stated restrictions.</li>
+<li><strong><a href="questions/V11.md">V11 Flowcharts and decision trees</a></strong>: Follow conditional branches to their final outcome.</li>
+<li><strong><a href="questions/V12.md">V12 Causal and counterfactual reasoning</a></strong>: Determine what changes when a pictured condition is altered.</li>
+<li><strong><a href="questions/V13.md">V13 Charts and quantitative comparisons</a></strong>: Read plotted values and compare or calculate the required quantity.</li>
+<li><strong><a href="questions/V14.md">V14 Document reconciliation</a></strong>: Combine entries across forms, receipts or tables and apply a rule.</li>
+<li><strong><a href="questions/V15.md">V15 Interface state decisions</a></strong>: Choose an action or identify a state from a screenshot.</li>
+<li><strong><a href="questions/V16.md">V16 Inspection against a reference</a></strong>: Compare an object or scene against a supplied reference.</li>
+<li><strong><a href="questions/V17.md">V17 Matching across images</a></strong>: Identify a corresponding object across two or three images.</li>
+<li><strong><a href="questions/V18.md">V18 Image and text consistency</a></strong>: Check whether a written claim agrees with the visible evidence.</li>
+<li><strong><a href="questions/V19.md">V19 Perspective and knowledge tracking</a></strong>: Apply line-of-sight constraints or track what an observer has seen.</li>
+<li><strong><a href="questions/V20.md">V20 Insufficient evidence</a></strong>: Recognize when the image cannot determine the requested answer.</li>
+</ul>
+<h2>Excluded routes and eligibility</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Status</th>
+<th style="text-align: right;">First attempts</th>
+<th style="text-align: right;">Observed median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Respan Span-02</td>
+<td>Stopped: median above 2 seconds</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">2.166 s</td>
+</tr>
+<tr>
+<td>ScaleDown Classify-1</td>
+<td>Current pinned image route rejects image input</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">Not scored</td>
+</tr>
+</tbody>
+</table>
+<p>Span's 21-question partial accuracy is reported only in the evidence; it is not comparable to a full-bank score. ScaleDown's catalog advertises image input, but its pinned route returned HTTP 400 rejecting <code>image_url</code> parts. No caption or OCR replacement was used. Nimble, Microsoft Decision, Drex, Kev, Tev and Solar have no documented native-image route in the current reviewed access. A successful response to encoded image-shaped JSON alone is not proof of pixel decoding. See the <a href="native_images_2026-10-20/image_capabilities.json">dated capability review</a>.</p>
+<h2>Bank, reference results and limitations</h2>
+<p>The bank contains <strong>20 categories × 10 questions</strong>, using 227 tested compressed image files (177 single-image questions, 19 pairs and four triples). There are 187 reasoning/grounded-decision questions and 13 perception controls. Options vary: 64 questions have five choices, 135 have four, and one has three. Uniform guessing therefore averages <strong>23.44%</strong>, not 20% or 25% for every question.</p>
+<p>The existing C1 preparation reduced 75.73 MiB to 54.36 MiB (28.2% fewer bytes). No images were recompressed or resized for this expansion. Smaller file size does not necessarily mean fewer billed image tokens. <strong>221 of 227 images are redistributable in this packet</strong>; six Our World in Data charts remain withheld pending third-party source-terms review. Their original private snapshots were used in all scored runs, not replacement downloads. Public hashes, source links, questions and results remain available.</p>
+<p>The supplied key was kept outside execution and unchanged during these runs. Offline scoring reproduces <strong>all five original model totals</strong>, including the archived LLMs. This is a consistency check against the existing reference, not a new independent verification of every gold answer. A 10/10 category score has a wide uncertainty interval and is not a reliability certificate. No image file is shared across primary questions and the manifest assigns 200 scene groups, but source collections and task types recur. Item-level confidence intervals and pairwise tests should not be read as independent population estimates.</p>
+<p><a href="questions/README.md">Browse questions and source images</a> · <a href="gallery.html">Image gallery</a> · <a href="THIRD_PARTY_NOTICES.md">Attribution and licenses</a> · <a href="native_images_2026-10-20/summary.json">Expanded evidence</a> · <a href="native_images_2026-10-20/family_scores.csv">Family CSV</a> · <a href="native_images_2026-10-20/attempts.jsonl">Native route ledger</a> · <a href="native_images_2026-10-20/compatibility_probes.jsonl">Admission probes</a> · <a href="native_images_2026-10-20/model_manifests.json">Model identities</a> · <a href="native_images_2026-10-20/audit_receipt.json">Audit receipt</a>.</p>
+<p>The three earlier general LLM runs are preserved in the <a href="https://github.com/etsabary/visual-decision-benchmark/blob/433f9368c7e3f594febf7f42c6cefaae75cafca7/README.md">original five-model report</a> and <a href="results/summary.json">original results</a>: regular Luna 117/200, Gemini 2.5 Flash-Lite 75/200 and GPT-5.4 nano 70/200. They are not deleted, rescored, or silently replaced. They are outside the current specialized-model ranking and graphics; they are not frontier LLM references.</p>
+<p>The separate <a href="https://github.com/etsabary/system-1-decision-benchmark">System 1 text benchmark</a> uses 1,342 text questions. Its percentages and image percentages must not be combined into one score.</p>
+<h2>Offline verification</h2>
+<pre><code class="language-bash">python3 validate.py
+python3 validate_native_images.py
+python3 -m unittest -v test_benchmark test_image_models_2026_10_20 test_native_analysis test_native_publication
+# Optional, with the original external key; never needed for API execution:
+python3 score_native_images.py --answer-key /path/to/reference_key.jsonl
+</code></pre>
+<p>The original checksums remain intact, with superseded presentation files preserved under <code>archive_2026-10-16/</code>. The new release has a separate seal. Public validation checks file integrity, input identity, allowed choices, coverage, timing and exact-decimal costs, without network calls or credentials. Re-scoring requires the external key. Six withheld charts prevent complete request-body reconstruction using the public images alone; no validator substitutes new chart versions.</p><footer>Reviewed image benchmark · October 20, 2026 · Exact source and result records on GitHub.</footer></main><script>for(const h of document.querySelectorAll('h2'))h.id=h.textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-$/,'');
+function tint(v){const a=[255,244,208],b=[24,63,122];return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*v)).join(',')})`}
+for(const c of document.querySelectorAll('.accuracy')){const v=+c.dataset.ratio;c.style.background=tint(v);c.style.color=v>=.65?'white':'#183044'}
+document.querySelector('#model-filter').addEventListener('input',e=>{const q=e.target.value.toLowerCase();for(const r of document.querySelectorAll('[data-model]'))r.hidden=!r.dataset.model.toLowerCase().includes(q)});
+for(const t of document.querySelectorAll('table:not(.family-table)')){const wrap=document.createElement('div');wrap.className='table-scroll';t.before(wrap);wrap.append(t)}
+const overall=[...document.querySelectorAll('table')].find(t=>t.querySelector('thead')?.textContent.includes('Actual 200 cost'));
+if(overall){for(const r of overall.tBodies[0].rows){const a=parseFloat(r.cells[2].textContent)/100;r.cells[2].style.background=tint(a);r.cells[2].style.color=a>=.65?'white':'#183044';
+for(const i of [4,5,6]){const ms=parseFloat(r.cells[i].textContent)*1000;r.cells[i].style.background=ms<=500?'#d9efdf':ms<=1000?'#fff0be':ms<=2000?'#ffe0c9':'#f6d3da'}
+const text=r.cells[8].textContent;if(text.includes('Free')){r.cells[8].style.background='#edf0f3'}else{const v=parseFloat(text.replace(/[^0-9.]/g,''));r.cells[8].style.background=v<=.05?'#d9efdf':v<=.15?'#fff0be':v<=.5?'#ffe0c9':'#f6d3da'}}}
+</script></body></html>

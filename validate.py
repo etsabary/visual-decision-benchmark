@@ -6,12 +6,13 @@ import json
 from pathlib import Path
 import re
 from benchmark import ROOT, MODELS, rows, payload, canonical, parse_saved_choice, cost
+from image_publication_history import historical_path
 
 
 def validate(root=ROOT,verify_payloads=True):
     seal=json.loads((root/'checksums.json').read_text())
     for name,expected in seal['files'].items():
-        path=root/name
+        path=historical_path(root,name)
         if not path.is_file() or sha256(path.read_bytes()).hexdigest()!=expected:raise ValueError('Checksum mismatch: '+name)
     questions={q['candidate_id']:q for q in rows(root/'data/questions.jsonl')}
     assets={a['asset_id']:a for a in rows(root/'data/assets.jsonl')}
@@ -63,7 +64,7 @@ def validate(root=ROOT,verify_payloads=True):
     for name in ('questions','assets','provenance','attempts','request_plan','compatibility_probes'):
         for r in rows(root/f'data/{name}.jsonl'):assert not forbidden.intersection(r),name
     for path in root.rglob('*'):
-        if not path.is_file() or '.git' in path.parts or '__pycache__' in path.parts:continue
+        if not path.is_file() or any(p in path.relative_to(root).parts for p in ('.git','__pycache__','runs','.venv')):continue
         assert not ('PRIVATE' in path.name or path.name.startswith('.env'))
         if path.suffix in ('.json','.jsonl','.md','.html','.svg','.csv','.py'):
             text=path.read_text()

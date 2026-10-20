@@ -1,3 +1,25 @@
+# October 20 native-image expansion
+
+The current report ranks 14 specialized models: 12 new completed 200-question runs and the unchanged October 15 Jev 1.14 and Luna Decisions runs. The three original general LLM runs remain historical references outside this primary cohort. The original protocol follows below, explicitly as the October 15 protocol; its five-model comparisons do not describe the expanded cohort.
+
+`image_models_2026_10_20.py` is the answer-blind executor. It reads frozen public questions, an old blind image-path manifest and exact compressed C1 image bytes, and never imports the offline scorer or reads the gold key. It binds model, provider, ordered image hashes, wording, rules, options, request-body SHA256 and its own software hashes before scoring. No question, key or image was changed in the expansion.
+
+OpenRouter calls use its native Decisions endpoint with an explicit provider pin and no fallback. Amos receives documented top-level bare-base64 `images`; d3 receives top-level base64 data URLs; Sqwish receives image URL parts in `state`. These are provider-specific image transports for the same pixels, not OCR or caption substitutes. Admission used one image and an ordered three-image set. Admission does not guarantee success on every later file.
+
+The first admission pass incorrectly treated nonzero output-token telemetry as proof of generation rather than a native typed choice. Before any scored call, this check was removed: four already-saved valid probe responses were reinterpreted without repeat inference, and the original raw evidence and parser review were retained privately. d3's first unscored bare-base64 probe was rejected; its documented data-URL encoding then passed with the same pixels. All of these controls and their charges remain separate from scored results. Token telemetry is published; internal reasoning is not inferred from that field.
+
+After 20 first attempts and after each later first attempt, a cumulative median above 2,000 ms stops the route. Span crossed this at question21 and was stopped. No partial score enters the full-bank table. ScaleDown's current pinned route rejected image parts despite catalog image support, so it received no scored cases. The other 12 new routes completed200. No native-model accuracy cutoff was applied.
+
+Primary accuracy counts every scheduled first attempt; errors are unsuccessful. Only transport failures or HTTP408/429/5xx can receive one recovery. No wrong valid answer, formatting failure, or deterministic HTTP400 is retried. Retry costs are included in core cost while primary accuracy and timing use first attempts only. Dispatches, attempts, results and completion receipts are separately journalled. An unresolved possibly billed dispatch is not silently replayed.
+
+Each timer starts before a fresh HTTPS connection and includes upload and complete response-body receipt. Local encoding, request construction and rate/retry waits are excluded. At most four independent serial model streams run concurrently. Summaries include mean, median and linearly interpolated inclusive p95 on all first attempts, not just usable answers. This is a route-and-date comparison, not same-weights mode isolation.
+
+Money is summed with exact-decimal arithmetic from API receipts. Missing error charges remain missing, not zero. d3 and Amos currently offer free public access and no metered cost receipt; they are not represented as measured $0 prices. Costs per1,000 normalize each actual200. Probes, retries and stopped runs have their own accounting. The executor's $5 guard applies only to known scored charges, so unreported or in-flight costs prevent a hard spending guarantee.
+
+Offline analysis uses the original key SHA256 from the frozen October15 manifest. All five original totals were reproduced before comparison. Public results contain no gold labels or item-level correctness. The old seal remains unchanged with superseded presentation snapshots under `archive_2026-10-16/`; the new dated bundle has a separate seal. External-key scoring is available independently of private execution state. This is not a new blind audit of the gold answers.
+
+## Original October 15 protocol (historical)
+
 # Methodology for the October 15 2026 image benchmark
 
 ## Frozen questions and image inputs
