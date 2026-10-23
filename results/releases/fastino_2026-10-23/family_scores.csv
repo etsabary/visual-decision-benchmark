@@ -1,0 +1,301 @@
+model_id,model,family_id,family,correct,questions,accuracy
+amos_large,Amos 1 Large,V01,Attribute binding and set logic,9,10,0.9
+amos_large,Amos 1 Large,V02,Conditional counting,9,10,0.9
+amos_large,Amos 1 Large,V03,Spatial relationships,8,10,0.8
+amos_large,Amos 1 Large,V04,Connectivity and reachability,6,10,0.6
+amos_large,Amos 1 Large,V05,Navigation and planning,7,10,0.7
+amos_large,Amos 1 Large,V06,Rotation and reflection,6,10,0.6
+amos_large,Amos 1 Large,V07,"Geometry, folding and fit",7,10,0.7
+amos_large,Amos 1 Large,V08,Visual rule application,7,10,0.7
+amos_large,Amos 1 Large,V09,Sequential state tracking,9,10,0.9
+amos_large,Amos 1 Large,V10,Constraint satisfaction,6,10,0.6
+amos_large,Amos 1 Large,V11,Flowcharts and decision trees,8,10,0.8
+amos_large,Amos 1 Large,V12,Causal and counterfactual reasoning,7,10,0.7
+amos_large,Amos 1 Large,V13,Charts and quantitative comparisons,7,10,0.7
+amos_large,Amos 1 Large,V14,Document reconciliation,8,10,0.8
+amos_large,Amos 1 Large,V15,Interface state decisions,10,10,1.0
+amos_large,Amos 1 Large,V16,Inspection against a reference,10,10,1.0
+amos_large,Amos 1 Large,V17,Matching across images,9,10,0.9
+amos_large,Amos 1 Large,V18,Image and text consistency,9,10,0.9
+amos_large,Amos 1 Large,V19,Perspective and knowledge tracking,8,10,0.8
+amos_large,Amos 1 Large,V20,Insufficient evidence,9,10,0.9
+fastino_glide,Fastino GLiDE,V01,Attribute binding and set logic,9,10,0.9
+fastino_glide,Fastino GLiDE,V02,Conditional counting,8,10,0.8
+fastino_glide,Fastino GLiDE,V03,Spatial relationships,9,10,0.9
+fastino_glide,Fastino GLiDE,V04,Connectivity and reachability,6,10,0.6
+fastino_glide,Fastino GLiDE,V05,Navigation and planning,5,10,0.5
+fastino_glide,Fastino GLiDE,V06,Rotation and reflection,6,10,0.6
+fastino_glide,Fastino GLiDE,V07,"Geometry, folding and fit",6,10,0.6
+fastino_glide,Fastino GLiDE,V08,Visual rule application,6,10,0.6
+fastino_glide,Fastino GLiDE,V09,Sequential state tracking,10,10,1.0
+fastino_glide,Fastino GLiDE,V10,Constraint satisfaction,7,10,0.7
+fastino_glide,Fastino GLiDE,V11,Flowcharts and decision trees,9,10,0.9
+fastino_glide,Fastino GLiDE,V12,Causal and counterfactual reasoning,8,10,0.8
+fastino_glide,Fastino GLiDE,V13,Charts and quantitative comparisons,9,10,0.9
+fastino_glide,Fastino GLiDE,V14,Document reconciliation,7,10,0.7
+fastino_glide,Fastino GLiDE,V15,Interface state decisions,10,10,1.0
+fastino_glide,Fastino GLiDE,V16,Inspection against a reference,10,10,1.0
+fastino_glide,Fastino GLiDE,V17,Matching across images,9,10,0.9
+fastino_glide,Fastino GLiDE,V18,Image and text consistency,9,10,0.9
+fastino_glide,Fastino GLiDE,V19,Perspective and knowledge tracking,6,10,0.6
+fastino_glide,Fastino GLiDE,V20,Insufficient evidence,9,10,0.9
+d3_turbo,d3-turbo,V01,Attribute binding and set logic,9,10,0.9
+d3_turbo,d3-turbo,V02,Conditional counting,7,10,0.7
+d3_turbo,d3-turbo,V03,Spatial relationships,8,10,0.8
+d3_turbo,d3-turbo,V04,Connectivity and reachability,7,10,0.7
+d3_turbo,d3-turbo,V05,Navigation and planning,7,10,0.7
+d3_turbo,d3-turbo,V06,Rotation and reflection,6,10,0.6
+d3_turbo,d3-turbo,V07,"Geometry, folding and fit",7,10,0.7
+d3_turbo,d3-turbo,V08,Visual rule application,5,10,0.5
+d3_turbo,d3-turbo,V09,Sequential state tracking,10,10,1.0
+d3_turbo,d3-turbo,V10,Constraint satisfaction,5,10,0.5
+d3_turbo,d3-turbo,V11,Flowcharts and decision trees,7,10,0.7
+d3_turbo,d3-turbo,V12,Causal and counterfactual reasoning,6,10,0.6
+d3_turbo,d3-turbo,V13,Charts and quantitative comparisons,10,10,1.0
+d3_turbo,d3-turbo,V14,Document reconciliation,6,10,0.6
+d3_turbo,d3-turbo,V15,Interface state decisions,10,10,1.0
+d3_turbo,d3-turbo,V16,Inspection against a reference,10,10,1.0
+d3_turbo,d3-turbo,V17,Matching across images,10,10,1.0
+d3_turbo,d3-turbo,V18,Image and text consistency,10,10,1.0
+d3_turbo,d3-turbo,V19,Perspective and knowledge tracking,6,10,0.6
+d3_turbo,d3-turbo,V20,Insufficient evidence,9,10,0.9
+pplx_decider12,Perplexity Decider v1.2,V01,Attribute binding and set logic,10,10,1.0
+pplx_decider12,Perplexity Decider v1.2,V02,Conditional counting,8,10,0.8
+pplx_decider12,Perplexity Decider v1.2,V03,Spatial relationships,8,10,0.8
+pplx_decider12,Perplexity Decider v1.2,V04,Connectivity and reachability,4,10,0.4
+pplx_decider12,Perplexity Decider v1.2,V05,Navigation and planning,7,10,0.7
+pplx_decider12,Perplexity Decider v1.2,V06,Rotation and reflection,5,10,0.5
+pplx_decider12,Perplexity Decider v1.2,V07,"Geometry, folding and fit",5,10,0.5
+pplx_decider12,Perplexity Decider v1.2,V08,Visual rule application,5,10,0.5
+pplx_decider12,Perplexity Decider v1.2,V09,Sequential state tracking,9,10,0.9
+pplx_decider12,Perplexity Decider v1.2,V10,Constraint satisfaction,4,10,0.4
+pplx_decider12,Perplexity Decider v1.2,V11,Flowcharts and decision trees,8,10,0.8
+pplx_decider12,Perplexity Decider v1.2,V12,Causal and counterfactual reasoning,9,10,0.9
+pplx_decider12,Perplexity Decider v1.2,V13,Charts and quantitative comparisons,10,10,1.0
+pplx_decider12,Perplexity Decider v1.2,V14,Document reconciliation,7,10,0.7
+pplx_decider12,Perplexity Decider v1.2,V15,Interface state decisions,10,10,1.0
+pplx_decider12,Perplexity Decider v1.2,V16,Inspection against a reference,10,10,1.0
+pplx_decider12,Perplexity Decider v1.2,V17,Matching across images,9,10,0.9
+pplx_decider12,Perplexity Decider v1.2,V18,Image and text consistency,9,10,0.9
+pplx_decider12,Perplexity Decider v1.2,V19,Perspective and knowledge tracking,6,10,0.6
+pplx_decider12,Perplexity Decider v1.2,V20,Insufficient evidence,9,10,0.9
+liquid_ultra,Liquid d1-ultra,V01,Attribute binding and set logic,9,10,0.9
+liquid_ultra,Liquid d1-ultra,V02,Conditional counting,8,10,0.8
+liquid_ultra,Liquid d1-ultra,V03,Spatial relationships,8,10,0.8
+liquid_ultra,Liquid d1-ultra,V04,Connectivity and reachability,6,10,0.6
+liquid_ultra,Liquid d1-ultra,V05,Navigation and planning,5,10,0.5
+liquid_ultra,Liquid d1-ultra,V06,Rotation and reflection,5,10,0.5
+liquid_ultra,Liquid d1-ultra,V07,"Geometry, folding and fit",7,10,0.7
+liquid_ultra,Liquid d1-ultra,V08,Visual rule application,3,10,0.3
+liquid_ultra,Liquid d1-ultra,V09,Sequential state tracking,9,10,0.9
+liquid_ultra,Liquid d1-ultra,V10,Constraint satisfaction,5,10,0.5
+liquid_ultra,Liquid d1-ultra,V11,Flowcharts and decision trees,9,10,0.9
+liquid_ultra,Liquid d1-ultra,V12,Causal and counterfactual reasoning,6,10,0.6
+liquid_ultra,Liquid d1-ultra,V13,Charts and quantitative comparisons,9,10,0.9
+liquid_ultra,Liquid d1-ultra,V14,Document reconciliation,8,10,0.8
+liquid_ultra,Liquid d1-ultra,V15,Interface state decisions,10,10,1.0
+liquid_ultra,Liquid d1-ultra,V16,Inspection against a reference,10,10,1.0
+liquid_ultra,Liquid d1-ultra,V17,Matching across images,8,10,0.8
+liquid_ultra,Liquid d1-ultra,V18,Image and text consistency,10,10,1.0
+liquid_ultra,Liquid d1-ultra,V19,Perspective and knowledge tracking,4,10,0.4
+liquid_ultra,Liquid d1-ultra,V20,Insufficient evidence,10,10,1.0
+kettei_fat,kettei-fat,V01,Attribute binding and set logic,9,10,0.9
+kettei_fat,kettei-fat,V02,Conditional counting,8,10,0.8
+kettei_fat,kettei-fat,V03,Spatial relationships,9,10,0.9
+kettei_fat,kettei-fat,V04,Connectivity and reachability,4,10,0.4
+kettei_fat,kettei-fat,V05,Navigation and planning,6,10,0.6
+kettei_fat,kettei-fat,V06,Rotation and reflection,5,10,0.5
+kettei_fat,kettei-fat,V07,"Geometry, folding and fit",6,10,0.6
+kettei_fat,kettei-fat,V08,Visual rule application,6,10,0.6
+kettei_fat,kettei-fat,V09,Sequential state tracking,7,10,0.7
+kettei_fat,kettei-fat,V10,Constraint satisfaction,5,10,0.5
+kettei_fat,kettei-fat,V11,Flowcharts and decision trees,9,10,0.9
+kettei_fat,kettei-fat,V12,Causal and counterfactual reasoning,7,10,0.7
+kettei_fat,kettei-fat,V13,Charts and quantitative comparisons,8,10,0.8
+kettei_fat,kettei-fat,V14,Document reconciliation,5,10,0.5
+kettei_fat,kettei-fat,V15,Interface state decisions,10,10,1.0
+kettei_fat,kettei-fat,V16,Inspection against a reference,8,10,0.8
+kettei_fat,kettei-fat,V17,Matching across images,9,10,0.9
+kettei_fat,kettei-fat,V18,Image and text consistency,9,10,0.9
+kettei_fat,kettei-fat,V19,Perspective and knowledge tracking,8,10,0.8
+kettei_fat,kettei-fat,V20,Insufficient evidence,9,10,0.9
+clef,Cloudflare Clef,V01,Attribute binding and set logic,9,10,0.9
+clef,Cloudflare Clef,V02,Conditional counting,6,10,0.6
+clef,Cloudflare Clef,V03,Spatial relationships,10,10,1.0
+clef,Cloudflare Clef,V04,Connectivity and reachability,7,10,0.7
+clef,Cloudflare Clef,V05,Navigation and planning,6,10,0.6
+clef,Cloudflare Clef,V06,Rotation and reflection,6,10,0.6
+clef,Cloudflare Clef,V07,"Geometry, folding and fit",5,10,0.5
+clef,Cloudflare Clef,V08,Visual rule application,4,10,0.4
+clef,Cloudflare Clef,V09,Sequential state tracking,10,10,1.0
+clef,Cloudflare Clef,V10,Constraint satisfaction,7,10,0.7
+clef,Cloudflare Clef,V11,Flowcharts and decision trees,7,10,0.7
+clef,Cloudflare Clef,V12,Causal and counterfactual reasoning,4,10,0.4
+clef,Cloudflare Clef,V13,Charts and quantitative comparisons,6,10,0.6
+clef,Cloudflare Clef,V14,Document reconciliation,7,10,0.7
+clef,Cloudflare Clef,V15,Interface state decisions,10,10,1.0
+clef,Cloudflare Clef,V16,Inspection against a reference,10,10,1.0
+clef,Cloudflare Clef,V17,Matching across images,8,10,0.8
+clef,Cloudflare Clef,V18,Image and text consistency,9,10,0.9
+clef,Cloudflare Clef,V19,Perspective and knowledge tracking,4,10,0.4
+clef,Cloudflare Clef,V20,Insufficient evidence,10,10,1.0
+jev113,Jev 1.13,V01,Attribute binding and set logic,9,10,0.9
+jev113,Jev 1.13,V02,Conditional counting,8,10,0.8
+jev113,Jev 1.13,V03,Spatial relationships,8,10,0.8
+jev113,Jev 1.13,V04,Connectivity and reachability,5,10,0.5
+jev113,Jev 1.13,V05,Navigation and planning,4,10,0.4
+jev113,Jev 1.13,V06,Rotation and reflection,6,10,0.6
+jev113,Jev 1.13,V07,"Geometry, folding and fit",3,10,0.3
+jev113,Jev 1.13,V08,Visual rule application,5,10,0.5
+jev113,Jev 1.13,V09,Sequential state tracking,6,10,0.6
+jev113,Jev 1.13,V10,Constraint satisfaction,6,10,0.6
+jev113,Jev 1.13,V11,Flowcharts and decision trees,7,10,0.7
+jev113,Jev 1.13,V12,Causal and counterfactual reasoning,7,10,0.7
+jev113,Jev 1.13,V13,Charts and quantitative comparisons,7,10,0.7
+jev113,Jev 1.13,V14,Document reconciliation,7,10,0.7
+jev113,Jev 1.13,V15,Interface state decisions,10,10,1.0
+jev113,Jev 1.13,V16,Inspection against a reference,10,10,1.0
+jev113,Jev 1.13,V17,Matching across images,9,10,0.9
+jev113,Jev 1.13,V18,Image and text consistency,9,10,0.9
+jev113,Jev 1.13,V19,Perspective and knowledge tracking,6,10,0.6
+jev113,Jev 1.13,V20,Insufficient evidence,10,10,1.0
+mercury_decide,Mercury Decide,V01,Attribute binding and set logic,9,10,0.9
+mercury_decide,Mercury Decide,V02,Conditional counting,8,10,0.8
+mercury_decide,Mercury Decide,V03,Spatial relationships,7,10,0.7
+mercury_decide,Mercury Decide,V04,Connectivity and reachability,3,10,0.3
+mercury_decide,Mercury Decide,V05,Navigation and planning,5,10,0.5
+mercury_decide,Mercury Decide,V06,Rotation and reflection,5,10,0.5
+mercury_decide,Mercury Decide,V07,"Geometry, folding and fit",6,10,0.6
+mercury_decide,Mercury Decide,V08,Visual rule application,3,10,0.3
+mercury_decide,Mercury Decide,V09,Sequential state tracking,9,10,0.9
+mercury_decide,Mercury Decide,V10,Constraint satisfaction,6,10,0.6
+mercury_decide,Mercury Decide,V11,Flowcharts and decision trees,6,10,0.6
+mercury_decide,Mercury Decide,V12,Causal and counterfactual reasoning,6,10,0.6
+mercury_decide,Mercury Decide,V13,Charts and quantitative comparisons,8,10,0.8
+mercury_decide,Mercury Decide,V14,Document reconciliation,8,10,0.8
+mercury_decide,Mercury Decide,V15,Interface state decisions,10,10,1.0
+mercury_decide,Mercury Decide,V16,Inspection against a reference,10,10,1.0
+mercury_decide,Mercury Decide,V17,Matching across images,8,10,0.8
+mercury_decide,Mercury Decide,V18,Image and text consistency,9,10,0.9
+mercury_decide,Mercury Decide,V19,Perspective and knowledge tracking,7,10,0.7
+mercury_decide,Mercury Decide,V20,Insufficient evidence,9,10,0.9
+jev114,Jev 1.14,V01,Attribute binding and set logic,10,10,1.0
+jev114,Jev 1.14,V02,Conditional counting,9,10,0.9
+jev114,Jev 1.14,V03,Spatial relationships,9,10,0.9
+jev114,Jev 1.14,V04,Connectivity and reachability,4,10,0.4
+jev114,Jev 1.14,V05,Navigation and planning,7,10,0.7
+jev114,Jev 1.14,V06,Rotation and reflection,3,10,0.3
+jev114,Jev 1.14,V07,"Geometry, folding and fit",4,10,0.4
+jev114,Jev 1.14,V08,Visual rule application,3,10,0.3
+jev114,Jev 1.14,V09,Sequential state tracking,6,10,0.6
+jev114,Jev 1.14,V10,Constraint satisfaction,6,10,0.6
+jev114,Jev 1.14,V11,Flowcharts and decision trees,9,10,0.9
+jev114,Jev 1.14,V12,Causal and counterfactual reasoning,7,10,0.7
+jev114,Jev 1.14,V13,Charts and quantitative comparisons,7,10,0.7
+jev114,Jev 1.14,V14,Document reconciliation,6,10,0.6
+jev114,Jev 1.14,V15,Interface state decisions,10,10,1.0
+jev114,Jev 1.14,V16,Inspection against a reference,10,10,1.0
+jev114,Jev 1.14,V17,Matching across images,7,10,0.7
+jev114,Jev 1.14,V18,Image and text consistency,10,10,1.0
+jev114,Jev 1.14,V19,Perspective and knowledge tracking,4,10,0.4
+jev114,Jev 1.14,V20,Insufficient evidence,10,10,1.0
+liquid_d1,Liquid d1,V01,Attribute binding and set logic,10,10,1.0
+liquid_d1,Liquid d1,V02,Conditional counting,8,10,0.8
+liquid_d1,Liquid d1,V03,Spatial relationships,7,10,0.7
+liquid_d1,Liquid d1,V04,Connectivity and reachability,4,10,0.4
+liquid_d1,Liquid d1,V05,Navigation and planning,5,10,0.5
+liquid_d1,Liquid d1,V06,Rotation and reflection,6,10,0.6
+liquid_d1,Liquid d1,V07,"Geometry, folding and fit",5,10,0.5
+liquid_d1,Liquid d1,V08,Visual rule application,4,10,0.4
+liquid_d1,Liquid d1,V09,Sequential state tracking,8,10,0.8
+liquid_d1,Liquid d1,V10,Constraint satisfaction,4,10,0.4
+liquid_d1,Liquid d1,V11,Flowcharts and decision trees,8,10,0.8
+liquid_d1,Liquid d1,V12,Causal and counterfactual reasoning,4,10,0.4
+liquid_d1,Liquid d1,V13,Charts and quantitative comparisons,8,10,0.8
+liquid_d1,Liquid d1,V14,Document reconciliation,5,10,0.5
+liquid_d1,Liquid d1,V15,Interface state decisions,10,10,1.0
+liquid_d1,Liquid d1,V16,Inspection against a reference,10,10,1.0
+liquid_d1,Liquid d1,V17,Matching across images,6,10,0.6
+liquid_d1,Liquid d1,V18,Image and text consistency,9,10,0.9
+liquid_d1,Liquid d1,V19,Perspective and knowledge tracking,6,10,0.6
+liquid_d1,Liquid d1,V20,Insufficient evidence,8,10,0.8
+pplx_flash12,Perplexity Decider Flash v1.2,V01,Attribute binding and set logic,9,10,0.9
+pplx_flash12,Perplexity Decider Flash v1.2,V02,Conditional counting,4,10,0.4
+pplx_flash12,Perplexity Decider Flash v1.2,V03,Spatial relationships,7,10,0.7
+pplx_flash12,Perplexity Decider Flash v1.2,V04,Connectivity and reachability,4,10,0.4
+pplx_flash12,Perplexity Decider Flash v1.2,V05,Navigation and planning,4,10,0.4
+pplx_flash12,Perplexity Decider Flash v1.2,V06,Rotation and reflection,5,10,0.5
+pplx_flash12,Perplexity Decider Flash v1.2,V07,"Geometry, folding and fit",3,10,0.3
+pplx_flash12,Perplexity Decider Flash v1.2,V08,Visual rule application,3,10,0.3
+pplx_flash12,Perplexity Decider Flash v1.2,V09,Sequential state tracking,7,10,0.7
+pplx_flash12,Perplexity Decider Flash v1.2,V10,Constraint satisfaction,4,10,0.4
+pplx_flash12,Perplexity Decider Flash v1.2,V11,Flowcharts and decision trees,7,10,0.7
+pplx_flash12,Perplexity Decider Flash v1.2,V12,Causal and counterfactual reasoning,6,10,0.6
+pplx_flash12,Perplexity Decider Flash v1.2,V13,Charts and quantitative comparisons,8,10,0.8
+pplx_flash12,Perplexity Decider Flash v1.2,V14,Document reconciliation,6,10,0.6
+pplx_flash12,Perplexity Decider Flash v1.2,V15,Interface state decisions,10,10,1.0
+pplx_flash12,Perplexity Decider Flash v1.2,V16,Inspection against a reference,10,10,1.0
+pplx_flash12,Perplexity Decider Flash v1.2,V17,Matching across images,8,10,0.8
+pplx_flash12,Perplexity Decider Flash v1.2,V18,Image and text consistency,9,10,0.9
+pplx_flash12,Perplexity Decider Flash v1.2,V19,Perspective and knowledge tracking,6,10,0.6
+pplx_flash12,Perplexity Decider Flash v1.2,V20,Insufficient evidence,9,10,0.9
+clef_flash,Cloudflare Clef Flash,V01,Attribute binding and set logic,9,10,0.9
+clef_flash,Cloudflare Clef Flash,V02,Conditional counting,5,10,0.5
+clef_flash,Cloudflare Clef Flash,V03,Spatial relationships,7,10,0.7
+clef_flash,Cloudflare Clef Flash,V04,Connectivity and reachability,5,10,0.5
+clef_flash,Cloudflare Clef Flash,V05,Navigation and planning,2,10,0.2
+clef_flash,Cloudflare Clef Flash,V06,Rotation and reflection,6,10,0.6
+clef_flash,Cloudflare Clef Flash,V07,"Geometry, folding and fit",5,10,0.5
+clef_flash,Cloudflare Clef Flash,V08,Visual rule application,6,10,0.6
+clef_flash,Cloudflare Clef Flash,V09,Sequential state tracking,9,10,0.9
+clef_flash,Cloudflare Clef Flash,V10,Constraint satisfaction,5,10,0.5
+clef_flash,Cloudflare Clef Flash,V11,Flowcharts and decision trees,7,10,0.7
+clef_flash,Cloudflare Clef Flash,V12,Causal and counterfactual reasoning,4,10,0.4
+clef_flash,Cloudflare Clef Flash,V13,Charts and quantitative comparisons,8,10,0.8
+clef_flash,Cloudflare Clef Flash,V14,Document reconciliation,4,10,0.4
+clef_flash,Cloudflare Clef Flash,V15,Interface state decisions,7,10,0.7
+clef_flash,Cloudflare Clef Flash,V16,Inspection against a reference,9,10,0.9
+clef_flash,Cloudflare Clef Flash,V17,Matching across images,8,10,0.8
+clef_flash,Cloudflare Clef Flash,V18,Image and text consistency,9,10,0.9
+clef_flash,Cloudflare Clef Flash,V19,Perspective and knowledge tracking,4,10,0.4
+clef_flash,Cloudflare Clef Flash,V20,Insufficient evidence,7,10,0.7
+luna_decisions,Luna 6 Decisions,V01,Attribute binding and set logic,9,10,0.9
+luna_decisions,Luna 6 Decisions,V02,Conditional counting,5,10,0.5
+luna_decisions,Luna 6 Decisions,V03,Spatial relationships,6,10,0.6
+luna_decisions,Luna 6 Decisions,V04,Connectivity and reachability,3,10,0.3
+luna_decisions,Luna 6 Decisions,V05,Navigation and planning,3,10,0.3
+luna_decisions,Luna 6 Decisions,V06,Rotation and reflection,8,10,0.8
+luna_decisions,Luna 6 Decisions,V07,"Geometry, folding and fit",4,10,0.4
+luna_decisions,Luna 6 Decisions,V08,Visual rule application,4,10,0.4
+luna_decisions,Luna 6 Decisions,V09,Sequential state tracking,7,10,0.7
+luna_decisions,Luna 6 Decisions,V10,Constraint satisfaction,1,10,0.1
+luna_decisions,Luna 6 Decisions,V11,Flowcharts and decision trees,3,10,0.3
+luna_decisions,Luna 6 Decisions,V12,Causal and counterfactual reasoning,6,10,0.6
+luna_decisions,Luna 6 Decisions,V13,Charts and quantitative comparisons,8,10,0.8
+luna_decisions,Luna 6 Decisions,V14,Document reconciliation,6,10,0.6
+luna_decisions,Luna 6 Decisions,V15,Interface state decisions,9,10,0.9
+luna_decisions,Luna 6 Decisions,V16,Inspection against a reference,9,10,0.9
+luna_decisions,Luna 6 Decisions,V17,Matching across images,6,10,0.6
+luna_decisions,Luna 6 Decisions,V18,Image and text consistency,8,10,0.8
+luna_decisions,Luna 6 Decisions,V19,Perspective and knowledge tracking,6,10,0.6
+luna_decisions,Luna 6 Decisions,V20,Insufficient evidence,10,10,1.0
+clef_omni,Cloudflare Clef Omni,V01,Attribute binding and set logic,9,10,0.9
+clef_omni,Cloudflare Clef Omni,V02,Conditional counting,4,10,0.4
+clef_omni,Cloudflare Clef Omni,V03,Spatial relationships,5,10,0.5
+clef_omni,Cloudflare Clef Omni,V04,Connectivity and reachability,3,10,0.3
+clef_omni,Cloudflare Clef Omni,V05,Navigation and planning,2,10,0.2
+clef_omni,Cloudflare Clef Omni,V06,Rotation and reflection,3,10,0.3
+clef_omni,Cloudflare Clef Omni,V07,"Geometry, folding and fit",5,10,0.5
+clef_omni,Cloudflare Clef Omni,V08,Visual rule application,1,10,0.1
+clef_omni,Cloudflare Clef Omni,V09,Sequential state tracking,6,10,0.6
+clef_omni,Cloudflare Clef Omni,V10,Constraint satisfaction,2,10,0.2
+clef_omni,Cloudflare Clef Omni,V11,Flowcharts and decision trees,3,10,0.3
+clef_omni,Cloudflare Clef Omni,V12,Causal and counterfactual reasoning,7,10,0.7
+clef_omni,Cloudflare Clef Omni,V13,Charts and quantitative comparisons,6,10,0.6
+clef_omni,Cloudflare Clef Omni,V14,Document reconciliation,4,10,0.4
+clef_omni,Cloudflare Clef Omni,V15,Interface state decisions,8,10,0.8
+clef_omni,Cloudflare Clef Omni,V16,Inspection against a reference,8,10,0.8
+clef_omni,Cloudflare Clef Omni,V17,Matching across images,8,10,0.8
+clef_omni,Cloudflare Clef Omni,V18,Image and text consistency,10,10,1.0
+clef_omni,Cloudflare Clef Omni,V19,Perspective and knowledge tracking,5,10,0.5
+clef_omni,Cloudflare Clef Omni,V20,Insufficient evidence,6,10,0.6

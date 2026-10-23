@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED_COMPLETE_FASTINO_IMAGE_200",
+  "n": 200,
+  "correct": 158,
+  "prior_14_records_unchanged": true,
+  "bank_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "private_aggregate_sha256": "d66c822fd61960a866e21f140d347e73138f46e8a9b41129bbeb6cf5236f89bf",
+  "capture_files_sha256": {
+    "manifest.json": "daf7c49a42a670f8395e07f4f3d476d6a54daa29985428938169067ad0fc2b05",
+    "software.json": "c0fa4dfadd7e37ec30003f356fd3ac5c70f4cbf72d80d86a075186bf18b5fd61",
+    "model_metadata.json": "e9754c6842db2aa7389e4fe14baa9db7f23da3a98540057a1680682d6f78649a",
+    "dispatches.jsonl": "086e54271af48333befa5d479626ed2034bf6dba1d2a9fb64f84f45a3613d6ec",
+    "attempts.jsonl": "e2d5657218d184b206c57d839f73bfb81362664b7a0729a4c94501b7b1c36f7a",
+    "results.jsonl": "ff0208743467193a744f3a2563e6e76d3f929fea276bc34786eb708cc2b668f8",
+    "probe_1_dispatch_1.json": "d476ad692fbe3ee8da5f9d2dc9bc6eb154149436f8204d31e6dd5913ae697248",
+    "probe_1_attempt_1.json": "bf881ab2624b4ab37d6eb926a82dd54d21da5759fa9c11d58a7db682e41cafd6",
+    "probe_2_dispatch_1.json": "b1451cfdec25513d3b4f8543295c7dd90dc3b888c60a85d0f10a3e6ed16c4b61",
+    "probe_2_attempt_1.json": "69afba4cce176f02286638fe4d9e3a1889cb16d578c3eae32e6c7766f536b09f"
+  },
+  "usage_core_usd": "0.00767264",
+  "probe_usage_usd": "0.00010484",
+  "reported_monetary_receipts": 0,
+  "note": "No per-item correct labels, answer key, raw account state or credentials exported."
+}
