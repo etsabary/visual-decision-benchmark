@@ -1,6 +1,8 @@
 *.png binary
 *.jpg binary
-*.svg text eol=lf
+# Matplotlib SVG path data contains insignificant trailing separators. Preserve
+# exact sealed figure bytes while retaining other whitespace checks.
+*.svg text eol=lf whitespace=-blank-at-eol
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf

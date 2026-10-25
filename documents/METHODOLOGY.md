@@ -1,3 +1,7 @@
+# Current local-image addition — October 25, 2026
+
+The current report adds two local routes using a separately recorded PNG variant. See [local image run protocol](LOCAL_IMAGE_RUNS.md) for conversion, admission, stopping, hardware, timing and privacy rules. The 15 earlier hosted records retain their original mixed-format inputs and measurements. The methodology below describes the original October15 cohort.
+
 # October 20 native-image expansion
 
 The current report ranks 14 specialized models: 12 new completed 200-question runs and the unchanged October 15 Jev 1.14 and Luna Decisions runs. The three original general LLM runs remain historical references outside this primary cohort. The original protocol follows below, explicitly as the October 15 protocol; its five-model comparisons do not describe the expanded cohort.

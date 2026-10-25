@@ -1,0 +1,33 @@
+{
+  "version": "local-images-20261025-v1",
+  "ranked_models": 17,
+  "hosted_models": 15,
+  "local_models": 2,
+  "questions_each": 200,
+  "bank_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "prior_summary_sha256": "065a8f4eddc3e01e2cb753daaec5963be60eb2ab0521f51bc5c3cf2fb1e37381",
+  "artifacts": {
+    "abilities_1.png": "2066cad9983351df888202990089bc793c320f3324cdf83f9597b1292a709882",
+    "abilities_1.svg": "a2e0293bd726bc7fa9d65344be0245b578f812f480defa3131e7043104a64963",
+    "abilities_2.png": "aac6fd3b5faee397bfd2f5f89fb006a94d7e1dee5c3612a9b7569158b29948a5",
+    "abilities_2.svg": "c45f65ea9efbe6cf0669819bc927f42535b2ae7e6d2c2ebccb2c85c5e10344a6",
+    "abilities_3.png": "01e6d67bddc601f195090a67b6b88875214f43305f5e4d7c0efd8165dbd30fac",
+    "abilities_3.svg": "1c841b97b7763d5558f9eac961a393cdec871f7d17067c2475fb4ba5a9d08935",
+    "abilities_4.png": "2e6821afc2ebe4647c2cbc520d804965ac8a070ff291772990d95b599d197061",
+    "abilities_4.svg": "7e39fd8714471a65368036312b9bbff80981051e1f008b9efe1a4acbd7870b90",
+    "analysis.md": "4bcf7123d6a965c8dbaf3013e55c8b89cf5923dedddaa04f2394e1a7da82e89a",
+    "audit_receipt.json": "b78bffd668678e74efd83cfdcd53af65036b0af5be63f07fa0ac8e1e9c45e9cb",
+    "execution_protocol.json": "82c4acccede56cc0602c7e30eeca58995214fff4e4a61635b1427b4f64b80528",
+    "execution_source_hashes.json": "42ec33c6e650f12d14ec13fc18a29e3d3d3d3d132119478773fb34e48aeaafab",
+    "family_scores.csv": "313a58096b3fb29af9047b3e6c04007f705121bea5bda897c243c8886980aeb6",
+    "image_variant_manifest.json": "101dbb39c2d86386cb63514697ed19dafc4216971d47f1e5f15b24be5d90105e",
+    "leaderboard.csv": "815f67f35d2fe71dc649f5e501c98fbbbe63c258d714ebfd7d22f80bdbbe947f",
+    "local_admission_findings.json": "231ba7495f85ceef08a05fc92743c8bb6d4e7f4f84e44ffc93284e0c1b5cee9e",
+    "local_model_metadata.json": "5e25eca9554cffa7ab475c55ecd646e0400f0a31628112edef69b50894b9f129",
+    "local_timing_evidence.jsonl": "0aec57affa29d7acec44f6ac01fd9e4f165766f6d6a28389ebea42a741b61979",
+    "overview.png": "cf4f9537938188fe48469055b2d682789eb256df66ecb6e45584ca2579c4fa6e",
+    "overview.svg": "5361cd136dc73d789a1df7e3154bcb8a70da952b2e0076051aa05cbb057c515f",
+    "report.html": "8717866848641cc0cf696f955fd42a9e5404c71fcff5272b5e932fd8a1c1916d",
+    "summary.json": "735933b74f2d234a10fbade42c42028ca506cbc0d7a18ebe6c0f8696edf54726"
+  }
+}

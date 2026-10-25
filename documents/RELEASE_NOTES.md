@@ -1,3 +1,10 @@
+# Local image addition — October 25, 2026
+
+- Added H2O Lightning 4B (117/200, 58.5%) and Fovea 4B (110/200, 55.0%) on a deliberately chosen RTX 2060 6 GB, with mean/median/p95 and unmeasured local operating cost.
+- Local names, accuracy bars and badges use purple #7c3aed; hosted models use blue #16728c. Accuracy/speed/cost scales stay fixed.
+- Recorded the PNG variant with identical decoded RGB pixels; preserved all 15 earlier hosted model records and dated seals. No inference was repeated for publication.
+- Added answer-free local timing, input hashes, metadata, admission findings, 340 named category cells, public PNG reproduction and offline validation. Private model-choice ledgers, keys and LAN addresses remain excluded.
+
 # October 20, 2026: specialized image decision cohort
 
 - Reviewed16 image-declared specialized models. Twelve new models completed200 cases; Jev1.14 and Luna Decisions retain their earlier200-case runs, producing14 complete comparable question-bank results.

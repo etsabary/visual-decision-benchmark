@@ -1,84 +1,97 @@
 # Image-grounded System 1 decision benchmark
 
-Fastino GLiDE joins the image comparison at **158/200 (79.0%)**, second to **Amos 1 Large at 159/200 (79.5%)**. GLiDE leads the separate text benchmark at **1154/1342 (86.0%)**; it is not first in both banks. Its image mean / median / p95 was **719/359/1950 ms**, and all 200 first attempts returned usable typed choices without retries.
+The comparison now contains **17 complete decision routes: 15 hosted models and two local models**. Each completed route has 200 first attempts on the same questions and choices. Local models use a separately recorded PNG input variant. Earlier hosted measurements remain unchanged.
 
-The comparison contains **15 specialized decision models**, all tested on the same 200 image questions. Fastino was measured October 23, 2026. The earlier 14 model records, image bytes, questions and options are unchanged.
+**H2O Lightning 4B scored 117/200 (58.5%) at 560/484/988 ms mean/median/p95. Fovea 4B scored 110/200 (55.0%) at 658/602/962 ms.** Both returned 200 usable typed choices, with no scored retries, on a user-reported NVIDIA RTX 2060 with 6 GB VRAM. This older GPU was chosen deliberately to examine a more accessible local setup.
+
+Amos 1 Large remains the highest-scoring hosted route at **159/200 (79.5%)**, followed by Fastino GLiDE at **158/200 (79.0%)** and hosted d3-turbo at **155/200 (77.5%)**. The one-answer Amos/Fastino gap remains statistically unresolved. These results cover immediate fixed-choice decisions without tools or iterative reasoning.
 
 [Open the colour-coded report](https://etsabary.github.io/visual-decision-benchmark/report.html)
 
-![Accuracy, speed and cost](results/releases/fastino_2026-10-23/overview.png)
+![Accuracy, speed and cost](results/releases/local_images_2026-10-25/overview.png)
+
+**Hosting colours:** purple `#7c3aed` = local RTX 2060 6 GB; blue `#16728c` = hosted decisions. Accuracy cells keep the fixed 0–100% scale. Speed bands: ≤500 ms, ≤1 s, ≤2 s, above. Cost/1,000 bands: ≤$0.05, ≤$0.15, ≤$0.50, above.
 
 ## Overall results
 
-| Decision model | Correct / 200 | Accuracy | Usable | Mean | Median | p95 | Actual 200 cost | Cost / 1,000 | Test date |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Amos 1 Large | 159/200 | 79.5% | 200/200 | 0.381 s | 0.340 s | 0.630 s | Free access† | Free access† | 2026-10-20 |
-| Fastino GLiDE | 158/200 | 79.0% | 200/200 | 0.719 s | 0.359 s | 1.950 s | ~$0.007673 | ~$0.038363 | 2026-10-23 |
-| d3-turbo | 155/200 | 77.5% | 200/200 | 0.510 s | 0.431 s | 0.975 s | Free access† | Free access† | 2026-10-20 |
-| Perplexity Decider v1.2 | 152/200 | 76.0% | 200/200 | 0.573 s | 0.476 s | 0.970 s | $0.004316 | $0.021582 | 2026-10-20 |
-| Liquid d1-ultra | 149/200 | 74.5% | 200/200 | 0.393 s | 0.343 s | 0.727 s | $0.012692 | $0.063462 | 2026-10-20 |
-| kettei-fat | 147/200 | 73.5% | 200/200 | 0.467 s | 0.410 s | 0.775 s | $0.002131 | $0.010655 | 2026-10-20 |
-| Cloudflare Clef | 145/200 | 72.5% | 200/200 | 0.685 s | 0.567 s | 1.440 s | $0.050310 | $0.251552 | 2026-10-20 |
-| Jev 1.13 | 142/200 | 71.0% | 195/200 | 0.270 s | 0.229 s | 0.515 s | $0.023976* | $0.119881* | 2026-10-20 |
-| Mercury Decide | 142/200 | 71.0% | 200/200 | 0.575 s | 0.498 s | 1.100 s | $0.003839 | $0.019197 | 2026-10-20 |
-| Jev 1.14 | 141/200 | 70.5% | 195/200 | 0.358 s | 0.307 s | 0.724 s | $0.023977* | $0.119884* | 2026-10-15 (reused) |
-| Liquid d1 | 135/200 | 67.5% | 200/200 | 0.277 s | 0.240 s | 0.509 s | $0.006044 | $0.030220 | 2026-10-20 |
-| Perplexity Decider Flash v1.2 | 129/200 | 64.5% | 200/200 | 0.303 s | 0.275 s | 0.552 s | $0.002158 | $0.010791 | 2026-10-20 |
-| Cloudflare Clef Flash | 126/200 | 63.0% | 200/200 | 0.827 s | 0.761 s | 1.595 s | $0.007966 | $0.039829 | 2026-10-20 |
-| Luna 6 Decisions | 121/200 | 60.5% | 198/200 | 0.479 s | 0.383 s | 0.799 s | $0.022546* | $0.112731* | 2026-10-15 (reused) |
-| Cloudflare Clef Omni | 105/200 | 52.5% | 200/200 | 0.562 s | 0.455 s | 1.202 s | $0.031330 | $0.156650 | 2026-10-20 |
+| Decision model | Hosting / inputs | Correct / 200 | Accuracy | Usable | Mean | Median | p95 | Actual 200 cost | Cost / 1,000 | Test date |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- | --- |
+| Amos 1 Large | Hosted · original mixed images | 159/200 | 79.5% | 200/200 | 381 ms | 340 ms | 630 ms | Free access† | Free access† | 2026-10-20 |
+| Fastino GLiDE | Hosted · original mixed images | 158/200 | 79.0% | 200/200 | 719 ms | 359 ms | 1950 ms | ~$0.007673 | ~$0.038363 | 2026-10-23 |
+| d3-turbo | Hosted · original mixed images | 155/200 | 77.5% | 200/200 | 510 ms | 431 ms | 975 ms | Free access† | Free access† | 2026-10-20 |
+| Perplexity Decider v1.2 | Hosted · original mixed images | 152/200 | 76.0% | 200/200 | 573 ms | 476 ms | 970 ms | $0.004316 | $0.021582 | 2026-10-20 |
+| Liquid d1-ultra | Hosted · original mixed images | 149/200 | 74.5% | 200/200 | 393 ms | 343 ms | 727 ms | $0.012692 | $0.063462 | 2026-10-20 |
+| kettei-fat | Hosted · original mixed images | 147/200 | 73.5% | 200/200 | 467 ms | 410 ms | 775 ms | $0.002131 | $0.010655 | 2026-10-20 |
+| Cloudflare Clef | Hosted · original mixed images | 145/200 | 72.5% | 200/200 | 685 ms | 567 ms | 1440 ms | $0.050310 | $0.251552 | 2026-10-20 |
+| Jev 1.13 | Hosted · original mixed images | 142/200 | 71.0% | 195/200 | 270 ms | 229 ms | 515 ms | $0.023976* | $0.119881* | 2026-10-20 |
+| Mercury Decide | Hosted · original mixed images | 142/200 | 71.0% | 200/200 | 575 ms | 498 ms | 1100 ms | $0.003839 | $0.019197 | 2026-10-20 |
+| Jev 1.14 | Hosted · original mixed images | 141/200 | 70.5% | 195/200 | 358 ms | 307 ms | 724 ms | $0.023977* | $0.119884* | 2026-10-15 (reused) |
+| Liquid d1 | Hosted · original mixed images | 135/200 | 67.5% | 200/200 | 277 ms | 240 ms | 509 ms | $0.006044 | $0.030220 | 2026-10-20 |
+| Perplexity Decider Flash v1.2 | Hosted · original mixed images | 129/200 | 64.5% | 200/200 | 303 ms | 275 ms | 552 ms | $0.002158 | $0.010791 | 2026-10-20 |
+| Cloudflare Clef Flash | Hosted · original mixed images | 126/200 | 63.0% | 200/200 | 827 ms | 761 ms | 1595 ms | $0.007966 | $0.039829 | 2026-10-20 |
+| Luna 6 Decisions | Hosted · original mixed images | 121/200 | 60.5% | 198/200 | 479 ms | 383 ms | 799 ms | $0.022546* | $0.112731* | 2026-10-15 (reused) |
+| H2O Lightning 4B | Local RTX 2060 6 GB · PNG | 117/200 | 58.5% | 200/200 | 560 ms | 484 ms | 988 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
+| Fovea 4B | Local RTX 2060 6 GB · PNG | 110/200 | 55.0% | 200/200 | 658 ms | 602 ms | 962 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
+| Cloudflare Clef Omni | Hosted · original mixed images | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
 
-## Method and reading the costs
+## Local hosting: useful speed, lower accuracy
 
-Every ranked model has the same **200 questions**, original choices and reviewed image bytes. Accuracy includes all first attempts; invalid answers and provider errors remain unsuccessful. No wrong-choice or formatting retries. At most one transient recovery was permitted; Fastino needed none. The median cutoff is above two seconds after at least 20 questions.
+H2O answered seven more questions correctly than Fovea and had lower mean and median latency. Their p95 values were both close to one second; Fovea's was slightly lower. This two-model comparison does not establish a general model ordering.
 
-**Cost / 1,000 is a normalization of each actual 200-question run**, not another 1000 calls. ~ means usage times captured tariff, not API monetary receipts; * means an incomplete sum with missing error charges; † means free public access, not a permanent production price of zero. Probes and stopped runs are separate from ranked core totals.
+The exact local routes were `h2o-lightning:4b` at **Q8_0** and `fovea:4b` at **NF4 with FP16 compute and FP32 readout**, served by Ollaya 0.17.0 on `cuda:0`. Both reported an 8,192-token context. Serving digests are captured in the metadata export; these routes did not report immutable upstream weight revisions.
 
-Speed colours: green ≤0.5 s, yellow ≤1 s, orange ≤2 s, red above. Cost colours per 1000: green ≤$0.05, yellow ≤$0.15, orange ≤$0.50, red above. Accuracy uses one fixed 0–100% scale across categories. Dates and routes differ; none of the older measurements was rerun.
+H2O's strongest categories were **interface-state decisions and inspection against a reference, both 10/10**, followed by attribute/set filtering at 9/10. Spatial relationships, image/text consistency and recognizing insufficient evidence were 8/10. Its weakest categories were geometry/folding/fit at 1/10 and rotation/reflection at 3/10. Counting, connectivity, visual rules, constraint satisfaction and perspective/knowledge tracking were each 4/10.
 
-## Fastino and Amos: one answer apart, different profiles
+Fovea scored **8/10 on attribute/set filtering, interface-state decisions and inspection against a reference**. Spatial relationships, matching across images and image/text consistency were 7/10. Flowcharts were 2/10 and perspective/knowledge tracking 3/10. Fovea exceeded H2O on counting (6 vs 4), rotation/reflection (5 vs 3), geometric fit (4 vs 1), visual rules (6 vs 4) and cross-image matching (7 vs 6). Each category has ten questions: one answer is ten percentage points.
 
-Amos answered 16 questions correctly that Fastino missed; Fastino answered 15 that Amos missed. The one-answer overall gap is not statistically resolved: the unadjusted paired exact p-value is 1.000. This selected bank includes related task types, so item-level tests do not establish a universal ordering or remove source and category dependence.
+The strongest practical candidate in this tested local shortlist is H2O, but its 58.5% accuracy is a material limitation. The hosted leader answered 42 more questions correctly; differences in weights, precision, image preprocessing, serving hardware and dates prevent attributing that gap to local hosting itself. Local execution provides control over deployment; it did not match the leading hosted accuracy in this run.
 
-Fastino scored **10/10 on sequential state tracking, interface-state decisions and inspection against a reference**. Sequential questions ask what remains after the pictured actions; interface questions ask which action or state follows from a screenshot. It scored 9/10 on attribute/set filtering, spatial relationships, flowcharts, charts, cross-image matching, image/text consistency and recognizing insufficient evidence.
+## What the PNG conversion changes
 
-Navigation and planning was **5/10**. Connectivity, rotation/reflection, geometric fit, visual rules and perspective/knowledge tracking were each **6/10**. Amos scored 8/10 on perspective and knowledge tracking, versus Fastino’s 6/10. A strong combined total does not imply equal performance on every visual operation. Each category has ten questions: one answer is ten percentage points, and 10/10 is not a reliability certificate.
+The local input variant is **PNG-lossless-from-reviewed-decoded-RGB-v1**. Exactly 47 original JPEG assets were decoded with **Pillow 12.3.0** and saved as PNG; all 180 original PNG assets retained their exact bytes. Independent checks confirmed identical decoded RGB pixels and dimensions for all 227 source files. No resizing, rotation, compositing, OCR, captions, sharpening or replacement download was used.
 
-## Cost and the two-second rule
+Questions, rules, option IDs, option order and image order stayed fixed. The local cohort also retained the original 200-question execution order. Older hosted measurements used the original mixed PNG/JPEG file bytes and were not repeated. The local PNG uploads are a distinct recorded format variant; their byte sizes and route timings must not be treated as a controlled hardware-only comparison.
 
-Fastino’s complete 200-question cost is **~$0.00767264**, or **~$0.0383632 per 1000 questions**. The tilde marks a calculation from reported input-token usage at the captured **$0.04 per million input tokens, $0 output** tariff, not API monetary receipts. The two separate image admission probes add **~$0.00010484**. Costs per 1000 normalize an actual 200-question run; no extra 1000 calls were made.
+The public image-variant manifest records both original and PNG hashes plus decoded RGB hashes. The answer-free reproduction tool can rebuild the 221 publicly available inputs with the captured Pillow version; six source-rights exclusions remain withheld. Derivative PNG files are generated on demand, keeping the public source repository small.
 
-Perplexity Decider v1.2 remains a lower-priced metered option at $0.00431642 for 200, with 152 correct answers; kettei-fat costs $0.00213102 and scored 147. Amos and d3 used currently free public access, not guaranteed production tariffs of zero. Fastino is neither the cheapest nor the shortest-median image route.
+## Speed gate, loading and usability
 
-The predeclared cutoff is a **cumulative median above two seconds after at least 20 cases**, not a p95 cutoff. Fastino’s 359 ms median passed throughout; its p95 was 1950 ms. The first-attempt timings include fresh HTTPS connection, image upload and the complete response. Local encoding, queues and deliberate waits are excluded. The serial image stream overlapped its two-request text stream, with at most three Fastino requests globally. Dates, hardware, load and provider image processing remain confounds.
+Each local route first received two unscored admission/warmup probes: one converted single PNG and one three-image PNG input. Qualifying routes then received 20 scored questions. Continuation required a cumulative median at or below **2,000 ms** and fewer than **5% unusable outputs**, checked after every subsequent first attempt. There was no accuracy-only stop rule. Two further unscored warmups preceded continuation.
 
-## Version and actual image support
+H2O's 20-question screen median was **493 ms**; Fovea's was **587 ms**. Both remained within the speed gate through all 200 questions. Cold loading and all warmups are recorded separately and excluded from scored timings. The reported mean/median/p95 include LAN upload and the complete response; local image encoding is excluded. Both routes reported `cuda:0`, unchanged serving digests and zero output tokens. These are observed runtime facts, not independent weight or architecture attestation.
 
-The native request model is `fastino/GLiDE`; all scored responses identify `glide_v2`. The authenticated catalog described **one-pass GLiDE v2.2**. This is a hosted alias, not an immutable-weight attestation, and the run must not be labelled v1.2. The catalog image flag was false while Fastino’s documentation described image parts. Single-image and three-image probes succeeded, followed by the complete unchanged 200-question image bank. No OCR, captions or replacement images were used.
+## Admission failures are outside the complete ranking
 
-All scored responses returned valid probabilities, zero reported output tokens and `not-stored` retention headers for `store:false` requests. These are observed API facts, not independent inspection of hidden computation.
+Liquid d1 3B accepted the converted 1024 × 768 single-image PNG, then returned **HTTP 500 / INFERENCE_FAILED on the three-image admission probe**. The runner's response-body decoding error does not establish the underlying cause. It received no scored bank run and has no accuracy score here.
 
-## Other models retain category-specific strengths
+D3 Mini, Nano, Lite and Edge Q8_0 each failed the first small PNG admission: **185 input tokens exceeded physical batch size 128**. Liquid d1-omni 600M Q8_0 accepted tiny single PNGs, but larger and multiple inputs exceeded the same physical batch setting. These are deployment findings, not wrong answers or zero-accuracy results. No server configuration or weights were changed to rescue a run. Mapika Decider 2B vision accepted single PNGs but rejected multiple images and JPEGs; it was not selected for the full bank. Installed D3 Flash Artemis and Perplexity Flash mixed4 advertised text-only support.
 
-d3-turbo scored 155/200, including 10/10 on charts, state tracking, interfaces, reference inspection, image matching and image/text consistency. Perplexity scored 152, with 9/10 on causal questions and 10/10 on charts, but 4/10 on connectivity and constraint satisfaction. Cloudflare Clef’s constraint-satisfaction score was 7/10, above Amos’s 6/10 and matching Fastino’s 7/10. Luna Decisions retains the strongest observed rotation/reflection score at 8/10. Model choice can depend on the operation, not just the overall row.
+The earlier exclusions remain: Respan Span-02 stopped after 21 questions at a 2,166 ms median, with 14 correct in that partial sample; ScaleDown's tested route rejected image parts. Neither is ranked as a 200-question zero.
 
-Jev 1.13 and 1.14 remain 142/200 and 141/200, each with five rejected images in their tested routes. Their old failures and timings have not been removed or rerun. The three older general LLMs remain archived references, not the current specialized-model ranking.
+## Cost and earlier hosted evidence
 
-## Exclusions are not zero accuracy scores
+**Local hardware and electricity costs are unmeasured.** Local rows have no metered API tariff or monetary receipts; they are not priced at $0. Hosted costs, dates, tariffs and missing-charge qualifications retain their previously measured values. Cost / 1,000 normalizes an actual 200-question run; it does not mean 1,000 calls were made.
 
-Respan Span-02’s existing image stream stopped after 21 questions when its median reached 2.166 seconds. Its 14/21 partial score is not a 200-question accuracy estimate. ScaleDown’s pinned route rejected image parts despite catalog support. Those two routes remain outside the complete ranking. Their exclusion is not a claim about their text performance, and the old image statement that Span leads the text bank is superseded by the current text report.
+Fastino's earlier image result remains 158/200, with **719/359/1950 ms** mean/median/p95 and **~$0.00767264** for 200 questions, or **~$0.0383632 per 1,000**. The tilde marks reported token usage times the captured tariff, not monetary receipts. Perplexity Decider v1.2 remains 152/200 at $0.00431642 for 200; kettei-fat remains 147/200 at $0.00213102. Amos and d3 used free public access, which is not a permanent production tariff.
+
+Fastino retained 10/10 on sequential state tracking, interfaces and reference inspection; navigation was 5/10. Amos scored 8/10 on perspective/knowledge tracking versus Fastino's 6/10. Jev 1.13 and 1.14 retain 142/200 and 141/200, each with five rejected images. No earlier failures, scores or timings were removed. Fastino's separate text lead does not make it the image leader.
+
+## Limits and reproducibility
+
+The bank has 20 categories with ten questions each, 187 grounded/reasoning questions and 13 perception controls. Choice counts vary, giving a **23.44% uniform-guessing baseline**. Related templates and shared source collections limit independence; these are selected tasks, not a general-intelligence ranking. Category scores and confidence intervals do not remove those limitations.
+
+The frozen external answer key stayed outside inference. Offline checks reproduced both new totals from private first attempts and verified coverage, payload hashes, timings, image bindings and serving identity. Public local timing/status evidence contains no model choices, answer labels or per-item correctness. Reproducing accuracy requires the external frozen key and the original saved choices; public aggregates alone cannot independently recreate it. Six chart snapshots remain withheld pending source-terms review. The three older general LLM references remain archived outside the specialized ranking.
+
 
 ## Results by named category
 
-Every category has ten questions; one answer is ten percentage points.
+![Named category scores, part 1](results/releases/local_images_2026-10-25/abilities_1.png)
 
-![Named category scores, part 1](results/releases/fastino_2026-10-23/abilities_1.png)
+![Named category scores, part 2](results/releases/local_images_2026-10-25/abilities_2.png)
 
-![Named category scores, part 2](results/releases/fastino_2026-10-23/abilities_2.png)
+![Named category scores, part 3](results/releases/local_images_2026-10-25/abilities_3.png)
 
-![Named category scores, part 3](results/releases/fastino_2026-10-23/abilities_3.png)
-
-![Named category scores, part 4](results/releases/fastino_2026-10-23/abilities_4.png)
+![Named category scores, part 4](results/releases/local_images_2026-10-25/abilities_4.png)
 
 ## What the categories test
 
@@ -103,14 +116,6 @@ Every category has ten questions; one answer is ten percentage points.
 - **[V19 Perspective and knowledge tracking](data/questions/V19.md)**: Apply line-of-sight constraints or track what an observer has seen.
 - **[V20 Insufficient evidence](data/questions/V20.md)**: Recognize when the image cannot determine the requested answer.
 
-## Bank and limitations
+[Aggregate results](results/releases/local_images_2026-10-25/summary.json) · [Category CSV](results/releases/local_images_2026-10-25/family_scores.csv) · [Local timing evidence](results/releases/local_images_2026-10-25/local_timing_evidence.jsonl) · [Input hashes](results/releases/local_images_2026-10-25/image_variant_manifest.json) · [Audit](results/releases/local_images_2026-10-25/audit_receipt.json) · [Method](documents/LOCAL_IMAGE_RUNS.md)
 
-The bank has 20 categories × 10 questions, 227 compressed source files and 23.44% uniform-random baseline (choice counts vary). There are 187 reasoning/grounded-decision questions and 13 perception controls. No image was recompressed for this update. 221 files are publicly redistributable; six Our World in Data charts remain withheld pending source-terms review. All scored models used the same private reviewed snapshots, not replacement downloads.
-
-The frozen supplied key was kept outside inference execution. Offline re-scoring reproduced all 14 prior specialized totals and Fastino’s new total. This is consistency against the existing key, not an independent new audit of every answer. Public validators reconcile hashes, payloads where assets are available, categories, timing and exact-decimal costs; private-key correctness cannot be independently reproduced from aggregate exports alone.
-
-[Questions and source images](data/questions/README.md) · [Image gallery](docs/gallery.html) · [Attribution](documents/THIRD_PARTY_NOTICES.md) · [Aggregate results](results/releases/fastino_2026-10-23/summary.json) · [Category CSV](results/releases/fastino_2026-10-23/family_scores.csv) · [Sanitized route evidence](results/releases/fastino_2026-10-23/attempts.jsonl) · [Audit](results/releases/fastino_2026-10-23/audit_receipt.json).
-
-Older general LLM runs are preserved in [original results](results/original_2026-10-15/summary.json), outside the current specialized ranking. The [separate text benchmark](https://etsabary.github.io/system-1-decision-benchmark/report.html) has 1342 text questions; the two bank scores must not be combined.
-
-Implementation is in scripts/, supporting documents in documents/, bank and image assets in data/, and dated evidence in results/. Public report and gallery URLs remain stable. Offline checks: `python3 scripts/validate_fastino_images.py`, `python3 scripts/validate_native_images.py`, and the focused tests in scripts/.
+[Questions and sources](data/questions/README.md) · [Image gallery](docs/gallery.html) · [Attribution](documents/THIRD_PARTY_NOTICES.md) · [Separate text benchmark](https://etsabary.github.io/system-1-decision-benchmark/report.html)

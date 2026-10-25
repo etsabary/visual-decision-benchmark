@@ -1,0 +1,174 @@
+{
+  "version": "fastino-presentation-history-20261025",
+  "files": {
+    ".github/workflows/image-release.yml": {
+      "path": "results/archives/fastino_2026-10-23_presentation/.github/workflows/image-release.yml.snapshot",
+      "sha256": "975cd614c00bf3177f794edbad3955007579611a58369feb6cc3cda094b11ad3"
+    },
+    ".gitignore": {
+      "path": "results/archives/fastino_2026-10-23_presentation/.gitignore.snapshot",
+      "sha256": "82032b90ae383a970b73ad0f92ac555ad0e6e0b65b3c25a48538b8749cecac8a"
+    },
+    "CITATION.cff": {
+      "path": "results/archives/fastino_2026-10-23_presentation/CITATION.cff.snapshot",
+      "sha256": "60c645b114e0db4791bb6787990dd0dd51c93c7c5c63439a478ffbf85d9d55ef"
+    },
+    "README.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/README.md.snapshot",
+      "sha256": "9ebc0627901a716b2a1a398d4219c9f3ff25080b738dee1a12d7dcbef393739a"
+    },
+    "data/README.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/data/README.md.snapshot",
+      "sha256": "7a44d15f275810dbba5dc694db5839b39555c774193d9a55e6b497a1c994c44a"
+    },
+    "docs/gallery.html": {
+      "path": "results/archives/fastino_2026-10-23_presentation/docs/gallery.html.snapshot",
+      "sha256": "6010ef6756e9c54b4c045229e145235314a00e3187b67521b9d1937315bb875e"
+    },
+    "docs/index.html": {
+      "path": "results/archives/fastino_2026-10-23_presentation/docs/index.html.snapshot",
+      "sha256": "efd259931778519c009f4ec02c760c91b305d4614c9ca98f4f0214c708f6fd13"
+    },
+    "docs/report.html": {
+      "path": "results/archives/fastino_2026-10-23_presentation/docs/report.html.snapshot",
+      "sha256": "f71bf880634f606d665f2047eeea5ab9e2239c50ac19085856851da19ea92717"
+    },
+    "documents/METHODOLOGY.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/documents/METHODOLOGY.md.snapshot",
+      "sha256": "837014d59d4d09919cf237bae0740147faf154b32fad08ee141ad9fc7d28f4ad"
+    },
+    "documents/RELEASE_NOTES.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/documents/RELEASE_NOTES.md.snapshot",
+      "sha256": "3d448e70d43040b80a90bed1b2634310b7dc803494f4b6fc49ba17a41e02ff9a"
+    },
+    "documents/THIRD_PARTY_NOTICES.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/documents/THIRD_PARTY_NOTICES.md.snapshot",
+      "sha256": "af3157dd741acd918685be98f8f2683028413408654b1459c1eeca6fef3d1df8"
+    },
+    "documents/native_image_analysis.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/documents/native_image_analysis.md.snapshot",
+      "sha256": "d4d04c6d2cb2e4ee8d4cf7ce967ca49d4aa9f195c511e5363752517dd9e228da"
+    },
+    "results/README.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/results/README.md.snapshot",
+      "sha256": "0ccb28d40cbcbacedc6377edb0fb5a47c3d17aa847b90eaf21191871e756a670"
+    },
+    "scripts/README.md": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/README.md.snapshot",
+      "sha256": "b8d0c3a1183a4108c059895daea339ade2bfa9b7e68125cb641098ebe0c69a81"
+    },
+    "scripts/analyze_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/analyze_native_images.py.snapshot",
+      "sha256": "616b53d890668bf975b950a52527cb35238b866175fcc36322261400480d079a"
+    },
+    "scripts/benchmark.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/benchmark.py.snapshot",
+      "sha256": "37a93c9428ee52ae40fd8a34bb29be8e765d47d879f55d9983cbfc2eb3b29578"
+    },
+    "scripts/build_image_site.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/build_image_site.py.snapshot",
+      "sha256": "6606abe81ca244e1b90735112fdfd65474b10776763338639a12e4145886a004"
+    },
+    "scripts/fastino_publication_history.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/fastino_publication_history.py.snapshot",
+      "sha256": "004966446f9738bd108518ad739c8bf45af993712df9ab2232c4ebaa27e1d1fb"
+    },
+    "scripts/freeze_checksums.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/freeze_checksums.py.snapshot",
+      "sha256": "1efa261ed1155ca6d3928863e8f7ae547f57b918d022ac973c6be477920ca9b6"
+    },
+    "scripts/image_models_2026_10_20.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/image_models_2026_10_20.py.snapshot",
+      "sha256": "36eafaa9cfbdc26c1a00158fcbf1c56e0cbadfff126a1a1cbbc4e68ab8ee06d2"
+    },
+    "scripts/image_publication_history.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/image_publication_history.py.snapshot",
+      "sha256": "a57bcc195c50501713d88dd8d96494a521c408175ad6905ba9325e3a73e1b9ed"
+    },
+    "scripts/layout_manifest.json": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/layout_manifest.json.snapshot",
+      "sha256": "83f6356dcea2fa0dd423d899174d7aeb28a65d5871f66a0a4f28c433fd497b0c"
+    },
+    "scripts/plot_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/plot_native_images.py.snapshot",
+      "sha256": "429ad39c93567add7fb018b55a752872b90c4a1d1f4957f1de48666e1d0d88df"
+    },
+    "scripts/plot_results.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/plot_results.py.snapshot",
+      "sha256": "5a2763fc3f44444077c2fb52e893fa19b9adba8eb975df37798fd78ae7985c8a"
+    },
+    "scripts/publish_fastino_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/publish_fastino_images.py.snapshot",
+      "sha256": "0d0b56a5562e0a7ba9ed79d959e9c8773080b467dd03955ae34c7d5539f9454e"
+    },
+    "scripts/publish_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/publish_native_images.py.snapshot",
+      "sha256": "a1b61473afe03e15f6bb856e7dedea40dfbfa2367ade8a90b1a6882eb9d6f484"
+    },
+    "scripts/recheck_respan_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/recheck_respan_images.py.snapshot",
+      "sha256": "c90d35a7ae4901c04d25bfd85539f238a21bc6e68ce71389c6e1b9bffcca0518"
+    },
+    "scripts/repo_layout.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/repo_layout.py.snapshot",
+      "sha256": "62483cad11053eb7b0ada041b2a4c5fb9faf9032d5d8aeb3fd5db0971cb29aef"
+    },
+    "scripts/score.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/score.py.snapshot",
+      "sha256": "c6f6d51a0c4ba99f6d096e2560529925cd4cd9151db7870b3e65c2e26b556f13"
+    },
+    "scripts/score_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/score_native_images.py.snapshot",
+      "sha256": "2263481975cad9d56e3bd86b3e46427de3545749fd50ff4aa71f6d51991f9089"
+    },
+    "scripts/seal_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/seal_native_images.py.snapshot",
+      "sha256": "0f0f8a56738adef2a2a79b150b2d18c46c800d7d40e3ac311129765656875f74"
+    },
+    "scripts/selective.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/selective.py.snapshot",
+      "sha256": "6b2f1655594b855a38a5fbb9091bae02f5b17383fbf3b08f70960e8e19355ccc"
+    },
+    "scripts/test_benchmark.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_benchmark.py.snapshot",
+      "sha256": "675a228cf1776a9429f2f9dc9a19561edee80f66a18506a9c2711784ab2a2bd8"
+    },
+    "scripts/test_fastino_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_fastino_images.py.snapshot",
+      "sha256": "1175bf708f9416148c76adf9ffc200493106b7d9871d66fbd887bbad2732fd9a"
+    },
+    "scripts/test_image_models_2026_10_20.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_image_models_2026_10_20.py.snapshot",
+      "sha256": "fca2b91373fd4faf0930ba84d89eeab213b6bfba29370526f14a2e1b4c74431f"
+    },
+    "scripts/test_native_analysis.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_native_analysis.py.snapshot",
+      "sha256": "e4ea004f907a35954194a41085ff83838b91a30f18993c5fe8e8146f23f4f5b9"
+    },
+    "scripts/test_native_publication.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_native_publication.py.snapshot",
+      "sha256": "25c01c7f1a1e66d62e3c2a5aec3327a84aaa20f4f8d7d8badd30073cb1a63fd1"
+    },
+    "scripts/test_recheck_respan_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/test_recheck_respan_images.py.snapshot",
+      "sha256": "d5244c789293651a6198be3f95e3d800b1d408b1ad2f45f461bfe7d14aec43ff"
+    },
+    "scripts/validate.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/validate.py.snapshot",
+      "sha256": "0aa49ea45c4d6ac932652f421f7265ece0d7686e3087e1c04eac320bc3cbc047"
+    },
+    "scripts/validate_fastino_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/validate_fastino_images.py.snapshot",
+      "sha256": "edd3597b151b966d84d1f07414b48c04f2ec04e311542f88be0044ee70d9661b"
+    },
+    "scripts/validate_native_images.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/validate_native_images.py.snapshot",
+      "sha256": "67b77fe9a5f53daa86e47efa781fe16e5f893132a8257a76a0ef6f1cb1290346"
+    },
+    "scripts/validate_repository_layout.py": {
+      "path": "results/archives/fastino_2026-10-23_presentation/scripts/validate_repository_layout.py.snapshot",
+      "sha256": "f9483bd35f3cbc23538e0b1f0fe3b5e593f2f6c862cd48723954d09c3ad53ae6"
+    }
+  },
+  "purpose": "Exact sealed October23 presentation; old measurement files and seals unchanged"
+}

@@ -13,6 +13,7 @@ from urllib.parse import urlsplit
 from repo_layout import ROOT,repo_file
 from benchmark import rows,canonical
 from analyze_native_images import percentile
+from local_image_publication_history import prior_path
 
 DATA=ROOT/'results/releases/fastino_2026-10-23'
 OLD=repo_file('native_images_2026-10-20')
@@ -84,7 +85,7 @@ def validate():
     with (DATA/'family_scores.csv').open() as handle:cells=list(csv.DictReader(handle))
     assert len(cells)==300 and len({(c['model_id'],c['family_id']) for c in cells})==300
     for c in cells:assert int(c['correct'])==s['models'][c['model_id']]['families'][c['family_id']]['correct']
-    page=Page();page.feed(repo_file('report.html').read_text())
+    page=Page();page.feed(prior_path('docs/report.html').read_text())
     assert len(page.cells)==300
     for c in page.cells:assert int(c['data-correct'])==s['models'][c['data-model-id']]['families'][c['data-family']]['correct']
     text=' '.join(page.text)
@@ -97,7 +98,7 @@ def validate():
         if not url.scheme and not url.netloc and url.path:assert (ROOT/'_site'/url.path).exists(),target
     seal=DATA/'release_checksums.json'
     if seal.exists():
-        for name,h in json.loads(seal.read_text()).items():assert digest(ROOT/name)==h,name
+        for name,h in json.loads(seal.read_text()).items():assert digest(prior_path(name))==h,name
     print(json.dumps(dict(status='PASS',models=15,category_cells=300,fastino_payloads_reconstructed=reproduced,
         withheld_payloads=withheld,prior_14_unchanged=True,core_cost='0.00767264',cost_basis='usage_times_tariff'),indent=2))
     return s

@@ -12,6 +12,10 @@ def build():
     out=repo_file('_site', root=ROOT);out.mkdir(exist_ok=True)
     for name in FILES:shutil.copy2(repo_file(name, root=ROOT),out/name)
     for name in DIRECTORIES:shutil.copytree(repo_file(name, root=ROOT),out/name,dirs_exist_ok=True)
+    local=ROOT/'results/releases/local_images_2026-10-25'
+    if local.exists():
+        shutil.copytree(local,out/local.name,dirs_exist_ok=True)
+        shutil.copy2(ROOT/'documents/LOCAL_IMAGE_RUNS.md',out/'LOCAL_IMAGE_RUNS.md')
     # Keep original public URLs without copying newly nested images a second
     # time under data/. Only the original data files are website data exports.
     data=out/'data';data.mkdir(exist_ok=True)

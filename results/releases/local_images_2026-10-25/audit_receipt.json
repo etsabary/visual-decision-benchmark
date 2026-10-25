@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED_LOCAL_IMAGE_400_FIRST_ATTEMPTS",
+  "complete_local_models": 2,
+  "scored_attempts": 400,
+  "usable": 400,
+  "correct": {
+    "local_h2o_lightning_4b": 117,
+    "local_fovea_4b": 110
+  },
+  "prior_15_records_unchanged": true,
+  "private_seal_sha256": "0558b328bd8ce9112a3a02360d1c1c5fe57501f0d7f5bc2d4d70590d1ae5f7b1",
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "question_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "decoded_rgb_verified_assets": 227,
+  "jpeg_conversions": 47,
+  "original_png_bytes_unchanged": 180,
+  "scored_retries": 0,
+  "unscored_png_admission_warmups": 10,
+  "initial_capability_probes": 34,
+  "publication_inference_calls": 0,
+  "original_private_variant_manifest_sha256": "750983fd8be1757a9c638bbd7f8b113746804efa8dd461fabb6e8c7aa7da37d7",
+  "privacy": "No local choices, probabilities, answer labels, per-item correctness, credentials, LAN address or private paths exported.",
+  "correctness_reproducibility": "Offline private frozen-key verification; public aggregates do not independently establish correctness."
+}

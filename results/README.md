@@ -1,11 +1,8 @@
-# Results and evidence
+# Dated image results
 
-- [Current Fastino update](releases/fastino_2026-10-23/summary.json): all 15 complete image models.
-- [October 20 release](releases/native_images_2026-10-20/summary.json): 14 earlier models, unchanged.
-- [Original five-model results](original_2026-10-15/summary.json).
-- [Earlier figures](figures/) and [historical presentations](archives/).
+- [Current: 15 hosted + two local routes](releases/local_images_2026-10-25/summary.json), with [analysis](releases/local_images_2026-10-25/analysis.md), [category scores](releases/local_images_2026-10-25/family_scores.csv), [answer-free local timings](releases/local_images_2026-10-25/local_timing_evidence.jsonl) and [audit](releases/local_images_2026-10-25/audit_receipt.json).
+- [Prior 15 hosted models](releases/fastino_2026-10-23/summary.json): unchanged.
+- [Earlier 14-model release](releases/native_images_2026-10-20/summary.json): unchanged.
+- [Original October15 results](original_2026-10-15/summary.json).
 
-The current [root analysis](../README.md) and
-[interactive report](https://etsabary.github.io/visual-decision-benchmark/report.html)
-are the shortest route to the findings. Dated records and seals remain separate;
-they are not overwritten when a new model is added.
+Historical presentation snapshots under archives/ preserve prior seals. Local PNG rows keep their input-variant qualification; admission failures stay outside complete rankings.
