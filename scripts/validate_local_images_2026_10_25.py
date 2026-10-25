@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
 
 from benchmark import rows
 from repo_layout import ROOT
+from llm_image_publication_history import local_historical_path
 
 NAME='local_images_2026-10-25'
 DATA=ROOT/'results/releases'/NAME
@@ -93,12 +94,12 @@ def validate():
     with (DATA/'family_scores.csv').open() as f:cells=list(csv.DictReader(f))
     assert len(cells)==len({(c['model_id'],c['family_id']) for c in cells})==340
     for c in cells:assert int(c['correct'])==s['models'][c['model_id']]['families'][c['family_id']]['correct']
-    page=Page();page.feed((ROOT/'docs/report.html').read_text())
+    page=Page();page.feed(local_historical_path('docs/report.html').read_text())
     assert page.summary==s['rank_order'] and set(page.local_summary)==set(EXPECTED)
     assert len(page.cells)==340
     for c in page.cells:assert int(c['data-correct'])==s['models'][c['data-model-id']]['families'][c['data-family']]['correct']
-    assert digest(ROOT/'docs/report.html')==digest(DATA/'report.html')
-    html=(ROOT/'docs/report.html').read_text()
+    assert digest(local_historical_path('docs/report.html'))==digest(DATA/'report.html')
+    html=local_historical_path('docs/report.html').read_text()
     for text in ('#7c3aed','#16728c','PNG-lossless-from-reviewed-decoded-RGB-v1','Pillow 12.3.0','58.5%','55.0%','Cost / 1,000','Unmeasured local compute'):
         assert text in html,text
     from build_image_site import build
@@ -119,7 +120,7 @@ def validate():
     manifest=DATA/'manifest.json'
     if manifest.exists():
         for name,h in json.loads(manifest.read_text())['artifacts'].items():assert digest(DATA/name)==h,name
-        for name,h in json.loads((DATA/'release_checksums.json').read_text()).items():assert digest(ROOT/name)==h,name
+        for name,h in json.loads((DATA/'release_checksums.json').read_text()).items():assert digest(local_historical_path(name))==h,name
     print('PASS: 17 routes; prior 15 unchanged; 400 local first-attempt timings; 340 category cells; PNG provenance; purple local hosting; private-field exclusions; exact docs mirror.')
     return s
 

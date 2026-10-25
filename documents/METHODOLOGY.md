@@ -1,3 +1,7 @@
+# Current LLM reference addition — October 25, 2026
+
+The current comparison adds Sol as one complete non-reasoning LLM reference and separately records three 20-question speed stops. See [LLM reference method](LLM_IMAGE_REFERENCES.md). Existing 17 complete records remain unchanged; the new LLMs use the existing PNG variant.
+
 # Current local-image addition — October 25, 2026
 
 The current report adds two local routes using a separately recorded PNG variant. See [local image run protocol](LOCAL_IMAGE_RUNS.md) for conversion, admission, stopping, hardware, timing and privacy rules. The 15 earlier hosted records retain their original mixed-format inputs and measurements. The methodology below describes the original October15 cohort.

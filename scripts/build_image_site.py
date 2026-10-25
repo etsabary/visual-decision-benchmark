@@ -16,6 +16,10 @@ def build():
     if local.exists():
         shutil.copytree(local,out/local.name,dirs_exist_ok=True)
         shutil.copy2(ROOT/'documents/LOCAL_IMAGE_RUNS.md',out/'LOCAL_IMAGE_RUNS.md')
+    reference=ROOT/'results/releases/llm_reference_2026-10-25'
+    if reference.exists():
+        shutil.copytree(reference,out/reference.name,dirs_exist_ok=True)
+        shutil.copy2(ROOT/'documents/LLM_IMAGE_REFERENCES.md',out/'LLM_IMAGE_REFERENCES.md')
     # Keep original public URLs without copying newly nested images a second
     # time under data/. Only the original data files are website data exports.
     data=out/'data';data.mkdir(exist_ok=True)

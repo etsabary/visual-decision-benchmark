@@ -10,6 +10,7 @@ python3 scripts/validate.py
 python3 scripts/validate_native_images.py
 python3 scripts/validate_fastino_images.py
 python3 scripts/validate_local_images_2026_10_25.py
+python3 scripts/validate_llm_image_reference_2026_10_25.py
 python3 scripts/validate_repository_layout.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/build_image_site.py
@@ -32,5 +33,13 @@ local timings, PNG bindings, aggregate/category coverage, colours and mirrors.
 with Pillow 12.3.0; see [the local run protocol](../documents/LOCAL_IMAGE_RUNS.md).
 The local-image publisher's `--seal` operation binds the final reviewed output
 and current layout. It refuses to overwrite an existing dated seal.
+
+`publish_llm_image_reference_2026_10_25.py` publishes Sol and three stopped LLM
+samples from the sealed private capture, with explicit external-key scoring and
+no inference. Its separate `--seal` phase binds reviewed files without replacing
+older releases. `validate_llm_image_reference_2026_10_25.py` checks the 18 complete
+rows, 360 category cells, speed-stop exclusions, answer-free timing, selection
+claim, prices and colours. `llm_image_protocol.py` reconstructs the four exact
+image payload profiles without network or credential access.
 
 [Current report](../README.md) · [Data](../data/README.md) · [Results](../results/README.md)

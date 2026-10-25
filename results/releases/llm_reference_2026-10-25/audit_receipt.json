@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED_SOL_200_WITH_THREE_SPEED_STOPS",
+  "prior_17_records_unchanged": true,
+  "question_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "private_seal_sha256": "b0f395ab476ce46416c56af47f20c774804ccf0204d3f7c86c7570fbf861afdd",
+  "scored_attempts": 260,
+  "complete_sol_attempts": 200,
+  "correct_sol": 147,
+  "usable_sol": 200,
+  "partial_attempts": 60,
+  "admission_probes": 8,
+  "retries": 0,
+  "cutoff_ms": 2000,
+  "publication_inference_calls": 0,
+  "explicit_zero_reasoning_scored_responses": 240,
+  "qwen_unknown_reasoning_scored_responses": 20,
+  "text_selection_statistics_sha256": "f234d3bb34f1afb14644e75edcf84019e0e896cccc89f9047478f3bf0c9dfab3",
+  "selection_scope": "Four completed non-reasoning text-reference configurations",
+  "privacy": "Answer-free new timing exports; no choices, answer labels, per-item correctness, raw account data, credentials or private paths.",
+  "accuracy_reproducibility": "Verified offline against external frozen key; public aggregates alone do not independently recreate private-key correctness."
+}

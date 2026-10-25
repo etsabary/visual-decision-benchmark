@@ -1,0 +1,279 @@
+{
+  "reference_sol": {
+    "model_requested": "openai/gpt-6-sol",
+    "catalog_snapshot": "openai/gpt-6-sol-20260922",
+    "host": "openrouter.ai",
+    "path": "/api/v1/chat/completions",
+    "provider": "OpenAI",
+    "selected_catalog": {
+      "name": "OpenAI | openai/gpt-6-sol-20260922",
+      "tag": "openai",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "discount": 0,
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "verbosity",
+        "reasoning_effort"
+      ]
+    },
+    "image_input": true,
+    "endpoint_identity_and_tariff_unchanged_at_end": true,
+    "settings": {
+      "model": "openai/gpt-6-sol",
+      "max_tokens": 16,
+      "stream": false,
+      "usage": {
+        "include": true
+      },
+      "reasoning": {
+        "enabled": false,
+        "effort": "none"
+      },
+      "service_tier": "default",
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      }
+    }
+  },
+  "reference_sonnet": {
+    "model_requested": "anthropic/claude-sonnet-5.5",
+    "catalog_snapshot": "anthropic/claude-sonnet-5.5-20260928",
+    "host": "openrouter.ai",
+    "path": "/api/v1/messages",
+    "provider": "Anthropic",
+    "selected_catalog": {
+      "name": "Anthropic | anthropic/claude-sonnet-5.5-20260928",
+      "tag": "anthropic",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "input_cache_write_1h": "0.000004",
+        "discount": 0
+      },
+      "context_length": 1000000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tools",
+        "tool_choice",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ]
+    },
+    "image_input": true,
+    "endpoint_identity_and_tariff_unchanged_at_end": true,
+    "settings": {
+      "model": "anthropic/claude-sonnet-5.5",
+      "max_tokens": 16,
+      "stream": false,
+      "thinking": {
+        "type": "between_tools"
+      },
+      "output_config": {
+        "effort": "high",
+        "format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "choice": {
+                "type": "string",
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              }
+            },
+            "required": [
+              "choice"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "provider": {
+        "only": [
+          "anthropic"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      }
+    }
+  },
+  "reference_opus5": {
+    "model_requested": "anthropic/claude-opus-5",
+    "catalog_snapshot": "anthropic/claude-opus-5-20260723",
+    "host": "openrouter.ai",
+    "path": "/api/v1/messages",
+    "provider": "Anthropic",
+    "selected_catalog": {
+      "name": "Anthropic | anthropic/claude-opus-5-20260723",
+      "tag": "anthropic",
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625",
+        "input_cache_write_1h": "0.00001",
+        "discount": 0
+      },
+      "context_length": 1000000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ]
+    },
+    "image_input": true,
+    "endpoint_identity_and_tariff_unchanged_at_end": true,
+    "settings": {
+      "model": "anthropic/claude-opus-5",
+      "max_tokens": 16,
+      "stream": false,
+      "thinking": {
+        "type": "disabled"
+      },
+      "output_config": {
+        "effort": "high",
+        "format": {
+          "type": "json_schema",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "choice": {
+                "type": "string",
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              }
+            },
+            "required": [
+              "choice"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "provider": {
+        "only": [
+          "anthropic"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "ignore": [
+          "anthropic/fast"
+        ]
+      }
+    }
+  },
+  "reference_qwen": {
+    "model_requested": "qwen3.8-max",
+    "catalog_snapshot": null,
+    "host": "hyper.charm.land",
+    "path": "/v1/chat/completions",
+    "provider": "Hyper Charm (request host)",
+    "selected_catalog": {
+      "id": "qwen3.8-max",
+      "object": "model",
+      "created": 0,
+      "owned_by": "hyper",
+      "display_name": "Qwen3.8-Max",
+      "producer": "Alibaba",
+      "context_window": 1000000,
+      "max_output_tokens": 65536,
+      "capabilities": {
+        "vision": true
+      },
+      "reasoning": {
+        "effort_levels": [
+          {
+            "value": "none",
+            "display": "None"
+          },
+          {
+            "value": "minimal",
+            "display": "minimal"
+          },
+          {
+            "value": "low",
+            "display": "Low"
+          },
+          {
+            "value": "medium",
+            "display": "Medium"
+          },
+          {
+            "value": "high",
+            "display": "High"
+          }
+        ],
+        "default_effort_level": "medium"
+      },
+      "pricing": {
+        "input": 2,
+        "output": 6,
+        "cache_create": 0,
+        "cache_hit": 0.25
+      }
+    },
+    "image_input": true,
+    "endpoint_identity_and_tariff_unchanged_at_end": true,
+    "settings": {
+      "model": "qwen3.8-max",
+      "max_tokens": 16,
+      "stream": false,
+      "reasoning_effort": "none"
+    }
+  }
+}

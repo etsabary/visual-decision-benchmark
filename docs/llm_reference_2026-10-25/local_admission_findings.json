@@ -1,0 +1,44 @@
+[
+  {
+    "model": "d1:3b-vision",
+    "stage": "PNG admission",
+    "scored_attempts": 0,
+    "reason": "Three-image PNG returned HTTP 500 / INFERENCE_FAILED; runner response-body decoding error; cause unknown"
+  },
+  {
+    "model": "d3:mini-gguf-q8_0",
+    "stage": "small PNG admission",
+    "scored_attempts": 0,
+    "reason": "185 input tokens exceeded physical batch size 128"
+  },
+  {
+    "model": "d3:nano-gguf-q8_0",
+    "stage": "small PNG admission",
+    "scored_attempts": 0,
+    "reason": "185 input tokens exceeded physical batch size 128"
+  },
+  {
+    "model": "d3:lite-gguf-q8_0",
+    "stage": "small PNG admission",
+    "scored_attempts": 0,
+    "reason": "185 input tokens exceeded physical batch size 128"
+  },
+  {
+    "model": "d3:edge-gguf-q8_0",
+    "stage": "small PNG admission",
+    "scored_attempts": 0,
+    "reason": "185 input tokens exceeded physical batch size 128"
+  },
+  {
+    "model": "d1-omni:600m-gguf-q8_0",
+    "stage": "capability probes",
+    "scored_attempts": 0,
+    "reason": "Tiny single PNG accepted; larger/multiple inputs exceeded physical batch size 128"
+  },
+  {
+    "model": "decider:2b-vision",
+    "stage": "capability probes; not selected",
+    "scored_attempts": 0,
+    "reason": "Single PNG accepted; multiple images and JPEGs rejected"
+  }
+]

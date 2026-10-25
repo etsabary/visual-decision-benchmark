@@ -1,0 +1,32 @@
+{
+  "local_h2o_lightning_4b": {
+    "model_requested": "h2o-lightning:4b",
+    "serving_digest": "2e535c910d02b13943f90a25a5beb99b0a9a8ec1607021dbfa907fda781b4dc4",
+    "precision": "Q8_0",
+    "device": "cuda:0",
+    "context_length": 8192,
+    "runtime": "Ollaya 0.17.0",
+    "hardware": "NVIDIA RTX 2060",
+    "vram_gb": 6,
+    "hardware_source": "user_reported",
+    "immutable_upstream_weight_revision": "Not reported by installed route",
+    "image_variant": "PNG-lossless-from-reviewed-decoded-RGB-v1",
+    "screen_median_ms": 493.43822948867455,
+    "warmup_calls": 4
+  },
+  "local_fovea_4b": {
+    "model_requested": "fovea:4b",
+    "serving_digest": "fd3dcbd2de8212f67b2de65a858bcfbb775a51aaa724c13794aba39bb633e963",
+    "precision": "NF4 / FP16 compute / FP32 readout",
+    "device": "cuda:0",
+    "context_length": 8192,
+    "runtime": "Ollaya 0.17.0",
+    "hardware": "NVIDIA RTX 2060",
+    "vram_gb": 6,
+    "hardware_source": "user_reported",
+    "immutable_upstream_weight_revision": "Not reported by installed route",
+    "image_variant": "PNG-lossless-from-reviewed-decoded-RGB-v1",
+    "screen_median_ms": 587.0424585154979,
+    "warmup_calls": 4
+  }
+}

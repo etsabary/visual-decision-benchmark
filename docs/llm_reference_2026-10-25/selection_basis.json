@@ -1,0 +1,38 @@
+{
+  "claim": "Highest-scoring non-reasoning-capable general-LLM reference in our completed text comparison",
+  "scope": "Four selected completed LLM configurations on the frozen 1342-question text bank",
+  "models": {
+    "reference_sol": {
+      "label": "GPT-6 Sol — no reasoning",
+      "n": 1342,
+      "correct": 1143,
+      "accuracy": 0.8517138599105812,
+      "reasoning_setting": "reasoning.effort=none"
+    },
+    "reference_sonnet": {
+      "label": "Sonnet 5.5 — no thinking, JSON-choice",
+      "n": 1342,
+      "correct": 1070,
+      "accuracy": 0.797317436661699,
+      "reasoning_setting": "thinking.type=between_tools; effort=high; no tools"
+    },
+    "reference_qwen": {
+      "label": "Qwen3.8-Max — none, Hyper Charm",
+      "n": 1342,
+      "correct": 967,
+      "accuracy": 0.7205663189269746,
+      "reasoning_setting": "reasoning_effort=none, documented/catalog-supported"
+    },
+    "reference_opus5": {
+      "label": "Opus 5 — no thinking, JSON-choice",
+      "n": 1342,
+      "correct": 1109,
+      "accuracy": 0.8263785394932935,
+      "reasoning_setting": "thinking.type=disabled; output_config.effort=high; no tools"
+    }
+  },
+  "statistics_sha256": "f234d3bb34f1afb14644e75edcf84019e0e896cccc89f9047478f3bf0c9dfab3",
+  "source": "https://etsabary.github.io/system-1-decision-benchmark/local_additions_2026-10-25/statistics.json",
+  "model_capability_source": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+  "limit": "Selection claim is bounded to this tested reference set; image performance is measured separately."
+}

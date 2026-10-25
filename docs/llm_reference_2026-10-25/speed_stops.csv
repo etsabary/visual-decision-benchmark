@@ -1,0 +1,4 @@
+model_id,model,status,correct,attempted,sample_accuracy,usable,mean_ms,median_ms,p95_ms,actual_sample_cost,cost_scope,included_in_full_ranking
+reference_sonnet,"Sonnet 5.5 — no thinking, JSON-choice",SPEED_STOP,18,20,0.9,20,3025.619470899983,3150.136479001958,3900.3769976072376,0.066222,API-reported USD charges; missing charges unknown,False
+reference_opus5,"Opus 5 — no thinking, JSON-choice",SPEED_STOP,16,20,0.8,20,2507.1275792011875,2627.616083002067,3127.5582646092516,0.165305,API-reported USD charges; missing charges unknown,False
+reference_qwen,"Qwen3.8-Max — none, Hyper Charm",SPEED_STOP,13,20,0.65,20,2914.026627104613,2836.886125005549,4289.6566458570305,0.0418939999999999995,"USD-equivalent prepaid quota debit, not cash invoice",False

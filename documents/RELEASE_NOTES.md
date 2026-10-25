@@ -1,3 +1,10 @@
+# Matched image LLM reference — October 25, 2026
+
+- Added Sol 147/200 (73.5%), 1787/1637/3028 ms mean/median/p95, 200 usable, zero reported reasoning tokens and $0.591634 primary cost.
+- Explained selection as the highest-scoring of four completed non-reasoning LLM text-reference configurations (1143/1342).
+- Marked Sonnet 5.5, Opus 5 and Qwen3.8-Max as speed stops after 20; their samples remain outside complete rankings.
+- Preserved all 17 prior records and seals. Added pale-yellow LLM styling, 360 category cells, answer-free timing, selection evidence and public offline validation; no inference during publication.
+
 # Local image addition — October 25, 2026
 
 - Added H2O Lightning 4B (117/200, 58.5%) and Fovea 4B (110/200, 55.0%) on a deliberately chosen RTX 2060 6 GB, with mean/median/p95 and unmeasured local operating cost.

@@ -23,6 +23,7 @@ jobs:
       - run: python scripts/validate_native_images.py
       - run: python scripts/validate_fastino_images.py
       - run: python scripts/validate_local_images_2026_10_25.py
+      - run: python scripts/validate_llm_image_reference_2026_10_25.py
       - run: python scripts/validate_repository_layout.py
       - run: python -m unittest discover -s scripts -p 'test_*.py'
   deploy:

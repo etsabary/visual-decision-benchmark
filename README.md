@@ -1,38 +1,79 @@
 # Image-grounded System 1 decision benchmark
 
-The comparison now contains **17 complete decision routes: 15 hosted models and two local models**. Each completed route has 200 first attempts on the same questions and choices. Local models use a separately recorded PNG input variant. Earlier hosted measurements remain unchanged.
+The comparison now contains **18 complete routes: 15 hosted decision models, two local models and GPT-6 Sol as a non-reasoning LLM reference**. Every complete row has 200 first attempts. Sonnet 5.5, Opus 5 and Qwen3.8-Max are separately marked **speed stops after 20 questions**, outside the complete ranking. All 17 previous records retain their exact scores, timings, costs and dates.
 
-**H2O Lightning 4B scored 117/200 (58.5%) at 560/484/988 ms mean/median/p95. Fovea 4B scored 110/200 (55.0%) at 658/602/962 ms.** Both returned 200 usable typed choices, with no scored retries, on a user-reported NVIDIA RTX 2060 with 6 GB VRAM. This older GPU was chosen deliberately to examine a more accessible local setup.
+**GPT-6 Sol scored 147/200 (73.5%), with 1787/1637/3028 ms mean/median/p95 and 200 usable decisions.** It passed the retained two-second median rule. Its reported 200-question cost was **$0.591634**, or **$2.958170 per 1,000**, with another **$0.007185** for two admission probes. Pale yellow with transparency identifies this LLM reference; purple continues to identify local hosting.
 
-Amos 1 Large remains the highest-scoring hosted route at **159/200 (79.5%)**, followed by Fastino GLiDE at **158/200 (79.0%)** and hosted d3-turbo at **155/200 (77.5%)**. The one-answer Amos/Fastino gap remains statistically unresolved. These results cover immediate fixed-choice decisions without tools or iterative reasoning.
+Amos 1 Large remains the highest-scoring complete route at 159/200 (79.5%), followed by Fastino GLiDE at 158/200 (79.0%) and hosted d3-turbo at 155/200 (77.5%). Sol matched kettei-fat's 147 correct answers. The one-answer Amos/Fastino gap remains statistically unresolved.
 
 [Open the colour-coded report](https://etsabary.github.io/visual-decision-benchmark/report.html)
 
-![Accuracy, speed and cost](results/releases/local_images_2026-10-25/overview.png)
+![Accuracy, speed and cost](results/releases/llm_reference_2026-10-25/overview.png)
 
-**Hosting colours:** purple `#7c3aed` = local RTX 2060 6 GB; blue `#16728c` = hosted decisions. Accuracy cells keep the fixed 0–100% scale. Speed bands: ≤500 ms, ≤1 s, ≤2 s, above. Cost/1,000 bands: ≤$0.05, ≤$0.15, ≤$0.50, above.
+**Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local RTX 2060 6 GB; pale yellow with transparency = general LLM reference with reasoning off. Accuracy cells retain the fixed 0–100% scale; speed/cost bands are unchanged.
 
 ## Overall results
 
-| Decision model | Hosting / inputs | Correct / 200 | Accuracy | Usable | Mean | Median | p95 | Actual 200 cost | Cost / 1,000 | Test date |
+| Model | Type / inputs | Correct / 200 | Accuracy | Usable | Mean | Median | p95 | Actual 200 cost | Cost / 1,000 | Date |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- | --- |
-| Amos 1 Large | Hosted · original mixed images | 159/200 | 79.5% | 200/200 | 381 ms | 340 ms | 630 ms | Free access† | Free access† | 2026-10-20 |
-| Fastino GLiDE | Hosted · original mixed images | 158/200 | 79.0% | 200/200 | 719 ms | 359 ms | 1950 ms | ~$0.007673 | ~$0.038363 | 2026-10-23 |
-| d3-turbo | Hosted · original mixed images | 155/200 | 77.5% | 200/200 | 510 ms | 431 ms | 975 ms | Free access† | Free access† | 2026-10-20 |
-| Perplexity Decider v1.2 | Hosted · original mixed images | 152/200 | 76.0% | 200/200 | 573 ms | 476 ms | 970 ms | $0.004316 | $0.021582 | 2026-10-20 |
-| Liquid d1-ultra | Hosted · original mixed images | 149/200 | 74.5% | 200/200 | 393 ms | 343 ms | 727 ms | $0.012692 | $0.063462 | 2026-10-20 |
-| kettei-fat | Hosted · original mixed images | 147/200 | 73.5% | 200/200 | 467 ms | 410 ms | 775 ms | $0.002131 | $0.010655 | 2026-10-20 |
-| Cloudflare Clef | Hosted · original mixed images | 145/200 | 72.5% | 200/200 | 685 ms | 567 ms | 1440 ms | $0.050310 | $0.251552 | 2026-10-20 |
-| Jev 1.13 | Hosted · original mixed images | 142/200 | 71.0% | 195/200 | 270 ms | 229 ms | 515 ms | $0.023976* | $0.119881* | 2026-10-20 |
-| Mercury Decide | Hosted · original mixed images | 142/200 | 71.0% | 200/200 | 575 ms | 498 ms | 1100 ms | $0.003839 | $0.019197 | 2026-10-20 |
-| Jev 1.14 | Hosted · original mixed images | 141/200 | 70.5% | 195/200 | 358 ms | 307 ms | 724 ms | $0.023977* | $0.119884* | 2026-10-15 (reused) |
-| Liquid d1 | Hosted · original mixed images | 135/200 | 67.5% | 200/200 | 277 ms | 240 ms | 509 ms | $0.006044 | $0.030220 | 2026-10-20 |
-| Perplexity Decider Flash v1.2 | Hosted · original mixed images | 129/200 | 64.5% | 200/200 | 303 ms | 275 ms | 552 ms | $0.002158 | $0.010791 | 2026-10-20 |
-| Cloudflare Clef Flash | Hosted · original mixed images | 126/200 | 63.0% | 200/200 | 827 ms | 761 ms | 1595 ms | $0.007966 | $0.039829 | 2026-10-20 |
-| Luna 6 Decisions | Hosted · original mixed images | 121/200 | 60.5% | 198/200 | 479 ms | 383 ms | 799 ms | $0.022546* | $0.112731* | 2026-10-15 (reused) |
+| Amos 1 Large | Hosted decision · original PNG/JPEG | 159/200 | 79.5% | 200/200 | 381 ms | 340 ms | 630 ms | Free access† | Free access† | 2026-10-20 |
+| Fastino GLiDE | Hosted decision · original PNG/JPEG | 158/200 | 79.0% | 200/200 | 719 ms | 359 ms | 1950 ms | ~$0.007673 | ~$0.038363 | 2026-10-23 |
+| d3-turbo | Hosted decision · original PNG/JPEG | 155/200 | 77.5% | 200/200 | 510 ms | 431 ms | 975 ms | Free access† | Free access† | 2026-10-20 |
+| Perplexity Decider v1.2 | Hosted decision · original PNG/JPEG | 152/200 | 76.0% | 200/200 | 573 ms | 476 ms | 970 ms | $0.004316 | $0.021582 | 2026-10-20 |
+| Liquid d1-ultra | Hosted decision · original PNG/JPEG | 149/200 | 74.5% | 200/200 | 393 ms | 343 ms | 727 ms | $0.012692 | $0.063462 | 2026-10-20 |
+| kettei-fat | Hosted decision · original PNG/JPEG | 147/200 | 73.5% | 200/200 | 467 ms | 410 ms | 775 ms | $0.002131 | $0.010655 | 2026-10-20 |
+| GPT-6 Sol — no reasoning | LLM reference · reasoning off · PNG | 147/200 | 73.5% | 200/200 | 1787 ms | 1637 ms | 3028 ms | $0.591634 | $2.958170 | 2026-10-25 |
+| Cloudflare Clef | Hosted decision · original PNG/JPEG | 145/200 | 72.5% | 200/200 | 685 ms | 567 ms | 1440 ms | $0.050310 | $0.251552 | 2026-10-20 |
+| Jev 1.13 | Hosted decision · original PNG/JPEG | 142/200 | 71.0% | 195/200 | 270 ms | 229 ms | 515 ms | $0.023976* | $0.119881* | 2026-10-20 |
+| Mercury Decide | Hosted decision · original PNG/JPEG | 142/200 | 71.0% | 200/200 | 575 ms | 498 ms | 1100 ms | $0.003839 | $0.019197 | 2026-10-20 |
+| Jev 1.14 | Hosted decision · original PNG/JPEG | 141/200 | 70.5% | 195/200 | 358 ms | 307 ms | 724 ms | $0.023977* | $0.119884* | 2026-10-15 (reused) |
+| Liquid d1 | Hosted decision · original PNG/JPEG | 135/200 | 67.5% | 200/200 | 277 ms | 240 ms | 509 ms | $0.006044 | $0.030220 | 2026-10-20 |
+| Perplexity Decider Flash v1.2 | Hosted decision · original PNG/JPEG | 129/200 | 64.5% | 200/200 | 303 ms | 275 ms | 552 ms | $0.002158 | $0.010791 | 2026-10-20 |
+| Cloudflare Clef Flash | Hosted decision · original PNG/JPEG | 126/200 | 63.0% | 200/200 | 827 ms | 761 ms | 1595 ms | $0.007966 | $0.039829 | 2026-10-20 |
+| Luna 6 Decisions | Hosted decision · original PNG/JPEG | 121/200 | 60.5% | 198/200 | 479 ms | 383 ms | 799 ms | $0.022546* | $0.112731* | 2026-10-15 (reused) |
 | H2O Lightning 4B | Local RTX 2060 6 GB · PNG | 117/200 | 58.5% | 200/200 | 560 ms | 484 ms | 988 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
 | Fovea 4B | Local RTX 2060 6 GB · PNG | 110/200 | 55.0% | 200/200 | 658 ms | 602 ms | 962 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
-| Cloudflare Clef Omni | Hosted · original mixed images | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
+| Cloudflare Clef Omni | Hosted decision · original PNG/JPEG | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
+
+## Why Sol is the strongest non-reasoning-capable LLM reference
+
+**Sol was the highest-scoring non-reasoning-capable general LLM in our completed text comparison: 1,143/1,342 (85.2%).** The other selected text references scored 1,109 for Opus 5, 1,070 for Sonnet 5.5 and 967 for Qwen3.8-Max. That is the measured basis for selecting Sol as the strongest—or “smartest”—non-reasoning-capable LLM reference here. The selection claim is bounded to those four tested configurations on the text bank; its image score is measured separately.
+
+Sol supports image input and a reasoning effort of `none`, as documented in the [official model documentation](https://developers.openai.com/api/docs/models/gpt-6-sol). This image run used the same OpenRouter → OpenAI standard route, `reasoning.enabled=false`, `reasoning.effort=none`, no tools and a 16-token output cap. All 200 scored responses explicitly reported **zero reasoning tokens and no reasoning content**. These are observed API facts; the model's weights are not independently attested.
+
+The [text comparison](https://etsabary.github.io/system-1-decision-benchmark/report.html) and [captured text statistics](https://etsabary.github.io/system-1-decision-benchmark/local_additions_2026-10-25/statistics.json) establish the selection population and scores. This is an immediate fixed-choice comparison without tools, crop/zoom operations or iterative reasoning.
+
+## Sol on the image bank
+
+Sol finished 12 answers behind Amos and 11 behind GLiDE. Its 1,637 ms median was longer than Amos's 340 ms, GLiDE's 359 ms and kettei-fat's 410 ms. Their weights, preprocessing, serving hardware, input file formats and dates differ; these are route-specific measurements.
+
+Sol scored **10/10 on sequential state tracking, charts, interface-state decisions and inspection against a reference**. Attribute/set filtering, spatial relationships, perspective/knowledge tracking and recognizing insufficient evidence were 9/10. Geometry/folding/fit and constraint satisfaction were each 3/10; connectivity 4/10, navigation/planning and document reconciliation 5/10. Each category contains ten questions, so one answer changes its score by ten percentage points.
+
+With exactly the same PNG inputs as the local runs, Sol answered 30 more questions correctly than H2O Lightning and 37 more than Fovea. Both local routes had shorter mean and median response times. This comparison does not isolate hosting location, because the model weights, hardware and serving routes also differ.
+
+## LLM speed stops
+
+The two-second **cumulative median** cutoff was retained explicitly for all four LLM references. Sonnet 5.5 stopped at 20 with a 3,150 ms median; Opus 5 stopped at 20 with 2,628 ms; Qwen3.8-Max stopped at 20 with 2,837 ms. All 60 partial first attempts returned usable outputs. These rows describe partial samples, with no full-bank score, full-run cost or entry in the 360-cell category ranking.
+
+| LLM reference | Outcome | Correct / attempted | Sample accuracy | Mean | Median | p95 | Actual sample cost |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Sonnet 5.5 — no thinking, JSON-choice | **SPEED STOP · partial** | 18/20 | 90.0% | 3026 ms | 3150 ms | 3900 ms | $0.066222 |
+| Opus 5 — no thinking, JSON-choice | **SPEED STOP · partial** | 16/20 | 80.0% | 2507 ms | 2628 ms | 3128 ms | $0.165305 |
+| Qwen3.8-Max — none, Hyper Charm | **SPEED STOP · partial** | 13/20 | 65.0% | 2914 ms | 2837 ms | 4290 ms | $0.041894 quota-equivalent |
+
+Sonnet's 18/20 (90.0%) is a promising partial result; it does not establish 90% accuracy on the 200-question bank. Its mode was `thinking.type=between_tools`, high effort, no tools and constrained JSON choice. Opus used disabled thinking at high effort with the same JSON-choice contract. All 40 scored Claude responses reported zero thinking tokens and no thinking blocks. Qwen requested catalog-supported `reasoning_effort=none`; its 20 responses omitted reasoning-token telemetry, which remains **unknown**, with no reasoning text. Hyper Charm cost values are reported USD-equivalent prepaid quota debits, not cash invoices.
+
+Sol passed 20 at a 1,746 ms median, then the separate offline 100-case accuracy gate at 73/100 before continuation. The cumulative median stayed at or below 2,000 ms throughout 200. All four retained their text-reference routes and output contracts; JSON enums followed each image question's 3/4/5 choices. No failed-format, wrong-answer or scored transport retries were made in this cohort.
+
+## LLM timing, input and cost qualifications
+
+New LLM calls used **PNG-lossless-from-reviewed-decoded-RGB-v1**, the exact PNG bytes used by the two local runs. Earlier 15 hosted decision models retain their original mixed PNG/JPEG bytes. The original questions, rules, option IDs, option order and image order remain frozen. No model was rerun to change a presentation or produce this publication.
+
+At most two distinct hosted model streams overlapped, with one request per model. Sol continuation ran alone. Timings include fresh HTTPS connection, PNG upload and the complete response; local encoding and between-phase waits are excluded. Two image admission probes per route have separate timings and costs.
+
+The complete Sol cost is its actual 200-question reported charge; cost/1,000 is a normalization, not another 1,000 calls. The three speed-stopped rows show only their actual 20-question sample costs. Probe charges remain separate in the exports. In this new cohort there were 260 first attempts and 8 admission probes, with zero retries. No inference was performed for publication.
+
+Public LLM timing/status evidence is answer-free: it contains request/image hashes, measured durations, returned identity, reported costs and reasoning telemetry. Private model choices, answer labels, per-item correctness, credentials, LAN addresses and account state are excluded. Accuracy was verified offline against the unchanged external key, and cannot be independently recreated from aggregates alone.
 
 ## Local hosting: useful speed, lower accuracy
 
@@ -85,13 +126,13 @@ The frozen external answer key stayed outside inference. Offline checks reproduc
 
 ## Results by named category
 
-![Named category scores, part 1](results/releases/local_images_2026-10-25/abilities_1.png)
+![Named category scores, part 1](results/releases/llm_reference_2026-10-25/abilities_1.png)
 
-![Named category scores, part 2](results/releases/local_images_2026-10-25/abilities_2.png)
+![Named category scores, part 2](results/releases/llm_reference_2026-10-25/abilities_2.png)
 
-![Named category scores, part 3](results/releases/local_images_2026-10-25/abilities_3.png)
+![Named category scores, part 3](results/releases/llm_reference_2026-10-25/abilities_3.png)
 
-![Named category scores, part 4](results/releases/local_images_2026-10-25/abilities_4.png)
+![Named category scores, part 4](results/releases/llm_reference_2026-10-25/abilities_4.png)
 
 ## What the categories test
 
@@ -116,6 +157,6 @@ The frozen external answer key stayed outside inference. Offline checks reproduc
 - **[V19 Perspective and knowledge tracking](data/questions/V19.md)**: Apply line-of-sight constraints or track what an observer has seen.
 - **[V20 Insufficient evidence](data/questions/V20.md)**: Recognize when the image cannot determine the requested answer.
 
-[Aggregate results](results/releases/local_images_2026-10-25/summary.json) · [Category CSV](results/releases/local_images_2026-10-25/family_scores.csv) · [Local timing evidence](results/releases/local_images_2026-10-25/local_timing_evidence.jsonl) · [Input hashes](results/releases/local_images_2026-10-25/image_variant_manifest.json) · [Audit](results/releases/local_images_2026-10-25/audit_receipt.json) · [Method](documents/LOCAL_IMAGE_RUNS.md)
+[Aggregate results](results/releases/llm_reference_2026-10-25/summary.json) · [Category CSV](results/releases/llm_reference_2026-10-25/family_scores.csv) · [LLM speed stops](results/releases/llm_reference_2026-10-25/speed_stops.csv) · [Answer-free LLM timing](results/releases/llm_reference_2026-10-25/llm_timing_evidence.jsonl) · [Selection evidence](results/releases/llm_reference_2026-10-25/selection_basis.json) · [Audit](results/releases/llm_reference_2026-10-25/audit_receipt.json) · [LLM method](documents/LLM_IMAGE_REFERENCES.md)
 
-[Questions and sources](data/questions/README.md) · [Image gallery](docs/gallery.html) · [Attribution](documents/THIRD_PARTY_NOTICES.md) · [Separate text benchmark](https://etsabary.github.io/system-1-decision-benchmark/report.html)
+[Questions and sources](data/questions/README.md) · [Gallery](docs/gallery.html) · [Attribution](documents/THIRD_PARTY_NOTICES.md) · [Local method](documents/LOCAL_IMAGE_RUNS.md)
