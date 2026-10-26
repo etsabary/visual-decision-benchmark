@@ -1,3 +1,9 @@
+# Celeris image publication — October 26, 2026
+
+- Added Celeris 1.1:143/200 (71.5%),200 usable,667/585/1120 ms mean/median/p95, primary estimated cost $0.01175164.
+- Preserved all 18 complete records and three partial LLM speed stops. No model calls during publication.
+- 19-route summary and380 named category cells, hosted blue/local purple/LLM pale yellow, answer-free Celeris timing and private-key audit bindings.
+
 # Matched image LLM reference — October 25, 2026
 
 - Added Sol 147/200 (73.5%), 1787/1637/3028 ms mean/median/p95, 200 usable, zero reported reasoning tokens and $0.591634 primary cost.

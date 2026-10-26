@@ -1,0 +1,404 @@
+[
+  {
+    "label": "Sonnet 5.5 — no thinking, JSON-choice",
+    "model_requested": "anthropic/claude-sonnet-5.5",
+    "state": "stopped_slow",
+    "attempted": 20,
+    "total": 200,
+    "correct": 18,
+    "accuracy": 0.9,
+    "usable": 20,
+    "mean_ms": 3025.619470899983,
+    "median_ms": 3150.136479001958,
+    "p95_ms": 3900.3769976072376,
+    "statuses": {
+      "ok": 20
+    },
+    "cost": {
+      "known_usd": "0.066222",
+      "reported_attempts": 20,
+      "unknown_attempts": 0
+    },
+    "probe_cost": {
+      "known_usd": "0.007806",
+      "reported_attempts": 2,
+      "unknown_attempts": 0
+    },
+    "probe_calls": 2,
+    "cost_scope": "API-reported USD charges; missing charges unknown",
+    "reasoning_tokens": {
+      "0": 20
+    },
+    "reasoning_text_responses": 0,
+    "reasoning_verification": {
+      "explicit_reported_zero": 20
+    },
+    "provider_identities": {
+      "Anthropic": 20
+    },
+    "returned_models": {
+      "anthropic/claude-sonnet-5.5": 20
+    },
+    "first100": {
+      "n": 20,
+      "correct": 18
+    },
+    "families": {
+      "V01": {
+        "n": 1,
+        "correct": 1
+      },
+      "V02": {
+        "n": 1,
+        "correct": 1
+      },
+      "V03": {
+        "n": 3,
+        "correct": 3
+      },
+      "V04": {
+        "n": 2,
+        "correct": 2
+      },
+      "V05": {
+        "n": 0,
+        "correct": 0
+      },
+      "V06": {
+        "n": 0,
+        "correct": 0
+      },
+      "V07": {
+        "n": 0,
+        "correct": 0
+      },
+      "V08": {
+        "n": 2,
+        "correct": 0
+      },
+      "V09": {
+        "n": 1,
+        "correct": 1
+      },
+      "V10": {
+        "n": 1,
+        "correct": 1
+      },
+      "V11": {
+        "n": 1,
+        "correct": 1
+      },
+      "V12": {
+        "n": 1,
+        "correct": 1
+      },
+      "V13": {
+        "n": 0,
+        "correct": 0
+      },
+      "V14": {
+        "n": 1,
+        "correct": 1
+      },
+      "V15": {
+        "n": 1,
+        "correct": 1
+      },
+      "V16": {
+        "n": 2,
+        "correct": 2
+      },
+      "V17": {
+        "n": 0,
+        "correct": 0
+      },
+      "V18": {
+        "n": 2,
+        "correct": 2
+      },
+      "V19": {
+        "n": 1,
+        "correct": 1
+      },
+      "V20": {
+        "n": 0,
+        "correct": 0
+      }
+    },
+    "model_id": "reference_sonnet",
+    "date": "2026-10-25",
+    "complete": false,
+    "included_in_full_ranking": false,
+    "stop_reason": "Cumulative median above 2000 ms after 20 first attempts",
+    "sample_warning": "Partial 20-question sample; no full 200-question score or normalized full-run cost",
+    "reasoning_setting": "between_tools/high; no tools; JSON choice"
+  },
+  {
+    "label": "Opus 5 — no thinking, JSON-choice",
+    "model_requested": "anthropic/claude-opus-5",
+    "state": "stopped_slow",
+    "attempted": 20,
+    "total": 200,
+    "correct": 16,
+    "accuracy": 0.8,
+    "usable": 20,
+    "mean_ms": 2507.1275792011875,
+    "median_ms": 2627.616083002067,
+    "p95_ms": 3127.5582646092516,
+    "statuses": {
+      "ok": 20
+    },
+    "cost": {
+      "known_usd": "0.165305",
+      "reported_attempts": 20,
+      "unknown_attempts": 0
+    },
+    "probe_cost": {
+      "known_usd": "0.019505",
+      "reported_attempts": 2,
+      "unknown_attempts": 0
+    },
+    "probe_calls": 2,
+    "cost_scope": "API-reported USD charges; missing charges unknown",
+    "reasoning_tokens": {
+      "0": 20
+    },
+    "reasoning_text_responses": 0,
+    "reasoning_verification": {
+      "explicit_reported_zero": 20
+    },
+    "provider_identities": {
+      "Anthropic": 20
+    },
+    "returned_models": {
+      "anthropic/claude-opus-5": 20
+    },
+    "first100": {
+      "n": 20,
+      "correct": 16
+    },
+    "families": {
+      "V01": {
+        "n": 1,
+        "correct": 1
+      },
+      "V02": {
+        "n": 1,
+        "correct": 1
+      },
+      "V03": {
+        "n": 3,
+        "correct": 2
+      },
+      "V04": {
+        "n": 2,
+        "correct": 2
+      },
+      "V05": {
+        "n": 0,
+        "correct": 0
+      },
+      "V06": {
+        "n": 0,
+        "correct": 0
+      },
+      "V07": {
+        "n": 0,
+        "correct": 0
+      },
+      "V08": {
+        "n": 2,
+        "correct": 0
+      },
+      "V09": {
+        "n": 1,
+        "correct": 1
+      },
+      "V10": {
+        "n": 1,
+        "correct": 0
+      },
+      "V11": {
+        "n": 1,
+        "correct": 1
+      },
+      "V12": {
+        "n": 1,
+        "correct": 1
+      },
+      "V13": {
+        "n": 0,
+        "correct": 0
+      },
+      "V14": {
+        "n": 1,
+        "correct": 1
+      },
+      "V15": {
+        "n": 1,
+        "correct": 1
+      },
+      "V16": {
+        "n": 2,
+        "correct": 2
+      },
+      "V17": {
+        "n": 0,
+        "correct": 0
+      },
+      "V18": {
+        "n": 2,
+        "correct": 2
+      },
+      "V19": {
+        "n": 1,
+        "correct": 1
+      },
+      "V20": {
+        "n": 0,
+        "correct": 0
+      }
+    },
+    "model_id": "reference_opus5",
+    "date": "2026-10-25",
+    "complete": false,
+    "included_in_full_ranking": false,
+    "stop_reason": "Cumulative median above 2000 ms after 20 first attempts",
+    "sample_warning": "Partial 20-question sample; no full 200-question score or normalized full-run cost",
+    "reasoning_setting": "disabled/high; JSON choice"
+  },
+  {
+    "label": "Qwen3.8-Max — none, Hyper Charm",
+    "model_requested": "qwen3.8-max",
+    "state": "stopped_slow",
+    "attempted": 20,
+    "total": 200,
+    "correct": 13,
+    "accuracy": 0.65,
+    "usable": 20,
+    "mean_ms": 2914.026627104613,
+    "median_ms": 2836.886125005549,
+    "p95_ms": 4289.6566458570305,
+    "statuses": {
+      "ok": 20
+    },
+    "cost": {
+      "known_usd": "0.0418939999999999995",
+      "reported_attempts": 20,
+      "unknown_attempts": 0
+    },
+    "probe_cost": {
+      "known_usd": "0.005228",
+      "reported_attempts": 2,
+      "unknown_attempts": 0
+    },
+    "probe_calls": 2,
+    "cost_scope": "USD-equivalent prepaid quota debit, not cash invoice",
+    "reasoning_tokens": {
+      "None": 20
+    },
+    "reasoning_text_responses": 0,
+    "reasoning_verification": {
+      "requested_none_catalog_supported_no_token_telemetry": 20
+    },
+    "provider_identities": {
+      "Hyper Charm (request host)": 20
+    },
+    "returned_models": {
+      "qwen3.8-max": 20
+    },
+    "first100": {
+      "n": 20,
+      "correct": 13
+    },
+    "families": {
+      "V01": {
+        "n": 1,
+        "correct": 1
+      },
+      "V02": {
+        "n": 1,
+        "correct": 1
+      },
+      "V03": {
+        "n": 3,
+        "correct": 1
+      },
+      "V04": {
+        "n": 2,
+        "correct": 1
+      },
+      "V05": {
+        "n": 0,
+        "correct": 0
+      },
+      "V06": {
+        "n": 0,
+        "correct": 0
+      },
+      "V07": {
+        "n": 0,
+        "correct": 0
+      },
+      "V08": {
+        "n": 2,
+        "correct": 0
+      },
+      "V09": {
+        "n": 1,
+        "correct": 0
+      },
+      "V10": {
+        "n": 1,
+        "correct": 1
+      },
+      "V11": {
+        "n": 1,
+        "correct": 1
+      },
+      "V12": {
+        "n": 1,
+        "correct": 0
+      },
+      "V13": {
+        "n": 0,
+        "correct": 0
+      },
+      "V14": {
+        "n": 1,
+        "correct": 1
+      },
+      "V15": {
+        "n": 1,
+        "correct": 1
+      },
+      "V16": {
+        "n": 2,
+        "correct": 2
+      },
+      "V17": {
+        "n": 0,
+        "correct": 0
+      },
+      "V18": {
+        "n": 2,
+        "correct": 2
+      },
+      "V19": {
+        "n": 1,
+        "correct": 1
+      },
+      "V20": {
+        "n": 0,
+        "correct": 0
+      }
+    },
+    "model_id": "reference_qwen",
+    "date": "2026-10-25",
+    "complete": false,
+    "included_in_full_ranking": false,
+    "stop_reason": "Cumulative median above 2000 ms after 20 first attempts",
+    "sample_warning": "Partial 20-question sample; no full 200-question score or normalized full-run cost",
+    "reasoning_setting": "requested reasoning_effort=none; omitted token telemetry remains unknown"
+  }
+]

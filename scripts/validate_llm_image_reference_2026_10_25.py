@@ -11,6 +11,7 @@ import statistics
 from urllib.parse import urlsplit
 
 from benchmark import rows
+from celeris_image_publication_history import historical_path
 from repo_layout import ROOT
 
 NAME='llm_reference_2026-10-25'
@@ -96,7 +97,7 @@ def validate():
     with (DATA/'family_scores.csv').open() as f:cells=list(csv.DictReader(f))
     assert len(cells)==len({(c['model_id'],c['family_id']) for c in cells})==360
     for c in cells:assert int(c['correct'])==s['models'][c['model_id']]['families'][c['family_id']]['correct']
-    html=(ROOT/'docs/report.html').read_text();page=Page();page.feed(html)
+    html=historical_path('docs/report.html').read_text();page=Page();page.feed(html)
     assert page.rows==s['rank_order'] and page.reference_rows==['reference_sol'] and set(page.local_rows)==set(s['local_model_ids'])
     assert len(page.cells)==360 and set(page.stops)==set(EXPECTED)
     for c in page.cells:assert int(c['data-correct'])==s['models'][c['data-model-id']]['families'][c['data-family']]['correct']
@@ -127,7 +128,7 @@ def validate():
             assert banned not in text,(path.name,banned)
     if (DATA/'manifest.json').exists():
         for name,h in json.loads((DATA/'manifest.json').read_text())['artifacts'].items():assert digest(DATA/name)==h,name
-        for name,h in json.loads((DATA/'release_checksums.json').read_text()).items():assert digest(ROOT/name)==h,name
+        for name,h in json.loads((DATA/'release_checksums.json').read_text()).items():assert digest(historical_path(name))==h,name
     print('PASS: 18 complete routes;17 earlier records exact;Sol147/200;three20-case speed stops excluded;260 answer-free timing rows;360 category cells;scoped text-selection claim;colour/mirror/privacy/seal checks.')
     return s
 

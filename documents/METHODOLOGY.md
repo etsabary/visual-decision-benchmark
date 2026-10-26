@@ -1,3 +1,7 @@
+# Celeris image addition — October 26, 2026
+
+The current comparison adds Celeris 1.1 as the 19th complete route. See [Celeris method](CELERIS_IMAGE_RUN.md) for native image binding, the recorded PNG variant, resolution 1120, timing, cost and audit limits. All 18 prior records and three partial speed stops are unchanged.
+
 # Current LLM reference addition — October 25, 2026
 
 The current comparison adds Sol as one complete non-reasoning LLM reference and separately records three 20-question speed stops. See [LLM reference method](LLM_IMAGE_REFERENCES.md). Existing 17 complete records remain unchanged; the new LLMs use the existing PNG variant.

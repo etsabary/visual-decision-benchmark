@@ -20,6 +20,11 @@ def build():
     if reference.exists():
         shutil.copytree(reference,out/reference.name,dirs_exist_ok=True)
         shutil.copy2(ROOT/'documents/LLM_IMAGE_REFERENCES.md',out/'LLM_IMAGE_REFERENCES.md')
+    celeris=ROOT/'results/releases/celeris_2026-10-26'
+    if celeris.exists():
+        shutil.copytree(celeris,out/celeris.name,dirs_exist_ok=True)
+        shutil.copy2(ROOT/'documents/CELERIS_IMAGE_RUN.md',out/'CELERIS_IMAGE_RUN.md')
+        shutil.copy2(ROOT/'docs/sitemap.xml',out/'sitemap.xml')
     # Keep original public URLs without copying newly nested images a second
     # time under data/. Only the original data files are website data exports.
     data=out/'data';data.mkdir(exist_ok=True)

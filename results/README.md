@@ -1,8 +1,7 @@
 # Dated image results
 
-- [Current: 18 complete routes](releases/llm_reference_2026-10-25/summary.json): 15 hosted decisions, two local and Sol reasoning-off LLM reference. [Speed stops](releases/llm_reference_2026-10-25/speed_stops.csv) are partial samples.
-- [Prior 17-route release](releases/local_images_2026-10-25/summary.json): unchanged.
-- [Earlier 15 hosted release](releases/fastino_2026-10-23/summary.json): unchanged.
-- [Earlier 14 models](releases/native_images_2026-10-20/summary.json) and [original October 15 results](original_2026-10-15/summary.json).
+- [Current: 19 complete routes](releases/celeris_2026-10-26/summary.json): 16 hosted decisions, two local and Sol reasoning-off reference. Celeris 71.5%, 585 ms median; [timing/usage](releases/celeris_2026-10-26/celeris_timing_evidence.jsonl).
+- [Previous 18 routes and three LLM speed stops](releases/llm_reference_2026-10-25/summary.json): unchanged.
+- [Earlier 17-route local release](releases/local_images_2026-10-25/summary.json), [15-hosted release](releases/fastino_2026-10-23/summary.json), [14-model release](releases/native_images_2026-10-20/summary.json), [original release](original_2026-10-15/summary.json).
 
-Presentation snapshots under archives/ preserve historical seals. New LLMs share local PNG inputs; earlier hosted rows retain original mixed-format bytes.
+Presentation snapshots under archives/ preserve historical seals. Celeris, Sol and local routes share recorded PNG bytes; earlier hosted rows keep original mixed formats.

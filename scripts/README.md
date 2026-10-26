@@ -43,3 +43,7 @@ claim, prices and colours. `llm_image_protocol.py` reconstructs the four exact
 image payload profiles without network or credential access.
 
 [Current report](../README.md) · [Data](../data/README.md) · [Results](../results/README.md)
+
+## Celeris image publication — October 26, 2026
+
+`publish_celeris_images_2026_10_26.py` reconciles the sealed 200-case owner run offline and publishes 19 complete routes. It does not send requests. `validate_celeris_images_2026_10_26.py` checks the new answer-free timing/usage evidence, 380 category cells and preserved 18-route history. `celeris_image_publication_history.py` resolves the exact superseded presentation for historical checks.

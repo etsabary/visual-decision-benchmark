@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED_CELERIS_200",
+  "prior_18_records_unchanged": true,
+  "question_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "private_seal_sha256": "310e7e96c4a1854603b55de01f651d03104d36060a33e205e2618998ad6d17ab",
+  "scored_first_attempts": 200,
+  "correct": 143,
+  "usable": 200,
+  "admission_probes": 5,
+  "retries": 0,
+  "cutoff_ms": 2000,
+  "payloads_rebuilt": 200,
+  "png_hashes_verified": 227,
+  "publication_inference_calls": 0,
+  "primary_estimated_cost_usd": "0.01175164",
+  "cost_basis": "Reported input usage times captured tariff; not receipts",
+  "privacy": "Answer-free timing, hashes and aggregates; no model choices, key labels, per-item correctness, credentials, LAN addresses or account state",
+  "public_scoring_limit": "Frozen private-key scoring verified offline; public aggregates alone cannot independently reproduce it"
+}
