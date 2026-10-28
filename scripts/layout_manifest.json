@@ -252,14 +252,14 @@
     }
   },
   "current_files": {
-    ".github/workflows/image-release.yml": "10763eff1754e3226fb353333f402c5a8e80c27cf01c9a725bc31f4ee5ea2b9d",
+    ".github/workflows/image-release.yml": "3272c8cf13fca649d9e38b2e17f33ea1497a1adbf574a20a9acc073478811997",
     ".gitignore": "82032b90ae383a970b73ad0f92ac555ad0e6e0b65b3c25a48538b8749cecac8a",
     "CITATION.cff": "60c645b114e0db4791bb6787990dd0dd51c93c7c5c63439a478ffbf85d9d55ef",
-    "README.md": "3565a1a7d673b8c4f579fd2d0244e5c68adfe18bf3675b1be303f623f3951b45",
+    "README.md": "7728dd401ffc74d6fa569e3fe5c0532fb7dba8484b1581785ec3153be9147f7d",
     "data/README.md": "7a44d15f275810dbba5dc694db5839b39555c774193d9a55e6b497a1c994c44a",
     "docs/gallery.html": "6010ef6756e9c54b4c045229e145235314a00e3187b67521b9d1937315bb875e",
     "docs/index.html": "efd259931778519c009f4ec02c760c91b305d4614c9ca98f4f0214c708f6fd13",
-    "docs/report.html": "a5500a9a74618c151d47d99348bb39c561d31d05baddb651d099c4c672137aee",
+    "docs/report.html": "aacf4326c9d7fc47d2dab10714dfe785cada8bd245e7ca05c4b8d5b0a096c30a",
     "docs/sitemap.xml": "2c1686b5947da150ca99ac9d59d9ffcfecc952aafe2ecbc386f60ec690c44d5e",
     "documents/CELERIS_IMAGE_RUN.md": "f410373ab677989c44f0746f83001085253c793d12e73bcca22f6091e8c2af9b",
     "documents/LLM_IMAGE_REFERENCES.md": "b7184397cade0db0a2124ae5b0ca5fd90262183610718726bb203ee6ceccc291",
@@ -273,7 +273,7 @@
     "scripts/README.md": "14d53cec85801a2f94a52c33e3dd271cffd66255b98f3a589b712b7582b64437",
     "scripts/analyze_native_images.py": "616b53d890668bf975b950a52527cb35238b866175fcc36322261400480d079a",
     "scripts/benchmark.py": "37a93c9428ee52ae40fd8a34bb29be8e765d47d879f55d9983cbfc2eb3b29578",
-    "scripts/build_image_site.py": "d732229522044adff9d9cedac2671d628ed15b89744daf73b15ca78ea80a9a71",
+    "scripts/build_image_site.py": "1d461474af7fe8bd7573a0a1cc2d54fe9f8d2dfe4119cd35bc1951acaefd6a2b",
     "scripts/celeris_image_publication_history.py": "673b2e9353a99c889bd39576f8c6d2aa549c18416425be49cc6c5fe395e5ae7d",
     "scripts/fastino_publication_history.py": "004966446f9738bd108518ad739c8bf45af993712df9ab2232c4ebaa27e1d1fb",
     "scripts/freeze_checksums.py": "1efa261ed1155ca6d3928863e8f7ae547f57b918d022ac973c6be477920ca9b6",
@@ -315,8 +315,9 @@
     "scripts/validate_llm_image_reference_2026_10_25.py": "c67805951e937940ab939c5b7b305488b43da813ec540c51b0ed425b83438e67",
     "scripts/validate_local_images_2026_10_25.py": "2ceafa948aeef77506d54bf913f0b061f20239c65588b3dd6bb283e2be3fac32",
     "scripts/validate_native_images.py": "67b77fe9a5f53daa86e47efa781fe16e5f893132a8257a76a0ef6f1cb1290346",
-    "scripts/validate_native_images_2026_10_27.py": "c7e209f93cefc7f39c80c9065c0f1be00a8fba8d1015a6e84a013474a0fa481f",
-    "scripts/validate_repository_layout.py": "f9483bd35f3cbc23538e0b1f0fe3b5e593f2f6c862cd48723954d09c3ad53ae6"
+    "scripts/validate_native_images_2026_10_27.py": "0c47110825c1d5295736f4e589437cae6d7f2c15a0588e7d3eff9bf72839eac3",
+    "scripts/validate_repository_layout.py": "f9483bd35f3cbc23538e0b1f0fe3b5e593f2f6c862cd48723954d09c3ad53ae6",
+    "scripts/validate_m2_image_screens_2026_10_28.py": "0d0a3d1bf81f019457eb9acf0068cc9bcbdde11b5c1c1755454feec74d1e2b5b"
   },
   "root_entries": [
     ".gitattributes",

@@ -1,0 +1,30 @@
+[
+  {
+    "model": "d1:2b",
+    "correct": 9,
+    "questions": 20,
+    "accuracy": 0.45,
+    "usable": 20,
+    "mean_ms": 5185.133898106869,
+    "median_ms": 4709.15372952004,
+    "p95_ms": 9041.408046521246,
+    "state": "stopped_slow",
+    "hardware": "Apple M2, 16 GB unified memory",
+    "runtime": "Ollama 0.40.12, MLX/Metal, BF16",
+    "date": "2026-10-28"
+  },
+  {
+    "model": "d1-omni:2b",
+    "correct": 13,
+    "questions": 20,
+    "accuracy": 0.65,
+    "usable": 20,
+    "mean_ms": 4139.674800098874,
+    "median_ms": 3322.789958503563,
+    "p95_ms": 7281.9002795033175,
+    "state": "stopped_slow",
+    "hardware": "Apple M2, 16 GB unified memory",
+    "runtime": "Ollama 0.40.12, MLX/Metal, BF16",
+    "date": "2026-10-28"
+  }
+]

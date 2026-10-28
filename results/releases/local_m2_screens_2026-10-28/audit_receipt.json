@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "models": 2,
+  "attempts": 40,
+  "usable": 40,
+  "image_input_probes_passed": 8,
+  "full_bank_results": false,
+  "scored_retries": 0,
+  "frozen_key": "privately verified",
+  "cost": "Local hardware and electricity unmeasured"
+}

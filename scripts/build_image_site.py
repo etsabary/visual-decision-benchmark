@@ -29,6 +29,11 @@ def build():
     if updates.exists():
         shutil.copytree(updates,out/updates.name,dirs_exist_ok=True)
         shutil.copy2(ROOT/'documents/OCTOBER27_UPDATES.md',out/'OCTOBER27_UPDATES.md')
+    screens=ROOT/'results/releases/local_m2_screens_2026-10-28'
+    if screens.exists():
+        target=out/'results/releases/local_m2_screens_2026-10-28'
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copytree(screens,target,dirs_exist_ok=True)
     # Keep original public URLs without copying newly nested images a second
     # time under data/. Only the original data files are website data exports.
     data=out/'data';data.mkdir(exist_ok=True)

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "README.md": {
+      "path": "files/README.md",
+      "sha256": "3565a1a7d673b8c4f579fd2d0244e5c68adfe18bf3675b1be303f623f3951b45"
+    },
+    "docs/report.html": {
+      "path": "files/docs/report.html",
+      "sha256": "a5500a9a74618c151d47d99348bb39c561d31d05baddb651d099c4c672137aee"
+    },
+    "scripts/layout_manifest.json": {
+      "path": "files/scripts/layout_manifest.json",
+      "sha256": "3a112a281cb8afa8bd8c5a13fe9b089fa8b30aeb22de03de6dae02f665e8b78c"
+    },
+    "scripts/validate_native_images_2026_10_27.py": {
+      "path": "files/scripts/validate_native_images_2026_10_27.py",
+      "sha256": "c7e209f93cefc7f39c80c9065c0f1be00a8fba8d1015a6e84a013474a0fa481f"
+    },
+    "scripts/build_image_site.py": {
+      "path": "files/scripts/build_image_site.py",
+      "sha256": "d732229522044adff9d9cedac2671d628ed15b89744daf73b15ca78ea80a9a71"
+    },
+    ".github/workflows/image-release.yml": {
+      "path": "files/.github/workflows/image-release.yml",
+      "sha256": "10763eff1754e3226fb353333f402c5a8e80c27cf01c9a725bc31f4ee5ea2b9d"
+    }
+  }
+}

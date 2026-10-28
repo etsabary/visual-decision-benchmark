@@ -1,0 +1,334 @@
+{
+  "version": "image-high-level-layout-20261023-v1",
+  "source_commit": "09a1c99d16e205e8d35399c043f985abff359a6a",
+  "source_files": [
+    "analyze_native_images.py",
+    "benchmark.py",
+    "build_image_site.py",
+    "fastino_publication_history.py",
+    "freeze_checksums.py",
+    "image_models_2026_10_20.py",
+    "image_publication_history.py",
+    "plot_native_images.py",
+    "plot_results.py",
+    "publish_fastino_images.py",
+    "publish_native_images.py",
+    "recheck_respan_images.py",
+    "repo_layout.py",
+    "score.py",
+    "score_native_images.py",
+    "seal_native_images.py",
+    "selective.py",
+    "test_benchmark.py",
+    "test_image_models_2026_10_20.py",
+    "test_native_analysis.py",
+    "test_native_publication.py",
+    "test_recheck_respan_images.py",
+    "validate.py",
+    "validate_native_images.py"
+  ],
+  "prefixes": {
+    "METHODOLOGY.md": "documents/METHODOLOGY.md",
+    "RELEASE_NOTES.md": "documents/RELEASE_NOTES.md",
+    "THIRD_PARTY_NOTICES.md": "documents/THIRD_PARTY_NOTICES.md",
+    "native_image_analysis.md": "documents/native_image_analysis.md",
+    "report.html": "docs/report.html",
+    "index.html": "docs/index.html",
+    "gallery.html": "docs/gallery.html",
+    "images": "data/images",
+    "questions": "data/questions",
+    "figures": "results/figures",
+    "native_images_2026-10-20": "results/releases/native_images_2026-10-20",
+    "fastino_2026-10-23": "results/releases/fastino_2026-10-23",
+    "archive_2026-10-16": "results/archives/archive_2026-10-16",
+    "results": "results/original_2026-10-15",
+    "checksums.json": "results/original_2026-10-15/checksums.json",
+    "requirements-image-reports.txt": "scripts/requirements-image-reports.txt"
+  },
+  "preserved_sources": {
+    "publish_native_images.py": {
+      "path": "scripts/legacy_layout/publish_native_images.py.snapshot",
+      "sha256": "29f1b9386fac2219996c111d5f2b69b4f1ac1a9c37b4d063147683315f614e6c"
+    },
+    "benchmark.py": {
+      "path": "scripts/legacy_layout/benchmark.py.snapshot",
+      "sha256": "6a821445652a955c4cec7b2e1aa811c636ef3b1666f2cf70fffa2749f2c041f5"
+    },
+    "test_image_models_2026_10_20.py": {
+      "path": "scripts/legacy_layout/test_image_models_2026_10_20.py.snapshot",
+      "sha256": "884e17524261cf2629fdd0a9ff9e9e0d13be9841cbe05a60c53483572a71fe96"
+    },
+    "recheck_respan_images.py": {
+      "path": "scripts/legacy_layout/recheck_respan_images.py.snapshot",
+      "sha256": "14ae4afb21c3a64416cf7447707bbc50bfbe38208f930b7ade097ecccdcb3e0f"
+    },
+    "test_native_publication.py": {
+      "path": "scripts/legacy_layout/test_native_publication.py.snapshot",
+      "sha256": "5141dc7db66a8be5e92ea78d5f0091aae8caa50f9b39b82490f84cae7469cb93"
+    },
+    "image_models_2026_10_20.py": {
+      "path": "scripts/legacy_layout/image_models_2026_10_20.py.snapshot",
+      "sha256": "591e35f1d080abca50cdf64fbc81adcec1de4d0348de336f3388c000ae8a6341"
+    },
+    "selective.py": {
+      "path": "scripts/legacy_layout/selective.py.snapshot",
+      "sha256": "9175afe156a94a65e804a51ef361630eacb1962aeaf6d8c0a48671c126522932"
+    },
+    "image_publication_history.py": {
+      "path": "scripts/legacy_layout/image_publication_history.py.snapshot",
+      "sha256": "ff2e763d243a7ea0b0e04a218dfc5a5bbfcf2b61f22c601c0c3b1a11e7293990"
+    },
+    "plot_native_images.py": {
+      "path": "scripts/legacy_layout/plot_native_images.py.snapshot",
+      "sha256": "45fc5575327211c12a132caa20dd676dc89029a01bfc948176cacb8dd6bf7249"
+    },
+    "freeze_checksums.py": {
+      "path": "scripts/legacy_layout/freeze_checksums.py.snapshot",
+      "sha256": "67ff2b743ac45993c88e051af7a0bd32050920b15ad5a41b1c6ee9f237800259"
+    },
+    "validate.py": {
+      "path": "scripts/legacy_layout/validate.py.snapshot",
+      "sha256": "2884f8e077e19cac305d37c93e77750207b1ca7208f7fa15c578c2aa742b88f3"
+    },
+    "test_benchmark.py": {
+      "path": "scripts/legacy_layout/test_benchmark.py.snapshot",
+      "sha256": "c56bea0052fc7cf85d459662c45b6406bfdfc32ea4b23b7df955d0d2face4f7c"
+    },
+    "seal_native_images.py": {
+      "path": "scripts/legacy_layout/seal_native_images.py.snapshot",
+      "sha256": "49a5d853a920db54bef4d3ae990258ddd7a4b85243a0ef4b2c534bc8502e8a8e"
+    },
+    "build_image_site.py": {
+      "path": "scripts/legacy_layout/build_image_site.py.snapshot",
+      "sha256": "82fd8620f2d694e0b2dc6507608e701bb6aeccaa9eb97c9015c0d6a931429404"
+    },
+    "score_native_images.py": {
+      "path": "scripts/legacy_layout/score_native_images.py.snapshot",
+      "sha256": "8338b4b83dd959e145d8d65034395f587402516fba98baf5fc2fcd7e74482fbd"
+    },
+    "validate_native_images.py": {
+      "path": "scripts/legacy_layout/validate_native_images.py.snapshot",
+      "sha256": "2fb6e6dfeb107e2a6d6bef99ed691c7e236c089aa0919295cf5511ed25b7824c"
+    },
+    "plot_results.py": {
+      "path": "scripts/legacy_layout/plot_results.py.snapshot",
+      "sha256": "f847e455a40e181831ad92beb473e634b0e977843aebe1d26d1e0f2a3299e699"
+    },
+    "test_recheck_respan_images.py": {
+      "path": "scripts/legacy_layout/test_recheck_respan_images.py.snapshot",
+      "sha256": "ad7d622f8a3456da970b81d4694fd62fd52ebbb8cd14fa97ca933830ec4b5f47"
+    },
+    "test_native_analysis.py": {
+      "path": "scripts/legacy_layout/test_native_analysis.py.snapshot",
+      "sha256": "8d24d3806d09866d0e337bc72a1fd3203df2b6303435c8d5ed510ec2678078f1"
+    },
+    "score.py": {
+      "path": "scripts/legacy_layout/score.py.snapshot",
+      "sha256": "0e136082aaf964c73c0749d771a3b68c8d9cff11b1a03eb7e83409e1946aa144"
+    },
+    "fastino_publication_history.py": {
+      "path": "scripts/legacy_layout/fastino_publication_history.py.snapshot",
+      "sha256": "be0292823a07a7f065edea74e4423be0da93b85fad0033327060196e0946c891"
+    },
+    "analyze_native_images.py": {
+      "path": "scripts/legacy_layout/analyze_native_images.py.snapshot",
+      "sha256": "96cf3749411af0392e49b3f18923a59d676557d1e722205f285d870ea5d198bd"
+    },
+    "METHODOLOGY.md": {
+      "path": "scripts/legacy_layout/METHODOLOGY.md.snapshot",
+      "sha256": "4dcc39f0801b0ad89184fbdf1089d74e6d002c1e164061cd60b9b987c5adbaa8"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "path": "scripts/legacy_layout/THIRD_PARTY_NOTICES.md.snapshot",
+      "sha256": "5999e7ed648d772d40b0c14a987e6d75f137d4be2dd9c167086cddadc41c74f2"
+    },
+    "README.md": {
+      "path": "scripts/legacy_layout/README.md.snapshot",
+      "sha256": "ff4c4fbf5c7055aa397753b77d232b5c953c9bb5695a673ce0b814c9af4d1301"
+    },
+    "RELEASE_NOTES.md": {
+      "path": "scripts/legacy_layout/RELEASE_NOTES.md.snapshot",
+      "sha256": "3d448e70d43040b80a90bed1b2634310b7dc803494f4b6fc49ba17a41e02ff9a"
+    },
+    "native_image_analysis.md": {
+      "path": "scripts/legacy_layout/native_image_analysis.md.snapshot",
+      "sha256": "45e03c791c7a395589d48947901c190840ed881a12609914edc6fd249ab7106b"
+    },
+    "questions/V09.md": {
+      "path": "scripts/legacy_layout/questions/V09.md.snapshot",
+      "sha256": "213ce664366dce654a3bcb4b4889dfffa3a76f8ab4021e52c79f4795445c3e63"
+    },
+    "questions/V19.md": {
+      "path": "scripts/legacy_layout/questions/V19.md.snapshot",
+      "sha256": "b1ab1d2fe623a23ca2cc74e11650f4fc5a2e83aff9a9f0817297ae84d9467528"
+    },
+    "questions/V08.md": {
+      "path": "scripts/legacy_layout/questions/V08.md.snapshot",
+      "sha256": "24458d0bfb27d06a5543baaad580943cfb4a1df7bf832621da6c7332b8a2c38a"
+    },
+    "questions/V18.md": {
+      "path": "scripts/legacy_layout/questions/V18.md.snapshot",
+      "sha256": "ee67c653244024c0f7e1d417d36cee365142054218f6a507b23942db95adb8f1"
+    },
+    "questions/V07.md": {
+      "path": "scripts/legacy_layout/questions/V07.md.snapshot",
+      "sha256": "b8d7fab355d60cc0b2fafd958c6d0f0040b6587b83c9741f3d20a9f43b167183"
+    },
+    "questions/V17.md": {
+      "path": "scripts/legacy_layout/questions/V17.md.snapshot",
+      "sha256": "6684e6af0a24401a20db808510a0f747c11b38c1781e733e178a290f50bce44e"
+    },
+    "questions/V03.md": {
+      "path": "scripts/legacy_layout/questions/V03.md.snapshot",
+      "sha256": "b6a0ef04a4d76e6cdb97ec317eaee0ab62f00c2bf8a5e9035d1597c8520b1db8"
+    },
+    "questions/V13.md": {
+      "path": "scripts/legacy_layout/questions/V13.md.snapshot",
+      "sha256": "4184d947590dad276da8f81a7811666113d9ed5a200901dbf5fd9a7bea2830d1"
+    },
+    "questions/V02.md": {
+      "path": "scripts/legacy_layout/questions/V02.md.snapshot",
+      "sha256": "2b5e74a396a7194a0aeed74982f65661ab4f4f7bc6ac8179ad68ae68744b1f29"
+    },
+    "questions/V12.md": {
+      "path": "scripts/legacy_layout/questions/V12.md.snapshot",
+      "sha256": "749c03056f180293dfa5a390a217e6d5e144d96673ce88f07bc4496282ff7ee8"
+    },
+    "questions/V06.md": {
+      "path": "scripts/legacy_layout/questions/V06.md.snapshot",
+      "sha256": "66d28fb2e683a88d556d38e4680c3d2f30b2ade8ecf77a9b42616146d2e77c3d"
+    },
+    "questions/V16.md": {
+      "path": "scripts/legacy_layout/questions/V16.md.snapshot",
+      "sha256": "9d3a722f862238be7a2d71efeb17ca30337e11d9103ceec97e396eef52be7b0d"
+    },
+    "questions/README.md": {
+      "path": "scripts/legacy_layout/questions/README.md.snapshot",
+      "sha256": "c267d216c456a709adb9b2ef158ae8d4c2bdbc1e90c1177ba08c106d44c86585"
+    },
+    "questions/V01.md": {
+      "path": "scripts/legacy_layout/questions/V01.md.snapshot",
+      "sha256": "c2f1aa12d50b1ce4a5225b5d4d28d82a3b15b692c232028ba3f8dea21ebf0e8b"
+    },
+    "questions/V11.md": {
+      "path": "scripts/legacy_layout/questions/V11.md.snapshot",
+      "sha256": "3ffa8a30f934238daf3f0a764df8cc1610204358d1f4d99a558c365ac08b0d5b"
+    },
+    "questions/V05.md": {
+      "path": "scripts/legacy_layout/questions/V05.md.snapshot",
+      "sha256": "b626bfe56e34887bf18d48101f8aeca1963f222333b43e8bfdd558ef7841c08a"
+    },
+    "questions/V15.md": {
+      "path": "scripts/legacy_layout/questions/V15.md.snapshot",
+      "sha256": "0c1a2da71ffa6d9294f4977091b6c394fd7b6386a85c06a3143177791594ed64"
+    },
+    "questions/V04.md": {
+      "path": "scripts/legacy_layout/questions/V04.md.snapshot",
+      "sha256": "0203d27f4a07afdd9eae72255e5b633e425d9c720a15824d7929a0af8f7fabd2"
+    },
+    "questions/V14.md": {
+      "path": "scripts/legacy_layout/questions/V14.md.snapshot",
+      "sha256": "828f5cdbc7e23cebe8bff2007ba8e8f200d2c865f806db8eff3ba59ac4b2ec0b"
+    },
+    "questions/V20.md": {
+      "path": "scripts/legacy_layout/questions/V20.md.snapshot",
+      "sha256": "9cc3019dd327708b3eaf4f2f9e915dc6c119b52a99474c3c8a0c9a2cc68e6c39"
+    },
+    "questions/V10.md": {
+      "path": "scripts/legacy_layout/questions/V10.md.snapshot",
+      "sha256": "c25a6caf7608a68e4ab3dd2d642970b4bc6b83031304a93917b98d7ed79be1f0"
+    },
+    "publish_fastino_images.py": {
+      "path": "scripts/legacy_layout/publish_fastino_images.py.snapshot",
+      "sha256": "332c8a24f681d24b3cda5067440fc223b1c7b29804a2a51823b57295d494d464"
+    },
+    "repo_layout.py": {
+      "path": "scripts/legacy_layout/repo_layout.py.snapshot",
+      "sha256": "df090de8c9cff6bedfd8113386bc577396717eefb23f66ec0b34ef9ae34402cd"
+    },
+    ".github/workflows/image-release.yml": {
+      "path": "scripts/legacy_layout/.github/workflows/image-release.yml.snapshot",
+      "sha256": "28e4f7117db4f868bebe6af33faa1bb9cfbb4a13a1d3d2ab4879532f3b462589"
+    }
+  },
+  "current_files": {
+    ".github/workflows/image-release.yml": "10763eff1754e3226fb353333f402c5a8e80c27cf01c9a725bc31f4ee5ea2b9d",
+    ".gitignore": "82032b90ae383a970b73ad0f92ac555ad0e6e0b65b3c25a48538b8749cecac8a",
+    "CITATION.cff": "60c645b114e0db4791bb6787990dd0dd51c93c7c5c63439a478ffbf85d9d55ef",
+    "README.md": "3565a1a7d673b8c4f579fd2d0244e5c68adfe18bf3675b1be303f623f3951b45",
+    "data/README.md": "7a44d15f275810dbba5dc694db5839b39555c774193d9a55e6b497a1c994c44a",
+    "docs/gallery.html": "6010ef6756e9c54b4c045229e145235314a00e3187b67521b9d1937315bb875e",
+    "docs/index.html": "efd259931778519c009f4ec02c760c91b305d4614c9ca98f4f0214c708f6fd13",
+    "docs/report.html": "a5500a9a74618c151d47d99348bb39c561d31d05baddb651d099c4c672137aee",
+    "docs/sitemap.xml": "2c1686b5947da150ca99ac9d59d9ffcfecc952aafe2ecbc386f60ec690c44d5e",
+    "documents/CELERIS_IMAGE_RUN.md": "f410373ab677989c44f0746f83001085253c793d12e73bcca22f6091e8c2af9b",
+    "documents/LLM_IMAGE_REFERENCES.md": "b7184397cade0db0a2124ae5b0ca5fd90262183610718726bb203ee6ceccc291",
+    "documents/LOCAL_IMAGE_RUNS.md": "57d9efa56f65261a604655e4af213472332ca473652cc3ea73a4852a94fadbde",
+    "documents/METHODOLOGY.md": "5363571c89f2e484bdceeca059d8b5a9dd03702ef0f69621de6aeb00cd1e7891",
+    "documents/OCTOBER27_UPDATES.md": "b19c610cd22dbca93f1d114934eee7b8c26b65f56ed6ae46eef675e7f739dd14",
+    "documents/RELEASE_NOTES.md": "10dfefde9b1fd0884067e82551578d8c2e485531d3a72afe210dbffbbb370717",
+    "documents/THIRD_PARTY_NOTICES.md": "af3157dd741acd918685be98f8f2683028413408654b1459c1eeca6fef3d1df8",
+    "documents/native_image_analysis.md": "168efdcb7cebac012439baaad618639cd0d04dc8a8efeb9c79e9ab982a73bded",
+    "results/README.md": "218b1acb789167caa4ac206cfc6cd8fb6b9e450601c95e291bf3e4bb7929f3cc",
+    "scripts/README.md": "14d53cec85801a2f94a52c33e3dd271cffd66255b98f3a589b712b7582b64437",
+    "scripts/analyze_native_images.py": "616b53d890668bf975b950a52527cb35238b866175fcc36322261400480d079a",
+    "scripts/benchmark.py": "37a93c9428ee52ae40fd8a34bb29be8e765d47d879f55d9983cbfc2eb3b29578",
+    "scripts/build_image_site.py": "d732229522044adff9d9cedac2671d628ed15b89744daf73b15ca78ea80a9a71",
+    "scripts/celeris_image_publication_history.py": "673b2e9353a99c889bd39576f8c6d2aa549c18416425be49cc6c5fe395e5ae7d",
+    "scripts/fastino_publication_history.py": "004966446f9738bd108518ad739c8bf45af993712df9ab2232c4ebaa27e1d1fb",
+    "scripts/freeze_checksums.py": "1efa261ed1155ca6d3928863e8f7ae547f57b918d022ac973c6be477920ca9b6",
+    "scripts/image_models_2026_10_20.py": "36eafaa9cfbdc26c1a00158fcbf1c56e0cbadfff126a1a1cbbc4e68ab8ee06d2",
+    "scripts/image_publication_history.py": "a57bcc195c50501713d88dd8d96494a521c408175ad6905ba9325e3a73e1b9ed",
+    "scripts/llm_image_protocol.py": "1822d1076f79cbb8c76226dcbc858a467363a9b01addbe1909c22158b1c9093d",
+    "scripts/llm_image_publication_history.py": "5dcdcf1c30497345100733e44c2edfd9956345e034853b667de19bee0de1e7fd",
+    "scripts/local_image_protocol.py": "f2c13e9ba5a84d75ffabb9a7832560dafedfe620eec6d16d1cf3afff2f159c86",
+    "scripts/local_image_publication_history.py": "adeae925cebd747a56f6dfa9aa7503da91c5d2663e04e65b5e1e67e9d3fd9968",
+    "scripts/october27_history.py": "a0a2dbc87ae5647125d4cc1240376069c2df19d80ee422284ee48127de8c3de1",
+    "scripts/october27_image_evidence.py": "22df171645788403ebd01692f81fb944cb4068ca259f2568aaf164d869786dbc",
+    "scripts/plot_native_images.py": "429ad39c93567add7fb018b55a752872b90c4a1d1f4957f1de48666e1d0d88df",
+    "scripts/plot_results.py": "5a2763fc3f44444077c2fb52e893fa19b9adba8eb975df37798fd78ae7985c8a",
+    "scripts/publish_celeris_images_2026_10_26.py": "e07eb8f1a00603c20479464195b590e9533206bdce2eac8643cf1506889e974b",
+    "scripts/publish_fastino_images.py": "0d0b56a5562e0a7ba9ed79d959e9c8773080b467dd03955ae34c7d5539f9454e",
+    "scripts/publish_llm_image_reference_2026_10_25.py": "f197566736dc1ec82c329b81b547119dde1fc556e369c1c2f489a1006c213105",
+    "scripts/publish_local_images_2026_10_25.py": "94d5eebb3b200ea12db8fe9b761763dff6c2e04801d4bd3a03dd37566621eb4b",
+    "scripts/publish_native_images.py": "a1b61473afe03e15f6bb856e7dedea40dfbfa2367ade8a90b1a6882eb9d6f484",
+    "scripts/publish_native_images_2026_10_27.py": "b7fd249c5be70603c23318effa61d6b60a945b82e6703706abdb272005790def",
+    "scripts/recheck_respan_images.py": "c90d35a7ae4901c04d25bfd85539f238a21bc6e68ce71389c6e1b9bffcca0518",
+    "scripts/repo_layout.py": "62483cad11053eb7b0ada041b2a4c5fb9faf9032d5d8aeb3fd5db0971cb29aef",
+    "scripts/score.py": "c6f6d51a0c4ba99f6d096e2560529925cd4cd9151db7870b3e65c2e26b556f13",
+    "scripts/score_native_images.py": "2263481975cad9d56e3bd86b3e46427de3545749fd50ff4aa71f6d51991f9089",
+    "scripts/seal_native_images.py": "0f0f8a56738adef2a2a79b150b2d18c46c800d7d40e3ac311129765656875f74",
+    "scripts/selective.py": "6b2f1655594b855a38a5fbb9091bae02f5b17383fbf3b08f70960e8e19355ccc",
+    "scripts/test_benchmark.py": "675a228cf1776a9429f2f9dc9a19561edee80f66a18506a9c2711784ab2a2bd8",
+    "scripts/test_celeris_images_2026_10_26.py": "d68c953dc9f1e28c1191ffb318fcc3dc93556c0e208e8a537dcaf3f8fd05a8bc",
+    "scripts/test_fastino_images.py": "1175bf708f9416148c76adf9ffc200493106b7d9871d66fbd887bbad2732fd9a",
+    "scripts/test_image_models_2026_10_20.py": "fca2b91373fd4faf0930ba84d89eeab213b6bfba29370526f14a2e1b4c74431f",
+    "scripts/test_llm_image_reference_2026_10_25.py": "721f8591042a23426d49e727caa621ea25c04e017d65d626eb63996b478e1664",
+    "scripts/test_local_images_2026_10_25.py": "f24fce0e115b675df85b505f562a14d76ccb96c9031b803bed90bd5db1667a2c",
+    "scripts/test_native_analysis.py": "e4ea004f907a35954194a41085ff83838b91a30f18993c5fe8e8146f23f4f5b9",
+    "scripts/test_native_publication.py": "25c01c7f1a1e66d62e3c2a5aec3327a84aaa20f4f8d7d8badd30073cb1a63fd1",
+    "scripts/test_october27_native_images.py": "b68853cd2a85c8522dfdcffe6a67f29a78d7839697b01cd3ed8318bf0932c857",
+    "scripts/test_recheck_respan_images.py": "d5244c789293651a6198be3f95e3d800b1d408b1ad2f45f461bfe7d14aec43ff",
+    "scripts/validate.py": "0aa49ea45c4d6ac932652f421f7265ece0d7686e3087e1c04eac320bc3cbc047",
+    "scripts/validate_celeris_images_2026_10_26.py": "544b5a7e62bb26ebf65a54a0f2bdb4d65e1a40ac47f947debd00817216efebb9",
+    "scripts/validate_fastino_images.py": "389c302f8cff513635f1f0b62411393b9d25e3fe2b4f7fffbb2729c6264fd5c3",
+    "scripts/validate_llm_image_reference_2026_10_25.py": "c67805951e937940ab939c5b7b305488b43da813ec540c51b0ed425b83438e67",
+    "scripts/validate_local_images_2026_10_25.py": "2ceafa948aeef77506d54bf913f0b061f20239c65588b3dd6bb283e2be3fac32",
+    "scripts/validate_native_images.py": "67b77fe9a5f53daa86e47efa781fe16e5f893132a8257a76a0ef6f1cb1290346",
+    "scripts/validate_native_images_2026_10_27.py": "c7e209f93cefc7f39c80c9065c0f1be00a8fba8d1015a6e84a013474a0fa481f",
+    "scripts/validate_repository_layout.py": "f9483bd35f3cbc23538e0b1f0fe3b5e593f2f6c862cd48723954d09c3ad53ae6"
+  },
+  "root_entries": [
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    "CITATION.cff",
+    "LICENSE",
+    "README.md",
+    "data",
+    "docs",
+    "documents",
+    "results",
+    "scripts"
+  ]
+}

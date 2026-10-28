@@ -8,6 +8,17 @@ from benchmark import rows
 from validate_llm_image_reference_2026_10_25 import Page,percentile
 import publish_native_images_2026_10_27 as b
 
+def historical_oct28(path):
+    path=Path(path)
+    archive=b.ROOT/'results/archives/presentation_before_m2_screens_2026-10-28'
+    manifest=archive/'manifest.json'
+    if not manifest.exists():return path
+    entry=json.loads(manifest.read_text())['files'].get(path.relative_to(b.ROOT).as_posix())
+    if not entry:return path
+    saved=archive/entry['path']
+    assert b.digest(saved)==entry['sha256'],path
+    return saved
+
 def validate():
     s=json.loads((b.DEST/'summary.json').read_text());old=json.loads((b.OLD/'summary.json').read_text())
     assert len(s['models'])==s['complete_routes']==21 and s['complete_first_attempt_cases']==4200
@@ -76,7 +87,7 @@ def validate():
             if p.name!='llm_model_metadata.json':assert '"choice":' not in t,p.name
     if (b.DEST/'manifest.json').exists():
         for name,h in json.loads((b.DEST/'manifest.json').read_text())['artifacts'].items():assert b.digest(b.DEST/name)==h,name
-        for name,h in json.loads((b.DEST/'release_checksums.json').read_text()).items():assert b.digest(b.ROOT/name)==h,name
+        for name,h in json.loads((b.DEST/'release_checksums.json').read_text()).items():assert b.digest(historical_oct28(b.ROOT/name))==h,name
     from validate_celeris_images_2026_10_26 import validate as historical
     historical()
     print('PASS:21 image routes;400 new attempts;420 category cells;19 earlier records exact')

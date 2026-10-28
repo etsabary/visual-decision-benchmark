@@ -26,6 +26,7 @@ jobs:
       - run: python scripts/validate_llm_image_reference_2026_10_25.py
       - run: python scripts/validate_celeris_images_2026_10_26.py
       - run: python scripts/validate_native_images_2026_10_27.py
+      - run: python scripts/validate_m2_image_screens_2026_10_28.py
       - run: python scripts/validate_repository_layout.py
       - run: python -m unittest discover -s scripts -p 'test_*.py'
   deploy:

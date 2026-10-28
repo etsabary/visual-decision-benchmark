@@ -36,6 +36,17 @@ The comparison contains **21 complete routes: 18 hosted decision models, two loc
 | Fovea 4B | Local RTX 2060 6 GB · PNG | 110/200 | 55.0% | 200/200 | 658 ms | 602 ms | 962 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
 | Cloudflare Clef Omni | Hosted decision · original PNG/JPEG | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
 
+## Apple M2 image speed screens
+
+On October 28, 2026, I tested two Liquid models on the first 20 image questions on an Apple M2 Mac with 16 GB unified memory, using Ollama 0.40.12, MLX/Metal and BF16. Both passed the image-input checks. Their median response times exceeded the two-second cutoff, so the runs stopped after 20 questions and do not enter the 200-question ranking.
+
+| Model | Correct / 20 | Mean | Median | p95 |
+| --- | ---: | ---: | ---: | ---: |
+| Liquid d1-2B · local Apple M2 | 9/20 | 5,185 ms | 4,709 ms | 9,041 ms |
+| Liquid d1-Omni-2B · local Apple M2 | 13/20 | 4,140 ms | 3,323 ms | 7,282 ms |
+
+These are small preliminary screens, not full image-benchmark scores. Tests were sequential, with model loading and image probes excluded from timing. Local hardware and electricity costs were not measured. Both completed the text bank: [text comparison](https://etsabary.github.io/system-1-decision-benchmark/report.html). [Screen data](results/releases/local_m2_screens_2026-10-28/screens.json) · [Answer-free timings](results/releases/local_m2_screens_2026-10-28/timing.csv).
+
 ## October 27 findings
 
 ### D3 Ultra improves on text and loses seven image answers
