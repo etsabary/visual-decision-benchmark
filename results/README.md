@@ -1,7 +1,6 @@
 # Dated image results
 
-- [Current: 19 complete routes](releases/celeris_2026-10-26/summary.json): 16 hosted decisions, two local and Sol reasoning-off reference. Celeris 71.5%, 585 ms median; [timing/usage](releases/celeris_2026-10-26/celeris_timing_evidence.jsonl).
-- [Previous 18 routes and three LLM speed stops](releases/llm_reference_2026-10-25/summary.json): unchanged.
-- [Earlier 17-route local release](releases/local_images_2026-10-25/summary.json), [15-hosted release](releases/fastino_2026-10-23/summary.json), [14-model release](releases/native_images_2026-10-20/summary.json), [original release](original_2026-10-15/summary.json).
+- [Current: 21 complete routes](releases/native_updates_2026-10-27/summary.json):18 hosted decisions, two local and Sol reference. [New timing/usage](releases/native_updates_2026-10-27/october27_timing_evidence.jsonl).
+- [Previous19 routes](releases/celeris_2026-10-26/summary.json), [18 routes](releases/llm_reference_2026-10-25/summary.json), [17 routes](releases/local_images_2026-10-25/summary.json): preserved.
 
-Presentation snapshots under archives/ preserve historical seals. Celeris, Sol and local routes share recorded PNG bytes; earlier hosted rows keep original mixed formats.
+All dated evidence remains sealed. New D3/Liquid routes use original reviewed files; previous PNG variants retain their exact provenance.

@@ -1,0 +1,78 @@
+{
+  "d3_ultra": {
+    "requested_model": "vllm-sr/d3-ultra",
+    "returned_identities": {
+      "vllm-sr/d3-ultra": 200
+    },
+    "selected_catalog": {
+      "aliases": [
+        "vllm-sr/d3-turbo",
+        "vllm-sr/d3"
+      ],
+      "box": true,
+      "hf_url": "https://huggingface.co/vllm-sr/d3-ultra",
+      "id": "vllm-sr/d3-ultra",
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "limits": {
+        "max_image_bytes": 16777216,
+        "max_images": 16,
+        "max_questions": 64,
+        "max_request_tokens": 131072,
+        "max_state_chars": 131072
+      },
+      "name": "d3-ultra",
+      "ready": true,
+      "size": "27B"
+    },
+    "selected_catalog_unchanged": true,
+    "pricing_basis": "Free public access at test time",
+    "source_evidence_sha256": {
+      "manifest.json": "140cba6074cbbd119decafa537f28a3d6ad9d6e61e1be1a1802f973dc0b8b70f",
+      "attempts.jsonl": "fb2df0cb0c582ef6c99d3a5a6e00d4ac156f388272c041d10346e6c736236d8c",
+      "dispatches.jsonl": "6fc3709213c935eaec07acdefda57eab56b4333ae7d192125c645393bb6e32a0",
+      "admission.jsonl": "1cee5bae217282e0efa3cb7decb8fc4cdfcc793fac8760c1270bc0f4153f4284",
+      "final_report.json": "77f351e3997fe3b17e63a0912fd79af3d902fa769f8dcbe70b1b9638b6271f71",
+      "audit_receipt.json": "3c9b3a63f4bca6bb597f2a36319a828d76fb12a99da87141e4474ae337fec9ae",
+      "catalog_start.json": "87cc0ea070f9a4e0081b3b93ad21aa1bb3c680958148ad23dbdd93ba08df8139",
+      "catalog_end.json": "87cc0ea070f9a4e0081b3b93ad21aa1bb3c680958148ad23dbdd93ba08df8139",
+      "executor_source.py.snapshot": "7a6de60d19f049f29259636fa2d38b0ffd3b38a62104436aba406aade3656e36"
+    }
+  },
+  "liquid11_decision": {
+    "requested_model": "liquid/d1.1",
+    "returned_identities": {
+      "liquid/d1.1-20261027": 200
+    },
+    "selected_catalog": {
+      "name": "Liquid | liquid/d1.1-20261027",
+      "tag": "liquid",
+      "provider_name": "Liquid",
+      "status": 0,
+      "pricing": {
+        "prompt": "0.00000002",
+        "completion": "0",
+        "input_cache_read": "0.00000002",
+        "discount": 0
+      },
+      "context_length": 65536,
+      "supported_parameters": []
+    },
+    "selected_catalog_unchanged": true,
+    "pricing_basis": "API-reported charges",
+    "source_evidence_sha256": {
+      "manifest.json": "972ff40ec4deaef6d400f75d89581cbeb839dda09625aac28846b66b5446791f",
+      "attempts.jsonl": "104a5fe91344c11bea7e78a6018d907c6678b106ac930d31424e3a23640a4337",
+      "dispatches.jsonl": "829ffe1309bd65a42eda60c855c08759850f35c89c103ff751d7e74530e3ca55",
+      "admission.jsonl": "6d2ecbea6e38bc72554f876e164bf996c460b3e55b060a0944986518dd378a68",
+      "final_report.json": "19aab355b31ca74a4de1a26942e4e309bb8438a13133432029cdcedbae5fc5fe",
+      "audit_receipt.json": "654f37da0ad161708e7e8422b0d304bc0e9030fcb7c54e8f34c4f61a854694ee",
+      "catalog_start.json": "9e9112f9d2a46d49a58c77a459c91351921ba70c65e82352aeac690d4da64e53",
+      "catalog_end.json": "9e9112f9d2a46d49a58c77a459c91351921ba70c65e82352aeac690d4da64e53",
+      "executor_source.py.snapshot": "7a6de60d19f049f29259636fa2d38b0ffd3b38a62104436aba406aade3656e36"
+    }
+  }
+}

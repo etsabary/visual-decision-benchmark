@@ -47,3 +47,7 @@ image payload profiles without network or credential access.
 ## Celeris image publication — October 26, 2026
 
 `publish_celeris_images_2026_10_26.py` reconciles the sealed 200-case owner run offline and publishes 19 complete routes. It does not send requests. `validate_celeris_images_2026_10_26.py` checks the new answer-free timing/usage evidence, 380 category cells and preserved 18-route history. `celeris_image_publication_history.py` resolves the exact superseded presentation for historical checks.
+
+## October 27 additions
+
+`publish_native_images_2026_10_27.py` publishes D3 Ultra and Liquid d1.1 offline from sealed captures and an explicit external key. `validate_native_images_2026_10_27.py` verifies21 complete routes,400 new first attempts,420 category cells and19 exact prior model records. The separate --seal phase freezes the reviewed dated release.

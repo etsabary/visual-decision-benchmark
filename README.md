@@ -1,16 +1,14 @@
 # Image-grounded System 1 decision benchmark
 
-The comparison contains **19 complete routes: 16 hosted decision models, two local models and GPT-6 Sol as a non-reasoning LLM reference**. Every complete row has 200 first attempts across 20 categories. All 18 prior records and the three separate LLM speed stops are unchanged.
+The comparison contains **21 complete routes: 18 hosted decision models, two local models and GPT-6 Sol as a non-reasoning LLM reference**. Each complete route covers the same 200 first attempts across 20 categories. All 19 earlier records and three partial LLM speed stops are preserved.
 
-**Celeris 1.1 Decision scored 143/200 (71.5%), with 667/585/1120 ms mean/median/p95 and 200 usable decisions.** It passed the existing two-second cumulative-median cutoff. Blue identifies its hosted route; purple identifies local RTX 2060 runs and pale yellow identifies Sol.
-
-Amos 1 Large remains highest at 159/200 (79.5%), followed by GLiDE at 158 (79.0%) and d3-turbo at 155 (77.5%). Sol retains 147 (73.5%). Every previous score, cost, duration, date and exclusion is preserved; publication used saved evidence without new model calls.
+**D3 Ultra scored 148/200 (74.0%); Liquid d1.1 scored 144/200 (72.0%).** Both returned 200 usable native decisions and passed the two-second cumulative-median gate. Amos remains highest at 159/200 (79.5%), followed by Fastino GLiDE at 158 (79.0%) and the earlier D3 Turbo at 155 (77.5%). Sol retains 147 (73.5%). One overall answer is half a percentage point; these observed gaps do not establish a universal model ranking.
 
 [Open the colour-coded report](https://etsabary.github.io/visual-decision-benchmark/report.html)
 
-![Accuracy, speed and cost](results/releases/celeris_2026-10-26/overview.png)
+![Accuracy, speed and cost](results/releases/native_updates_2026-10-27/overview.png)
 
-**Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local RTX 2060 6 GB; pale yellow with transparency = general LLM reference with reasoning off. Accuracy cells retain the fixed 0–100% scale; speed/cost bands are unchanged.
+**Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local RTX 2060 6 GB; pale yellow with transparency = LLM reference with reasoning off. Accuracy cells and speed/cost bands retain their fixed scales.
 
 ## Overall results
 
@@ -21,9 +19,11 @@ Amos 1 Large remains highest at 159/200 (79.5%), followed by GLiDE at 158 (79.0%
 | d3-turbo | Hosted decision · original PNG/JPEG | 155/200 | 77.5% | 200/200 | 510 ms | 431 ms | 975 ms | Free access† | Free access† | 2026-10-20 |
 | Perplexity Decider v1.2 | Hosted decision · original PNG/JPEG | 152/200 | 76.0% | 200/200 | 573 ms | 476 ms | 970 ms | $0.004316 | $0.021582 | 2026-10-20 |
 | Liquid d1-ultra | Hosted decision · original PNG/JPEG | 149/200 | 74.5% | 200/200 | 393 ms | 343 ms | 727 ms | $0.012692 | $0.063462 | 2026-10-20 |
+| D3 Ultra | Hosted decision · original PNG/JPEG | 148/200 | 74.0% | 200/200 | 451 ms | 361 ms | 752 ms | Free access† | Free access† | 2026-10-27 |
 | kettei-fat | Hosted decision · original PNG/JPEG | 147/200 | 73.5% | 200/200 | 467 ms | 410 ms | 775 ms | $0.002131 | $0.010655 | 2026-10-20 |
 | GPT-6 Sol — no reasoning | LLM reference · reasoning off · PNG | 147/200 | 73.5% | 200/200 | 1787 ms | 1637 ms | 3028 ms | $0.591634 | $2.958170 | 2026-10-25 |
 | Cloudflare Clef | Hosted decision · original PNG/JPEG | 145/200 | 72.5% | 200/200 | 685 ms | 567 ms | 1440 ms | $0.050310 | $0.251552 | 2026-10-20 |
+| Liquid d1.1 | Hosted decision · original PNG/JPEG | 144/200 | 72.0% | 200/200 | 487 ms | 425 ms | 915 ms | $0.006044 | $0.030220 | 2026-10-27 |
 | Celeris 1.1 Decision | Hosted decision · PNG · resolution 1120 | 143/200 | 71.5% | 200/200 | 667 ms | 585 ms | 1120 ms | ~$0.011752 | ~$0.058758 | 2026-10-25 |
 | Jev 1.13 | Hosted decision · original PNG/JPEG | 142/200 | 71.0% | 195/200 | 270 ms | 229 ms | 515 ms | $0.023976* | $0.119881* | 2026-10-20 |
 | Mercury Decide | Hosted decision · original PNG/JPEG | 142/200 | 71.0% | 200/200 | 575 ms | 498 ms | 1100 ms | $0.003839 | $0.019197 | 2026-10-20 |
@@ -36,31 +36,31 @@ Amos 1 Large remains highest at 159/200 (79.5%), followed by GLiDE at 158 (79.0%
 | Fovea 4B | Local RTX 2060 6 GB · PNG | 110/200 | 55.0% | 200/200 | 658 ms | 602 ms | 962 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
 | Cloudflare Clef Omni | Hosted decision · original PNG/JPEG | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
 
-## Celeris: accuracy, speed and cost
+## October 27 findings
 
-Celeris answered four fewer questions correctly than Sol, a two-percentage-point gap, with a 585 ms median versus Sol's 1,637 ms. It finished 16 answers behind Amos and 15 behind GLiDE. These observed gaps on one developing bank do not establish a general ability ordering. Celeris is the ninth complete route in the accuracy-sorted table.
+### D3 Ultra improves on text and loses seven image answers
 
-Its estimated 200-question cost is **~$0.01175164**, or **~$0.05875820 per 1,000**. This is 293,791 reported input tokens times the captured USD 0.04/million tariff, not monetary receipts. Five separate image-binding probes cost an estimated $0.00042344. Sol's reported bank charge was $0.591634; GLiDE's usage-times-tariff estimate was $0.00767264. Local hardware and electricity cost remains unmeasured.
+D3 Ultra measured **451 / 361 / 752 ms mean / median / p95**, compared with the earlier Turbo image median of 431 ms. Its image score fell from 155/200 to 148/200, while its text score rose from 1,106/1,342 (82.4%) to 1,124 (83.8%). A newer model does not improve every tested operation.
 
-## Celeris category profile
+Navigation and planning fell from **7/10 to 3/10**; connectivity and reachability from **7/10 to 5/10**. Document reconciliation—comparing records across documents—improved from **6/10 to 8/10**, and spatial relationships from **8/10 to 9/10**. Visual rule application scored 5/10; constraint satisfaction 4/10. Each category contains ten questions, so a one-answer difference is ten percentage points.
 
-**10/10:** Charts and quantitative comparisons 10/10; Interface state decisions 10/10; Insufficient evidence 10/10.
+### Liquid d1.1 gains nine image answers, with a longer median
 
-**3/10:** Visual rule application 3/10; Perspective and knowledge tracking 3/10.
+Liquid d1.1 measured **487 / 425 / 915 ms mean / median / p95**. It scored nine more than the older d1 run's 135/200 (67.5%), whose median was 240 ms. Liquid d1-ultra retains 149/200 (74.5%). Its text run also improved: 1,044/1,342 (77.8%) versus the older d1's 965 (71.9%).
 
-Every category has ten questions, so one answer changes a category score by ten percentage points. The full 380-cell matrix preserves all model profiles; a category's measured score is not a promise of reliability on other tasks.
+Causal and counterfactual image decisions rose from **4/10 to 7/10**. Sequential visual state tracking and insufficient-evidence decisions each rose from **8/10 to 10/10**. Visual rule application fell from **4/10 to 2/10**, and attribute binding/set logic from **10/10 to 9/10**. The full 420-cell category matrix shows where each model differs.
 
-## Celeris image settings and timing
+### Image inputs, identity and cost
 
-The exact requested and returned model was `celeris-1.1-decision`, using the direct native SystemOne endpoint with explanations disabled. Images were named `image_1`, `image_2`, etc. in `x_celeris.images`, supplied as base64 PNG URLs in original order, with corresponding state markers. Question wording, rules, option IDs, order and the frozen answer key were unchanged. Variable three/four/five-choice outputs were checked against each question's exact choices.
+The new runs used the **exact original reviewed PNG/JPEG bytes** from the earlier native-provider D3/Liquid image runs. The same 200 questions, rules, option IDs/text, image order and request order were retained. No resizing, replacement downloads, OCR or captions. Celeris, Sol and the two local rows retain their separately documented lossless PNG variant; all earlier inputs and measurements are unchanged.
 
-The run used the exact recorded PNG bytes shared with Sol and the two local models. No image was resized, replaced with OCR or captioned. `max_soft_tokens=1120` selected the highest resolution control in the captured [Celeris image documentation](https://docs.celeris.ai/images). Its internal preprocessing is provider-controlled. Earlier 15 hosted decision records retain their original mixed PNG/JPEG bytes. File format, resolution, route, hardware, date and load qualify accuracy and timing comparisons.
+D3 explicitly requested and returned `vllm-sr/d3-ultra`. The current service aliases its old Turbo name to Ultra, so the October 20 Turbo record remains a separately dated historical measurement. OpenRouter was pinned to Liquid, requested `liquid/d1.1`, and returned `liquid/d1.1-20261027` throughout. Start/end selected identity, provider and tariff remained unchanged. Provider-controlled image preprocessing and immutable weights were not independently attested.
 
-Five synthetic probes checked red/blue recognition, reversed pair order and a three-image input; all passed. The initial 20 scored requests measured 677/572/1105 ms mean/median/p95. The cumulative median stayed below 2,000 ms through all 200. All first attempts are retained; no retries or accuracy-only stopping. Fresh HTTPS calls were serial, at least 0.25 seconds between dispatch starts; PNG/base64/JSON preparation and idle pacing were excluded, upload and complete response included.
+D3 used **free public access**, without monetary receipts or a permanent production-price guarantee. Liquid reported **$0.00604404 for 200 questions**, or **$0.03022020 per 1,000**. Five separate admission probes added **$0.00001032**. Cost per 1,000 rescales the actual 200-question run; it does not mean 1,000 scored calls per model.
 
-All 200 outputs were native typed choices with probability distributions, zero reported output tokens and no generated explanation. These facts do not independently attest to hidden computation, model weights or per-item processed-input delivery. Start/end model catalogs matched. The [captured protocol](results/releases/celeris_2026-10-26/celeris_execution_protocol.json) and [answer-free timing/usage evidence](results/releases/celeris_2026-10-26/celeris_timing_evidence.jsonl) retain settings and bindings without publishing model choices or answer labels.
+Five synthetic probes per route checked red/blue recognition, reversed pair order and a three-image request. All passed. Every scored output was a usable native choice with zero reported output tokens and no explanation. No scored retries. One fresh HTTPS call per provider ran at a time; the independent D3/Liquid providers ran concurrently. The timer includes connection, upload and full response; image/base64/JSON preparation and idle waits are excluded. All cumulative medians after the first 20 stayed below 2,000 ms.
 
-
+The [new timing/usage evidence](results/releases/native_updates_2026-10-27/october27_timing_evidence.jsonl), [model metadata](results/releases/native_updates_2026-10-27/october27_model_metadata.json) and [execution protocol](results/releases/native_updates_2026-10-27/october27_execution_protocol.json) are answer-free. Scores were reconciled offline with the existing revision-bound private key. Public exports can verify coverage, timing and arithmetic, but cannot independently reproduce private-key correctness.
 
 ## Why Sol is the strongest non-reasoning-capable LLM reference
 
@@ -80,7 +80,7 @@ With exactly the same PNG inputs as the local runs, Sol answered 30 more questio
 
 ## LLM speed stops
 
-The two-second **cumulative median** cutoff was retained explicitly for all four LLM references. Sonnet 5.5 stopped at 20 with a 3,150 ms median; Opus 5 stopped at 20 with 2,628 ms; Qwen3.8-Max stopped at 20 with 2,837 ms. All 60 partial first attempts returned usable outputs. These rows describe partial samples, with no full-bank score, full-run cost or entry in the 380-cell category ranking.
+The two-second **cumulative median** cutoff was retained explicitly for all four LLM references. Sonnet 5.5 stopped at 20 with a 3,150 ms median; Opus 5 stopped at 20 with 2,628 ms; Qwen3.8-Max stopped at 20 with 2,837 ms. All 60 partial first attempts returned usable outputs. These rows describe partial samples, with no full-bank score, full-run cost or entry in the 420-cell category ranking.
 
 | LLM reference | Outcome | Correct / attempted | Sample accuracy | Mean | Median | p95 | Actual sample cost |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -153,13 +153,13 @@ The frozen external answer key stayed outside inference. Offline checks reproduc
 
 ## Results by named category
 
-![Named category scores, part 1](results/releases/celeris_2026-10-26/abilities_1.png)
+![Named category scores, part 1](results/releases/native_updates_2026-10-27/abilities_1.png)
 
-![Named category scores, part 2](results/releases/celeris_2026-10-26/abilities_2.png)
+![Named category scores, part 2](results/releases/native_updates_2026-10-27/abilities_2.png)
 
-![Named category scores, part 3](results/releases/celeris_2026-10-26/abilities_3.png)
+![Named category scores, part 3](results/releases/native_updates_2026-10-27/abilities_3.png)
 
-![Named category scores, part 4](results/releases/celeris_2026-10-26/abilities_4.png)
+![Named category scores, part 4](results/releases/native_updates_2026-10-27/abilities_4.png)
 
 ## What the categories test
 
@@ -184,6 +184,6 @@ The frozen external answer key stayed outside inference. Offline checks reproduc
 - **[V19 Perspective and knowledge tracking](data/questions/V19.md)**: Apply line-of-sight constraints or track what an observer has seen.
 - **[V20 Insufficient evidence](data/questions/V20.md)**: Recognize when the image cannot determine the requested answer.
 
-[Aggregate results](results/releases/celeris_2026-10-26/summary.json) · [Category CSV](results/releases/celeris_2026-10-26/family_scores.csv) · [Celeris timing/usage](results/releases/celeris_2026-10-26/celeris_timing_evidence.jsonl) · [Audit](results/releases/celeris_2026-10-26/audit_receipt.json) · [Celeris method](documents/CELERIS_IMAGE_RUN.md)
+[Aggregate results](results/releases/native_updates_2026-10-27/summary.json) · [Category CSV](results/releases/native_updates_2026-10-27/family_scores.csv) · [New timing/usage](results/releases/native_updates_2026-10-27/october27_timing_evidence.jsonl) · [Audit](results/releases/native_updates_2026-10-27/audit_receipt.json) · [New method](documents/OCTOBER27_UPDATES.md)
 
 [Questions and sources](data/questions/README.md) · [Gallery](docs/gallery.html) · [Attribution](documents/THIRD_PARTY_NOTICES.md) · [Local method](documents/LOCAL_IMAGE_RUNS.md)

@@ -1,4 +1,5 @@
 """Public offline checks for Celeris and the unchanged 18-route history."""
+from october27_history import previous as historical_path
 from collections import Counter
 import csv
 from decimal import Decimal
@@ -71,7 +72,7 @@ def validate():
     from build_image_site import build
     build()
     for path,base in ((ROOT/'docs/report.html',ROOT/'_site'),(b.DEST/'report.html',ROOT/'_site'/b.NAME)):
-        text=path.read_text();page=Page();page.feed(text)
+        text=historical_path(path).read_text();page=Page();page.feed(text)
         assert page.rows==s['rank_order'] and len(page.cells)==380
         assert page.reference_rows==['reference_sol'] and set(page.local_rows)==set(s['local_model_ids'])
         assert set(page.stops)=={'reference_sonnet','reference_opus5','reference_qwen'}
@@ -100,7 +101,7 @@ def validate():
         for token in banned:assert token not in text,(p.name,token)
     if (b.DEST/'manifest.json').exists():
         for name,h in json.loads((b.DEST/'manifest.json').read_text())['artifacts'].items():assert b.digest(b.DEST/name)==h,name
-        for name,h in json.loads((b.DEST/'release_checksums.json').read_text()).items():assert b.digest(ROOT/name)==h,name
+        for name,h in json.loads((b.DEST/'release_checksums.json').read_text()).items():assert b.digest(historical_path(ROOT/name))==h,name
     from validate_llm_image_reference_2026_10_25 import validate as historical
     historical()
     print('PASS: Celeris143/200;19 complete routes;18 prior records exact;200 answer-free timing rows;380 category cells;cost/PNG/mirror/privacy/seals checked.')

@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED_21_ROUTES",
+  "complete_routes": 21,
+  "new_models": 2,
+  "prior_19_records_unchanged": true,
+  "question_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "key_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "private_seal_sha256": "9ac09f473e66a712504379db35c97fd91688ccdb1aee7e56d8f03037a786dbd8",
+  "scored_first_attempts": 400,
+  "new_usable": 400,
+  "new_correct": {
+    "d3_ultra": 148,
+    "liquid11_decision": 144
+  },
+  "admission_probes": 10,
+  "retries": 0,
+  "payloads_rebuilt": 400,
+  "original_image_hashes_verified": 227,
+  "publication_inference_calls": 0,
+  "privacy": "Answer-free timing hashes and aggregate scores; no keys, model choices, per-item correctness, credentials or LAN addresses",
+  "scoring_limit": "Owner reconciled frozen private key offline; public exports reproduce timing, coverage and arithmetic"
+}

@@ -1,0 +1,245 @@
+{
+  "purpose": "Exact previous active presentation and sources; measurements remain in their sealed dated releases",
+  "files": {
+    ".github/workflows/image-release.yml": {
+      "path": "files/.github/workflows/image-release.yml.snapshot",
+      "sha256": "9f5b479bc88c6900a670057987ca6c465ce239fadcd0946d5ecdb8141bfbd79b"
+    },
+    ".gitignore": {
+      "path": "files/.gitignore.snapshot",
+      "sha256": "82032b90ae383a970b73ad0f92ac555ad0e6e0b65b3c25a48538b8749cecac8a"
+    },
+    "CITATION.cff": {
+      "path": "files/CITATION.cff.snapshot",
+      "sha256": "60c645b114e0db4791bb6787990dd0dd51c93c7c5c63439a478ffbf85d9d55ef"
+    },
+    "README.md": {
+      "path": "files/README.md.snapshot",
+      "sha256": "d990904f10705d4a99cedcbe2fa31d0e6933768c89b61309ac7420be4048db0a"
+    },
+    "data/README.md": {
+      "path": "files/data/README.md.snapshot",
+      "sha256": "7a44d15f275810dbba5dc694db5839b39555c774193d9a55e6b497a1c994c44a"
+    },
+    "docs/gallery.html": {
+      "path": "files/docs/gallery.html.snapshot",
+      "sha256": "6010ef6756e9c54b4c045229e145235314a00e3187b67521b9d1937315bb875e"
+    },
+    "docs/index.html": {
+      "path": "files/docs/index.html.snapshot",
+      "sha256": "efd259931778519c009f4ec02c760c91b305d4614c9ca98f4f0214c708f6fd13"
+    },
+    "docs/report.html": {
+      "path": "files/docs/report.html.snapshot",
+      "sha256": "7b6ea5b38039fa6e84cf96677c3fb9908bf564465e0cec6e382319b6cfdc4845"
+    },
+    "docs/sitemap.xml": {
+      "path": "files/docs/sitemap.xml.snapshot",
+      "sha256": "f990004d685d0ad1e6f2107a259d7df2712ec319114db9bf6dc0d3344557cf13"
+    },
+    "documents/CELERIS_IMAGE_RUN.md": {
+      "path": "files/documents/CELERIS_IMAGE_RUN.md.snapshot",
+      "sha256": "f410373ab677989c44f0746f83001085253c793d12e73bcca22f6091e8c2af9b"
+    },
+    "documents/LLM_IMAGE_REFERENCES.md": {
+      "path": "files/documents/LLM_IMAGE_REFERENCES.md.snapshot",
+      "sha256": "b7184397cade0db0a2124ae5b0ca5fd90262183610718726bb203ee6ceccc291"
+    },
+    "documents/LOCAL_IMAGE_RUNS.md": {
+      "path": "files/documents/LOCAL_IMAGE_RUNS.md.snapshot",
+      "sha256": "57d9efa56f65261a604655e4af213472332ca473652cc3ea73a4852a94fadbde"
+    },
+    "documents/METHODOLOGY.md": {
+      "path": "files/documents/METHODOLOGY.md.snapshot",
+      "sha256": "72406c262bd291428a73c9304518a136b6527eed897dd608b336490df3e7888b"
+    },
+    "documents/RELEASE_NOTES.md": {
+      "path": "files/documents/RELEASE_NOTES.md.snapshot",
+      "sha256": "7c2ccde0d2a8e215ef3762ece0a857b0fa11ff5ab2ebabba8208e619e3e3d6a3"
+    },
+    "documents/THIRD_PARTY_NOTICES.md": {
+      "path": "files/documents/THIRD_PARTY_NOTICES.md.snapshot",
+      "sha256": "af3157dd741acd918685be98f8f2683028413408654b1459c1eeca6fef3d1df8"
+    },
+    "documents/native_image_analysis.md": {
+      "path": "files/documents/native_image_analysis.md.snapshot",
+      "sha256": "754993eb49590e435ea959a6971ce5a9b2398aaffd1925ec8efb39258e50bde0"
+    },
+    "results/README.md": {
+      "path": "files/results/README.md.snapshot",
+      "sha256": "9f8cc6af0f703d9ab9656fe7777ccf02cd43726b11970e1d12d9cf5d848a6fba"
+    },
+    "scripts/README.md": {
+      "path": "files/scripts/README.md.snapshot",
+      "sha256": "94c55c61de6c28e0ceccbcc19289d21bb57148bb17a69a48e3ec0de0e494dad1"
+    },
+    "scripts/analyze_native_images.py": {
+      "path": "files/scripts/analyze_native_images.py.snapshot",
+      "sha256": "616b53d890668bf975b950a52527cb35238b866175fcc36322261400480d079a"
+    },
+    "scripts/benchmark.py": {
+      "path": "files/scripts/benchmark.py.snapshot",
+      "sha256": "37a93c9428ee52ae40fd8a34bb29be8e765d47d879f55d9983cbfc2eb3b29578"
+    },
+    "scripts/build_image_site.py": {
+      "path": "files/scripts/build_image_site.py.snapshot",
+      "sha256": "6b22ecfdcb4a7171e28d9f9adb50bc6426c52cfb95b946704f0fb6dcdb4f9da3"
+    },
+    "scripts/celeris_image_publication_history.py": {
+      "path": "files/scripts/celeris_image_publication_history.py.snapshot",
+      "sha256": "673b2e9353a99c889bd39576f8c6d2aa549c18416425be49cc6c5fe395e5ae7d"
+    },
+    "scripts/fastino_publication_history.py": {
+      "path": "files/scripts/fastino_publication_history.py.snapshot",
+      "sha256": "004966446f9738bd108518ad739c8bf45af993712df9ab2232c4ebaa27e1d1fb"
+    },
+    "scripts/freeze_checksums.py": {
+      "path": "files/scripts/freeze_checksums.py.snapshot",
+      "sha256": "1efa261ed1155ca6d3928863e8f7ae547f57b918d022ac973c6be477920ca9b6"
+    },
+    "scripts/image_models_2026_10_20.py": {
+      "path": "files/scripts/image_models_2026_10_20.py.snapshot",
+      "sha256": "36eafaa9cfbdc26c1a00158fcbf1c56e0cbadfff126a1a1cbbc4e68ab8ee06d2"
+    },
+    "scripts/image_publication_history.py": {
+      "path": "files/scripts/image_publication_history.py.snapshot",
+      "sha256": "a57bcc195c50501713d88dd8d96494a521c408175ad6905ba9325e3a73e1b9ed"
+    },
+    "scripts/layout_manifest.json": {
+      "path": "files/scripts/layout_manifest.json.snapshot",
+      "sha256": "3abba7e376f46ed8efd219cbc2b58a5b6fba75024cbab4418c25e0aff48f11bc"
+    },
+    "scripts/llm_image_protocol.py": {
+      "path": "files/scripts/llm_image_protocol.py.snapshot",
+      "sha256": "1822d1076f79cbb8c76226dcbc858a467363a9b01addbe1909c22158b1c9093d"
+    },
+    "scripts/llm_image_publication_history.py": {
+      "path": "files/scripts/llm_image_publication_history.py.snapshot",
+      "sha256": "5dcdcf1c30497345100733e44c2edfd9956345e034853b667de19bee0de1e7fd"
+    },
+    "scripts/local_image_protocol.py": {
+      "path": "files/scripts/local_image_protocol.py.snapshot",
+      "sha256": "f2c13e9ba5a84d75ffabb9a7832560dafedfe620eec6d16d1cf3afff2f159c86"
+    },
+    "scripts/local_image_publication_history.py": {
+      "path": "files/scripts/local_image_publication_history.py.snapshot",
+      "sha256": "adeae925cebd747a56f6dfa9aa7503da91c5d2663e04e65b5e1e67e9d3fd9968"
+    },
+    "scripts/plot_native_images.py": {
+      "path": "files/scripts/plot_native_images.py.snapshot",
+      "sha256": "429ad39c93567add7fb018b55a752872b90c4a1d1f4957f1de48666e1d0d88df"
+    },
+    "scripts/plot_results.py": {
+      "path": "files/scripts/plot_results.py.snapshot",
+      "sha256": "5a2763fc3f44444077c2fb52e893fa19b9adba8eb975df37798fd78ae7985c8a"
+    },
+    "scripts/publish_celeris_images_2026_10_26.py": {
+      "path": "files/scripts/publish_celeris_images_2026_10_26.py.snapshot",
+      "sha256": "e07eb8f1a00603c20479464195b590e9533206bdce2eac8643cf1506889e974b"
+    },
+    "scripts/publish_fastino_images.py": {
+      "path": "files/scripts/publish_fastino_images.py.snapshot",
+      "sha256": "0d0b56a5562e0a7ba9ed79d959e9c8773080b467dd03955ae34c7d5539f9454e"
+    },
+    "scripts/publish_llm_image_reference_2026_10_25.py": {
+      "path": "files/scripts/publish_llm_image_reference_2026_10_25.py.snapshot",
+      "sha256": "f197566736dc1ec82c329b81b547119dde1fc556e369c1c2f489a1006c213105"
+    },
+    "scripts/publish_local_images_2026_10_25.py": {
+      "path": "files/scripts/publish_local_images_2026_10_25.py.snapshot",
+      "sha256": "94d5eebb3b200ea12db8fe9b761763dff6c2e04801d4bd3a03dd37566621eb4b"
+    },
+    "scripts/publish_native_images.py": {
+      "path": "files/scripts/publish_native_images.py.snapshot",
+      "sha256": "a1b61473afe03e15f6bb856e7dedea40dfbfa2367ade8a90b1a6882eb9d6f484"
+    },
+    "scripts/recheck_respan_images.py": {
+      "path": "files/scripts/recheck_respan_images.py.snapshot",
+      "sha256": "c90d35a7ae4901c04d25bfd85539f238a21bc6e68ce71389c6e1b9bffcca0518"
+    },
+    "scripts/repo_layout.py": {
+      "path": "files/scripts/repo_layout.py.snapshot",
+      "sha256": "62483cad11053eb7b0ada041b2a4c5fb9faf9032d5d8aeb3fd5db0971cb29aef"
+    },
+    "scripts/score.py": {
+      "path": "files/scripts/score.py.snapshot",
+      "sha256": "c6f6d51a0c4ba99f6d096e2560529925cd4cd9151db7870b3e65c2e26b556f13"
+    },
+    "scripts/score_native_images.py": {
+      "path": "files/scripts/score_native_images.py.snapshot",
+      "sha256": "2263481975cad9d56e3bd86b3e46427de3545749fd50ff4aa71f6d51991f9089"
+    },
+    "scripts/seal_native_images.py": {
+      "path": "files/scripts/seal_native_images.py.snapshot",
+      "sha256": "0f0f8a56738adef2a2a79b150b2d18c46c800d7d40e3ac311129765656875f74"
+    },
+    "scripts/selective.py": {
+      "path": "files/scripts/selective.py.snapshot",
+      "sha256": "6b2f1655594b855a38a5fbb9091bae02f5b17383fbf3b08f70960e8e19355ccc"
+    },
+    "scripts/test_benchmark.py": {
+      "path": "files/scripts/test_benchmark.py.snapshot",
+      "sha256": "675a228cf1776a9429f2f9dc9a19561edee80f66a18506a9c2711784ab2a2bd8"
+    },
+    "scripts/test_celeris_images_2026_10_26.py": {
+      "path": "files/scripts/test_celeris_images_2026_10_26.py.snapshot",
+      "sha256": "d68c953dc9f1e28c1191ffb318fcc3dc93556c0e208e8a537dcaf3f8fd05a8bc"
+    },
+    "scripts/test_fastino_images.py": {
+      "path": "files/scripts/test_fastino_images.py.snapshot",
+      "sha256": "1175bf708f9416148c76adf9ffc200493106b7d9871d66fbd887bbad2732fd9a"
+    },
+    "scripts/test_image_models_2026_10_20.py": {
+      "path": "files/scripts/test_image_models_2026_10_20.py.snapshot",
+      "sha256": "fca2b91373fd4faf0930ba84d89eeab213b6bfba29370526f14a2e1b4c74431f"
+    },
+    "scripts/test_llm_image_reference_2026_10_25.py": {
+      "path": "files/scripts/test_llm_image_reference_2026_10_25.py.snapshot",
+      "sha256": "721f8591042a23426d49e727caa621ea25c04e017d65d626eb63996b478e1664"
+    },
+    "scripts/test_local_images_2026_10_25.py": {
+      "path": "files/scripts/test_local_images_2026_10_25.py.snapshot",
+      "sha256": "f24fce0e115b675df85b505f562a14d76ccb96c9031b803bed90bd5db1667a2c"
+    },
+    "scripts/test_native_analysis.py": {
+      "path": "files/scripts/test_native_analysis.py.snapshot",
+      "sha256": "e4ea004f907a35954194a41085ff83838b91a30f18993c5fe8e8146f23f4f5b9"
+    },
+    "scripts/test_native_publication.py": {
+      "path": "files/scripts/test_native_publication.py.snapshot",
+      "sha256": "25c01c7f1a1e66d62e3c2a5aec3327a84aaa20f4f8d7d8badd30073cb1a63fd1"
+    },
+    "scripts/test_recheck_respan_images.py": {
+      "path": "files/scripts/test_recheck_respan_images.py.snapshot",
+      "sha256": "d5244c789293651a6198be3f95e3d800b1d408b1ad2f45f461bfe7d14aec43ff"
+    },
+    "scripts/validate.py": {
+      "path": "files/scripts/validate.py.snapshot",
+      "sha256": "0aa49ea45c4d6ac932652f421f7265ece0d7686e3087e1c04eac320bc3cbc047"
+    },
+    "scripts/validate_celeris_images_2026_10_26.py": {
+      "path": "files/scripts/validate_celeris_images_2026_10_26.py.snapshot",
+      "sha256": "5cae538e18180caa994a363e9ffb4cbdc38f7cd1d942c2c552168b5258736872"
+    },
+    "scripts/validate_fastino_images.py": {
+      "path": "files/scripts/validate_fastino_images.py.snapshot",
+      "sha256": "389c302f8cff513635f1f0b62411393b9d25e3fe2b4f7fffbb2729c6264fd5c3"
+    },
+    "scripts/validate_llm_image_reference_2026_10_25.py": {
+      "path": "files/scripts/validate_llm_image_reference_2026_10_25.py.snapshot",
+      "sha256": "c67805951e937940ab939c5b7b305488b43da813ec540c51b0ed425b83438e67"
+    },
+    "scripts/validate_local_images_2026_10_25.py": {
+      "path": "files/scripts/validate_local_images_2026_10_25.py.snapshot",
+      "sha256": "2ceafa948aeef77506d54bf913f0b061f20239c65588b3dd6bb283e2be3fac32"
+    },
+    "scripts/validate_native_images.py": {
+      "path": "files/scripts/validate_native_images.py.snapshot",
+      "sha256": "67b77fe9a5f53daa86e47efa781fe16e5f893132a8257a76a0ef6f1cb1290346"
+    },
+    "scripts/validate_repository_layout.py": {
+      "path": "files/scripts/validate_repository_layout.py.snapshot",
+      "sha256": "f9483bd35f3cbc23538e0b1f0fe3b5e593f2f6c862cd48723954d09c3ad53ae6"
+    }
+  }
+}

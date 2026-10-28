@@ -1,0 +1,89 @@
+"""Standard-library offline verification of the expanded public image release."""
+from repo_layout import repo_file, frozen_file
+from collections import Counter,defaultdict
+from decimal import Decimal
+from hashlib import sha256
+from html.parser import HTMLParser
+import json
+from pathlib import Path
+import statistics
+
+from benchmark import ROOT,rows,canonical,digest
+from image_models_2026_10_20 import payload,MODELS
+from analyze_native_images import percentile
+from fastino_publication_history import native_historical_path
+
+DATA=repo_file('native_images_2026-10-20', root=ROOT)
+
+def validate(verify_seal=True,reconstruct=True):
+    if verify_seal:
+        seal=json.loads((DATA/'checksums.json').read_text())
+        for name,h in seal['files'].items():assert sha256(native_historical_path(ROOT,name).read_bytes()).hexdigest()==h,'Checksum mismatch: '+name
+    d=json.loads((DATA/'summary.json').read_text());records=rows(DATA/'attempts.jsonl')
+    questions={r['candidate_id']:r for r in rows(repo_file('data/questions.jsonl', root=ROOT))}
+    assets={r['asset_id']:r for r in rows(repo_file('data/assets.jsonl', root=ROOT))}
+    public_assets={aid:dict(a,path=str(repo_file(a['path'], root=ROOT))) for aid,a in assets.items() if a['path']}
+    manifests=json.loads((DATA/'model_manifests.json').read_text());old=rows(repo_file('data/attempts.jsonl', root=ROOT))
+    assert len(d['rank_order'])==len(d['models'])==14 and len(d['exclusions'])==2
+    assert set(manifests)==set(MODELS)-{'classify1'}
+    assert set(d['rank_order'])|{e['model_id'] for e in d['exclusions']}==set(MODELS)|{'jev114','luna_decisions'}
+    assert d['new_complete_models']==12 and d['decision_models_reviewed']==16
+    assert len({(r['model_id'],r['candidate_id'],r['attempt']) for r in records})==len(records)
+    reconstructed=withheld=0
+    for mid,wrapped in manifests.items():
+        cfg=wrapped['manifest']['model'];plan=wrapped['manifest']['plan']
+        assert len(plan)==len({t['candidate_id'] for t in plan})==200
+        assert {t['candidate_id'] for t in plan}==set(questions)
+        assert wrapped['manifest']['question_sha256']==sha256((repo_file('data/questions.jsonl', root=ROOT)).read_bytes()).hexdigest()
+        for name,h in wrapped['software'].items():assert sha256(frozen_file(repo_file(name, root=ROOT)).read_bytes()).hexdigest()==h
+        for t in plan:
+            q=questions[t['candidate_id']]
+            assert t['image_sha256']==[assets[a]['sha256'] for a in q['asset_ids']]
+            assert t['semantic_input_sha256']==digest({k:q[k] for k in ('question','rules','options','asset_ids')})
+        by_id={t['candidate_id']:t for t in plan}
+        rr=[r for r in records if r['model_id']==mid]
+        for r in rr:
+            q=questions[r['candidate_id']];task=by_id[r['candidate_id']]
+            for k,v in task.items():assert r[k]==v,(mid,k)
+            assert r['model_requested']==cfg['model']
+            if r['status']=='ok':assert r['choice'] in {o['id'] for o in q['options']}
+            else:assert r['choice'] is None
+            assert 'correct_option_id' not in r and 'correct_first' not in r and 'raw_response' not in r
+            if r['attempt']==1 and reconstruct:
+                if any(a not in public_assets for a in q['asset_ids']):withheld+=1;continue
+                body=canonical(payload(q,public_assets,mid))
+                assert sha256(body).hexdigest()==r['request_payload_sha256'] and len(body)==r['request_body_bytes']
+                reconstructed+=1
+    for mid in d['rank_order']:
+        s=d['models'][mid];rr=[r for r in (old if s['reused'] else records) if r['model_requested']==s['model_requested']]
+        first=[r for r in rr if r['attempt']==1];times=[r['latency_ms'] for r in first]
+        assert len(first)==len({r['candidate_id'] for r in first})==200
+        assert s['n']==200 and s['complete'] and s['median_ms']<=2000
+        assert s['correct']==sum(v['correct'] for v in s['families'].values())==sum(v['correct'] for v in s['subsets'].values())
+        assert s['usable']==sum(r['status']=='ok' for r in first)
+        assert s['status_counts']==dict(Counter(r['status'] for r in first))
+        assert s['median_ms']==statistics.median(times) and abs(s['mean_ms']-statistics.mean(times))<1e-8
+        assert s['p95_ms']==percentile(times,.95)
+        known=sum((Decimal(str(r['reported_cost_usd'])) for r in rr if r.get('reported_cost_usd') is not None),Decimal(0))
+        assert known==Decimal(s['core_cost']['known_api_usd'])
+        assert s['core_cost']['missing_api_records']==sum(r.get('reported_cost_usd') is None for r in rr)
+        assert Decimal(s['core_cost_per_1000_known_usd'])==known*5
+        assert all(v['n']==10 for v in s['families'].values())
+    ex={e['model_id']:e for e in d['exclusions']}
+    assert ex['respan02']['n']==21 and ex['respan02']['partial']['median_ms']>2000
+    assert ex['classify1']['n']==0
+    assert 'respan02' not in d['rank_order'] and 'classify1' not in d['rank_order']
+    # Check local link targets; fragments and external URLs are independently browser-checked.
+    class Links(HTMLParser):
+        targets=[]
+        def handle_starttag(self,tag,attrs):
+            for key,value in attrs:
+                if key in ('href','src') and value and not value.startswith(('#','http:','https:','data:')):self.targets.append(value.split('#')[0])
+    links=Links();links.feed(native_historical_path(ROOT,'report.html').read_text())
+    for target in links.targets:assert (repo_file(target, root=ROOT)).is_file(),'Broken local link: '+target
+    return dict(status='PASS',ranked_models=14,questions_each=200,new_full_runs=12,excluded_routes=2,
+        new_first_attempts=len([r for r in records if r['attempt']==1]),
+        new_attempts=len(records),reconstructed_new_payloads=reconstructed,payloads_requiring_withheld_images=withheld,
+        note='Accuracy internally reconciled; external-key scorer needed to reproduce correctness.')
+
+if __name__=='__main__':print(json.dumps(validate(),indent=2))

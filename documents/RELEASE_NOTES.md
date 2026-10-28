@@ -1,3 +1,7 @@
+# October 27 image publication
+
+Added D3 Ultra148/200 (74.0%),361ms median; Liquid d1.1 144/200 (72.0%),425ms median.21 complete routes,420 category cells; preserved19 previous model records and all exclusions.
+
 # Celeris image publication — October 26, 2026
 
 - Added Celeris 1.1:143/200 (71.5%),200 usable,667/585/1120 ms mean/median/p95, primary estimated cost $0.01175164.

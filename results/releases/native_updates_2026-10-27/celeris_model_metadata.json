@@ -1,0 +1,45 @@
+{
+  "model_requested": "celeris-1.1-decision",
+  "selected_catalog": {
+    "id": "celeris-1.1-decision",
+    "object": "model",
+    "created": 1792454400,
+    "owned_by": "Celeris AI",
+    "max_model_len": 131072
+  },
+  "base_url": "https://inference.celeris.ai/celeris-1-decision",
+  "endpoint": "/v1/systemone",
+  "explanations": false,
+  "max_soft_tokens": 1120,
+  "image_adapter": "Named data:image/png;base64 URLs in x_celeris.images; ordered image markers in state",
+  "catalog_unchanged_at_end": true,
+  "concurrency": 1,
+  "scored_retries": 0,
+  "min_dispatch_spacing_seconds": 0.25,
+  "pricing": {
+    "input_usd_per_million": "0.04",
+    "output": "free",
+    "basis": "Captured October25 documentation; usage-times-tariff estimate, not receipts"
+  },
+  "sources": {
+    "models": "https://docs.celeris.ai/models",
+    "images": "https://docs.celeris.ai/images",
+    "pricing": "https://docs.celeris.ai/pricing"
+  },
+  "source_evidence_sha256": {
+    "runner.py": "a8fba05a1a0948c07eb245511f8e4902c8528b2ab17786e247e307a673b6fcd8",
+    "executor_source.py.snapshot": "a8fba05a1a0948c07eb245511f8e4902c8528b2ab17786e247e307a673b6fcd8",
+    "attempts.jsonl": "639f18b4b6663c68026fb6e777fda80fa4fb26de93ed5410ca657762b216a8e6",
+    "dispatches.jsonl": "e67eed22266bbbe30ba8582a39712387b2a4ed990289a0e946d15f81251d2d83",
+    "admission.jsonl": "cbbb805cb1908a7ec961e6d5312c7876de6581acb1e44356e0a59ed21cbd663f",
+    "manifest.json": "f38cf979ef7f939f72578d737c5dd2f86387e1cc43f962b1bec140469d0df975",
+    "final_report.json": "4991b71b1df7f84965a7b35ce6d2804e4f310acaf881779129366f587cf82b7b",
+    "audit_receipt.json": "d8f0c105a0fba114727a1af0cd34897e92dd2e6d9b1b6cfd74930486c427265c",
+    "seal.json": "310e7e96c4a1854603b55de01f651d03104d36060a33e205e2618998ad6d17ab",
+    "docs_decisions.html": "747a773b218612af40d4457be3aa3f176d105e6ca4eb98f31f9395334c57fed7",
+    "docs_models.html": "04a4d6891df1c4646d2561fc14a36572e9406a55ff7a4ed6a4d670d93ccd83cd",
+    "docs_pricing.html": "3974c3bff2867e0e439cea900f5f88ea72a51e1f84e97d4f5c89c46fbc3b0c8f",
+    "catalog_start.json": "2e0209fa0b018f5bffaa654093aebfe66b69be006ddf791727ef8ac1901aae7e",
+    "catalog_end.json": "8526eca6cdeb0575e571f0a17d7d71cebefc7d63b30e7cccbd9ef67329dbaddf"
+  }
+}

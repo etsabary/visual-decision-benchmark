@@ -1,3 +1,7 @@
+# October 27 native image update
+
+D3 Ultra and Liquid d1.1 add400 first attempts using exact original reviewed PNG/JPEG bytes, no retries. All19 earlier records and three LLM speed stops remain unchanged. See [new protocol](OCTOBER27_UPDATES.md).
+
 # Celeris image addition — October 26, 2026
 
 The current comparison adds Celeris 1.1 as the 19th complete route. See [Celeris method](CELERIS_IMAGE_RUN.md) for native image binding, the recorded PNG variant, resolution 1120, timing, cost and audit limits. All 18 prior records and three partial speed stops are unchanged.
