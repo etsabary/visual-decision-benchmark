@@ -1,0 +1,16 @@
+{
+  "files": {
+    "README.md": {
+      "path": "README.md",
+      "sha256": "7728dd401ffc74d6fa569e3fe5c0532fb7dba8484b1581785ec3153be9147f7d"
+    },
+    "docs/report.html": {
+      "path": "docs/report.html",
+      "sha256": "aacf4326c9d7fc47d2dab10714dfe785cada8bd245e7ca05c4b8d5b0a096c30a"
+    },
+    "docs/sitemap.xml": {
+      "path": "docs/sitemap.xml",
+      "sha256": "2c1686b5947da150ca99ac9d59d9ffcfecc952aafe2ecbc386f60ec690c44d5e"
+    }
+  }
+}

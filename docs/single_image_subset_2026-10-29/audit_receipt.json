@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "new_model_attempts": 531,
+  "reference_records_reused": 708,
+  "subset_questions": 177,
+  "excluded_questions": 23,
+  "scored_retries": 0,
+  "all_new_responses_usable": true,
+  "all_dispatches_resolved": true,
+  "original_asset_hashes_verified": true,
+  "private_key_binding_sha256": "f62348cb73594146497858473fb01c4f78bb06a0649a857329ca47197688fe7c",
+  "full200_statistics_unchanged": true,
+  "privacy": "Aggregates and answer-free hashes/timings; no new choices, probabilities, keys or per-item correctness"
+}

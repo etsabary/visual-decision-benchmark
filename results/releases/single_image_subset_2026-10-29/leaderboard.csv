@@ -1,0 +1,8 @@
+model_id,model,correct,questions,accuracy,mean_ms,median_ms,p95_ms,date,mode,cost_basis
+amos_large,Amos 1 Large,138,177,0.7796610169491526,356.34524248787704,332.51158392522484,538.571891770698,2026-10-20,immediate,See unchanged full200 record; subset cost not re-accounted
+fastino_glide,Fastino GLiDE,136,177,0.768361581920904,631.598213920863,347.36879100091755,1722.3890918001412,2026-10-23,immediate,See unchanged full200 record; subset cost not re-accounted
+d3_turbo,d3-turbo,132,177,0.7457627118644068,464.0032361290486,414.8290000157431,845.2934082364659,2026-10-20,immediate,See unchanged full200 record; subset cost not re-accounted
+jev113,Jev 1.13,124,177,0.7005649717514124,255.1775204891202,219.86208308953792,457.3101579910141,2026-10-20,immediate,See unchanged full200 record; subset cost not re-accounted
+local_startlux_autothink4b,StartLux v1.1 4B AutoThink,108,177,0.6101694915254238,7119.118715629855,8362.55116702523,13731.686900218483,2026-10-29,adaptive,Hardware/electricity unmeasured
+trio_spark14,Trio-Spark v1.4,106,177,0.5988700564971752,1142.721961662476,1071.686666982714,1672.525308630429,2026-10-29,immediate,"Usage × tariff estimate, not a monetary receipt"
+local_startlux_instant4b,StartLux v1.1 4B Instant,101,177,0.5706214689265536,391.4325061286431,387.3717919923365,461.011683626566,2026-10-29,immediate,Hardware/electricity unmeasured

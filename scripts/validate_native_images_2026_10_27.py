@@ -14,7 +14,15 @@ def historical_oct28(path):
     manifest=archive/'manifest.json'
     if not manifest.exists():return path
     entry=json.loads(manifest.read_text())['files'].get(path.relative_to(b.ROOT).as_posix())
-    if not entry:return path
+    if not entry:
+        later=b.ROOT/'results/archives/presentation_before_october29_2026'
+        later_manifest=later/'manifest.json'
+        if later_manifest.exists():
+            e=json.loads(later_manifest.read_text())['files'].get(path.relative_to(b.ROOT).as_posix())
+            if e:
+                saved=later/e['path'];assert b.digest(saved)==e['sha256'],path
+                return saved
+        return path
     saved=archive/entry['path']
     assert b.digest(saved)==entry['sha256'],path
     return saved

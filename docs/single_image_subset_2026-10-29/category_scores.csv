@@ -1,0 +1,141 @@
+model_id,family_id,category,correct,questions,accuracy
+amos_large,V01,Attribute binding and set logic,9,10,0.9
+amos_large,V02,Conditional counting,9,10,0.9
+amos_large,V03,Spatial relationships,8,10,0.8
+amos_large,V04,Connectivity and reachability,6,10,0.6
+amos_large,V05,Navigation and planning,7,10,0.7
+amos_large,V06,Rotation and reflection,6,10,0.6
+amos_large,V07,"Geometry, folding and fit",7,10,0.7
+amos_large,V08,Visual rule application,7,10,0.7
+amos_large,V09,Sequential state tracking,6,6,1.0
+amos_large,V10,Constraint satisfaction,6,10,0.6
+amos_large,V11,Flowcharts and decision trees,8,10,0.8
+amos_large,V12,Causal and counterfactual reasoning,7,10,0.7
+amos_large,V13,Charts and quantitative comparisons,7,10,0.7
+amos_large,V14,Document reconciliation,8,10,0.8
+amos_large,V15,Interface state decisions,10,10,1.0
+amos_large,V16,Inspection against a reference,0,0,
+amos_large,V17,Matching across images,1,1,1.0
+amos_large,V18,Image and text consistency,9,10,0.9
+amos_large,V19,Perspective and knowledge tracking,8,10,0.8
+amos_large,V20,Insufficient evidence,9,10,0.9
+fastino_glide,V01,Attribute binding and set logic,9,10,0.9
+fastino_glide,V02,Conditional counting,8,10,0.8
+fastino_glide,V03,Spatial relationships,9,10,0.9
+fastino_glide,V04,Connectivity and reachability,6,10,0.6
+fastino_glide,V05,Navigation and planning,5,10,0.5
+fastino_glide,V06,Rotation and reflection,6,10,0.6
+fastino_glide,V07,"Geometry, folding and fit",6,10,0.6
+fastino_glide,V08,Visual rule application,6,10,0.6
+fastino_glide,V09,Sequential state tracking,6,6,1.0
+fastino_glide,V10,Constraint satisfaction,7,10,0.7
+fastino_glide,V11,Flowcharts and decision trees,9,10,0.9
+fastino_glide,V12,Causal and counterfactual reasoning,8,10,0.8
+fastino_glide,V13,Charts and quantitative comparisons,9,10,0.9
+fastino_glide,V14,Document reconciliation,7,10,0.7
+fastino_glide,V15,Interface state decisions,10,10,1.0
+fastino_glide,V16,Inspection against a reference,0,0,
+fastino_glide,V17,Matching across images,1,1,1.0
+fastino_glide,V18,Image and text consistency,9,10,0.9
+fastino_glide,V19,Perspective and knowledge tracking,6,10,0.6
+fastino_glide,V20,Insufficient evidence,9,10,0.9
+d3_turbo,V01,Attribute binding and set logic,9,10,0.9
+d3_turbo,V02,Conditional counting,7,10,0.7
+d3_turbo,V03,Spatial relationships,8,10,0.8
+d3_turbo,V04,Connectivity and reachability,7,10,0.7
+d3_turbo,V05,Navigation and planning,7,10,0.7
+d3_turbo,V06,Rotation and reflection,6,10,0.6
+d3_turbo,V07,"Geometry, folding and fit",7,10,0.7
+d3_turbo,V08,Visual rule application,5,10,0.5
+d3_turbo,V09,Sequential state tracking,6,6,1.0
+d3_turbo,V10,Constraint satisfaction,5,10,0.5
+d3_turbo,V11,Flowcharts and decision trees,7,10,0.7
+d3_turbo,V12,Causal and counterfactual reasoning,6,10,0.6
+d3_turbo,V13,Charts and quantitative comparisons,10,10,1.0
+d3_turbo,V14,Document reconciliation,6,10,0.6
+d3_turbo,V15,Interface state decisions,10,10,1.0
+d3_turbo,V16,Inspection against a reference,0,0,
+d3_turbo,V17,Matching across images,1,1,1.0
+d3_turbo,V18,Image and text consistency,10,10,1.0
+d3_turbo,V19,Perspective and knowledge tracking,6,10,0.6
+d3_turbo,V20,Insufficient evidence,9,10,0.9
+jev113,V01,Attribute binding and set logic,9,10,0.9
+jev113,V02,Conditional counting,8,10,0.8
+jev113,V03,Spatial relationships,8,10,0.8
+jev113,V04,Connectivity and reachability,5,10,0.5
+jev113,V05,Navigation and planning,4,10,0.4
+jev113,V06,Rotation and reflection,6,10,0.6
+jev113,V07,"Geometry, folding and fit",3,10,0.3
+jev113,V08,Visual rule application,5,10,0.5
+jev113,V09,Sequential state tracking,6,6,1.0
+jev113,V10,Constraint satisfaction,6,10,0.6
+jev113,V11,Flowcharts and decision trees,7,10,0.7
+jev113,V12,Causal and counterfactual reasoning,7,10,0.7
+jev113,V13,Charts and quantitative comparisons,7,10,0.7
+jev113,V14,Document reconciliation,7,10,0.7
+jev113,V15,Interface state decisions,10,10,1.0
+jev113,V16,Inspection against a reference,0,0,
+jev113,V17,Matching across images,1,1,1.0
+jev113,V18,Image and text consistency,9,10,0.9
+jev113,V19,Perspective and knowledge tracking,6,10,0.6
+jev113,V20,Insufficient evidence,10,10,1.0
+local_startlux_autothink4b,V01,Attribute binding and set logic,9,10,0.9
+local_startlux_autothink4b,V02,Conditional counting,5,10,0.5
+local_startlux_autothink4b,V03,Spatial relationships,7,10,0.7
+local_startlux_autothink4b,V04,Connectivity and reachability,4,10,0.4
+local_startlux_autothink4b,V05,Navigation and planning,5,10,0.5
+local_startlux_autothink4b,V06,Rotation and reflection,6,10,0.6
+local_startlux_autothink4b,V07,"Geometry, folding and fit",4,10,0.4
+local_startlux_autothink4b,V08,Visual rule application,3,10,0.3
+local_startlux_autothink4b,V09,Sequential state tracking,3,6,0.5
+local_startlux_autothink4b,V10,Constraint satisfaction,4,10,0.4
+local_startlux_autothink4b,V11,Flowcharts and decision trees,7,10,0.7
+local_startlux_autothink4b,V12,Causal and counterfactual reasoning,5,10,0.5
+local_startlux_autothink4b,V13,Charts and quantitative comparisons,6,10,0.6
+local_startlux_autothink4b,V14,Document reconciliation,8,10,0.8
+local_startlux_autothink4b,V15,Interface state decisions,9,10,0.9
+local_startlux_autothink4b,V16,Inspection against a reference,0,0,
+local_startlux_autothink4b,V17,Matching across images,1,1,1.0
+local_startlux_autothink4b,V18,Image and text consistency,8,10,0.8
+local_startlux_autothink4b,V19,Perspective and knowledge tracking,6,10,0.6
+local_startlux_autothink4b,V20,Insufficient evidence,8,10,0.8
+trio_spark14,V01,Attribute binding and set logic,9,10,0.9
+trio_spark14,V02,Conditional counting,7,10,0.7
+trio_spark14,V03,Spatial relationships,8,10,0.8
+trio_spark14,V04,Connectivity and reachability,4,10,0.4
+trio_spark14,V05,Navigation and planning,4,10,0.4
+trio_spark14,V06,Rotation and reflection,5,10,0.5
+trio_spark14,V07,"Geometry, folding and fit",5,10,0.5
+trio_spark14,V08,Visual rule application,3,10,0.3
+trio_spark14,V09,Sequential state tracking,5,6,0.8333333333333334
+trio_spark14,V10,Constraint satisfaction,4,10,0.4
+trio_spark14,V11,Flowcharts and decision trees,6,10,0.6
+trio_spark14,V12,Causal and counterfactual reasoning,5,10,0.5
+trio_spark14,V13,Charts and quantitative comparisons,7,10,0.7
+trio_spark14,V14,Document reconciliation,6,10,0.6
+trio_spark14,V15,Interface state decisions,8,10,0.8
+trio_spark14,V16,Inspection against a reference,0,0,
+trio_spark14,V17,Matching across images,1,1,1.0
+trio_spark14,V18,Image and text consistency,8,10,0.8
+trio_spark14,V19,Perspective and knowledge tracking,3,10,0.3
+trio_spark14,V20,Insufficient evidence,8,10,0.8
+local_startlux_instant4b,V01,Attribute binding and set logic,9,10,0.9
+local_startlux_instant4b,V02,Conditional counting,4,10,0.4
+local_startlux_instant4b,V03,Spatial relationships,9,10,0.9
+local_startlux_instant4b,V04,Connectivity and reachability,4,10,0.4
+local_startlux_instant4b,V05,Navigation and planning,3,10,0.3
+local_startlux_instant4b,V06,Rotation and reflection,5,10,0.5
+local_startlux_instant4b,V07,"Geometry, folding and fit",5,10,0.5
+local_startlux_instant4b,V08,Visual rule application,3,10,0.3
+local_startlux_instant4b,V09,Sequential state tracking,4,6,0.6666666666666666
+local_startlux_instant4b,V10,Constraint satisfaction,4,10,0.4
+local_startlux_instant4b,V11,Flowcharts and decision trees,6,10,0.6
+local_startlux_instant4b,V12,Causal and counterfactual reasoning,5,10,0.5
+local_startlux_instant4b,V13,Charts and quantitative comparisons,5,10,0.5
+local_startlux_instant4b,V14,Document reconciliation,6,10,0.6
+local_startlux_instant4b,V15,Interface state decisions,9,10,0.9
+local_startlux_instant4b,V16,Inspection against a reference,0,0,
+local_startlux_instant4b,V17,Matching across images,1,1,1.0
+local_startlux_instant4b,V18,Image and text consistency,7,10,0.7
+local_startlux_instant4b,V19,Perspective and knowledge tracking,5,10,0.5
+local_startlux_instant4b,V20,Insufficient evidence,7,10,0.7

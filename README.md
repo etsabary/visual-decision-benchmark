@@ -8,7 +8,29 @@ The comparison contains **21 complete routes: 18 hosted decision models, two loc
 
 ![Accuracy, speed and cost](results/releases/native_updates_2026-10-27/overview.png)
 
-**Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local RTX 2060 6 GB; pale yellow with transparency = LLM reference with reasoning off. Accuracy cells and speed/cost bands retain their fixed scales.
+**Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local CUDA (earlier runs: RTX 2060 6 GB); gold frame = adaptive AutoThink; pale yellow with transparency = LLM reference with reasoning off. Accuracy cells and speed/cost bands retain their fixed scales.
+
+## New:177 single-image questions · October 29
+
+The new Trio-Spark and local StartLux interfaces support one image per request. They completed the same 177 single-image questions; 23 multi-image questions are unsupported. **These scores form a separate matched subset and do not replace the full 200 ranking.**
+
+| Model | Correct /177 | Accuracy | Mean | Median | p95 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Amos 1 Large | 138/177 | 78.0% | 356 ms | 333 ms | 539 ms |
+| Fastino GLiDE | 136/177 | 76.8% | 632 ms | 347 ms | 1,722 ms |
+| d3-turbo | 132/177 | 74.6% | 464 ms | 415 ms | 845 ms |
+| Jev 1.13 | 124/177 | 70.1% | 255 ms | 220 ms | 457 ms |
+| StartLux v1.1 4B AutoThink ✦ adaptive | 108/177 | 61.0% | 7,119 ms | 8,363 ms | 13,732 ms |
+| Trio-Spark v1.4 | 106/177 | 59.9% | 1,143 ms | 1,072 ms | 1,673 ms |
+| StartLux v1.1 4B Instant | 101/177 | 57.1% | 391 ms | 387 ms | 461 ms |
+
+The four earlier hosted references were recomputed from existing first attempts. **AutoThink shares local purple, with a gold frame and ✦ badge for its sometimes-thinking behavior.** It reported generation on 99/177 image calls; its speed exception is explicit.
+
+![177-question subset; AutoThink purple with gold frame](results/releases/single_image_subset_2026-10-29/subset_comparison.png)
+
+[Full subset report and named categories](https://etsabary.github.io/visual-decision-benchmark/single_image_subset_2026-10-29/report.html) · [Subset analysis](results/releases/single_image_subset_2026-10-29/analysis.md) · [Evidence](results/releases/single_image_subset_2026-10-29/timing_evidence.csv) · [Question coverage](results/releases/single_image_subset_2026-10-29/subset_items.json).
+
+Turion did not pass image-binding probes on the tested endpoint and has no image score. Trio’s image tariff estimate is approximately $0.00238216, rather than a monetary receipt. Local compute costs are unmeasured.
 
 ## Overall results
 

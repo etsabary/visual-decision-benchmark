@@ -1,0 +1,880 @@
+{
+  "version": "matched-single-image-177-october29-v1",
+  "full_bank_questions": 200,
+  "subset_questions": 177,
+  "excluded_multi_image_questions": 23,
+  "new_model_ids": [
+    "trio_spark14",
+    "local_startlux_instant4b",
+    "local_startlux_autothink4b"
+  ],
+  "adaptive_model_ids": [
+    "local_startlux_autothink4b"
+  ],
+  "scope": "Three new routes and four selected prior native references on identical177 single-image questions; separate from full200 ranking",
+  "date": "2026-10-29",
+  "models": {
+    "trio_spark14": {
+      "label": "Trio-Spark v1.4",
+      "n": 177,
+      "correct": 106,
+      "accuracy": 0.5988700564971752,
+      "usable": 177,
+      "mean_ms": 1142.721961662476,
+      "median_ms": 1071.686666982714,
+      "p95_ms": 1672.525308630429,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 7
+        },
+        "V03": {
+          "n": 10,
+          "correct": 8
+        },
+        "V04": {
+          "n": 10,
+          "correct": 4
+        },
+        "V05": {
+          "n": 10,
+          "correct": 4
+        },
+        "V06": {
+          "n": 10,
+          "correct": 5
+        },
+        "V07": {
+          "n": 10,
+          "correct": 5
+        },
+        "V08": {
+          "n": 10,
+          "correct": 3
+        },
+        "V09": {
+          "n": 6,
+          "correct": 5
+        },
+        "V10": {
+          "n": 10,
+          "correct": 4
+        },
+        "V11": {
+          "n": 10,
+          "correct": 6
+        },
+        "V12": {
+          "n": 10,
+          "correct": 5
+        },
+        "V13": {
+          "n": 10,
+          "correct": 7
+        },
+        "V14": {
+          "n": 10,
+          "correct": 6
+        },
+        "V15": {
+          "n": 10,
+          "correct": 8
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 8
+        },
+        "V19": {
+          "n": 10,
+          "correct": 3
+        },
+        "V20": {
+          "n": 10,
+          "correct": 8
+        }
+      },
+      "date": "2026-10-29",
+      "location": "hosted",
+      "mode": "immediate",
+      "model_requested": "trio-spark-v1.3",
+      "reported_output_tokens": 0,
+      "reported_generation_calls": 0,
+      "cost_basis": "Usage × tariff estimate, not a monetary receipt",
+      "known_api_cost_usd": null,
+      "estimated_tariff_usd": 0.002382156
+    },
+    "local_startlux_instant4b": {
+      "label": "StartLux v1.1 4B Instant",
+      "n": 177,
+      "correct": 101,
+      "accuracy": 0.5706214689265536,
+      "usable": 177,
+      "mean_ms": 391.4325061286431,
+      "median_ms": 387.3717919923365,
+      "p95_ms": 461.011683626566,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 4
+        },
+        "V03": {
+          "n": 10,
+          "correct": 9
+        },
+        "V04": {
+          "n": 10,
+          "correct": 4
+        },
+        "V05": {
+          "n": 10,
+          "correct": 3
+        },
+        "V06": {
+          "n": 10,
+          "correct": 5
+        },
+        "V07": {
+          "n": 10,
+          "correct": 5
+        },
+        "V08": {
+          "n": 10,
+          "correct": 3
+        },
+        "V09": {
+          "n": 6,
+          "correct": 4
+        },
+        "V10": {
+          "n": 10,
+          "correct": 4
+        },
+        "V11": {
+          "n": 10,
+          "correct": 6
+        },
+        "V12": {
+          "n": 10,
+          "correct": 5
+        },
+        "V13": {
+          "n": 10,
+          "correct": 5
+        },
+        "V14": {
+          "n": 10,
+          "correct": 6
+        },
+        "V15": {
+          "n": 10,
+          "correct": 9
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 7
+        },
+        "V19": {
+          "n": 10,
+          "correct": 5
+        },
+        "V20": {
+          "n": 10,
+          "correct": 7
+        }
+      },
+      "date": "2026-10-29",
+      "location": "local",
+      "mode": "immediate",
+      "model_requested": "startlux:4b-v1.1-instant",
+      "reported_output_tokens": 0,
+      "reported_generation_calls": 0,
+      "cost_basis": "Hardware/electricity unmeasured",
+      "known_api_cost_usd": null,
+      "estimated_tariff_usd": null
+    },
+    "local_startlux_autothink4b": {
+      "label": "StartLux v1.1 4B AutoThink",
+      "n": 177,
+      "correct": 108,
+      "accuracy": 0.6101694915254238,
+      "usable": 177,
+      "mean_ms": 7119.118715629855,
+      "median_ms": 8362.55116702523,
+      "p95_ms": 13731.686900218483,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 5
+        },
+        "V03": {
+          "n": 10,
+          "correct": 7
+        },
+        "V04": {
+          "n": 10,
+          "correct": 4
+        },
+        "V05": {
+          "n": 10,
+          "correct": 5
+        },
+        "V06": {
+          "n": 10,
+          "correct": 6
+        },
+        "V07": {
+          "n": 10,
+          "correct": 4
+        },
+        "V08": {
+          "n": 10,
+          "correct": 3
+        },
+        "V09": {
+          "n": 6,
+          "correct": 3
+        },
+        "V10": {
+          "n": 10,
+          "correct": 4
+        },
+        "V11": {
+          "n": 10,
+          "correct": 7
+        },
+        "V12": {
+          "n": 10,
+          "correct": 5
+        },
+        "V13": {
+          "n": 10,
+          "correct": 6
+        },
+        "V14": {
+          "n": 10,
+          "correct": 8
+        },
+        "V15": {
+          "n": 10,
+          "correct": 9
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 8
+        },
+        "V19": {
+          "n": 10,
+          "correct": 6
+        },
+        "V20": {
+          "n": 10,
+          "correct": 8
+        }
+      },
+      "date": "2026-10-29",
+      "location": "local",
+      "mode": "adaptive",
+      "model_requested": "startlux:4b-v1.1-autothink",
+      "reported_output_tokens": 45679,
+      "reported_generation_calls": 99,
+      "cost_basis": "Hardware/electricity unmeasured",
+      "known_api_cost_usd": null,
+      "estimated_tariff_usd": null
+    },
+    "amos_large": {
+      "label": "Amos 1 Large",
+      "n": 177,
+      "correct": 138,
+      "accuracy": 0.7796610169491526,
+      "usable": 177,
+      "mean_ms": 356.34524248787704,
+      "median_ms": 332.51158392522484,
+      "p95_ms": 538.571891770698,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 9
+        },
+        "V03": {
+          "n": 10,
+          "correct": 8
+        },
+        "V04": {
+          "n": 10,
+          "correct": 6
+        },
+        "V05": {
+          "n": 10,
+          "correct": 7
+        },
+        "V06": {
+          "n": 10,
+          "correct": 6
+        },
+        "V07": {
+          "n": 10,
+          "correct": 7
+        },
+        "V08": {
+          "n": 10,
+          "correct": 7
+        },
+        "V09": {
+          "n": 6,
+          "correct": 6
+        },
+        "V10": {
+          "n": 10,
+          "correct": 6
+        },
+        "V11": {
+          "n": 10,
+          "correct": 8
+        },
+        "V12": {
+          "n": 10,
+          "correct": 7
+        },
+        "V13": {
+          "n": 10,
+          "correct": 7
+        },
+        "V14": {
+          "n": 10,
+          "correct": 8
+        },
+        "V15": {
+          "n": 10,
+          "correct": 10
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 9
+        },
+        "V19": {
+          "n": 10,
+          "correct": 8
+        },
+        "V20": {
+          "n": 10,
+          "correct": 9
+        }
+      },
+      "date": "2026-10-20",
+      "location": "hosted",
+      "mode": "immediate",
+      "reference_recomputed": true,
+      "cost_basis": "See unchanged full200 record; subset cost not re-accounted"
+    },
+    "fastino_glide": {
+      "label": "Fastino GLiDE",
+      "n": 177,
+      "correct": 136,
+      "accuracy": 0.768361581920904,
+      "usable": 177,
+      "mean_ms": 631.598213920863,
+      "median_ms": 347.36879100091755,
+      "p95_ms": 1722.3890918001412,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 8
+        },
+        "V03": {
+          "n": 10,
+          "correct": 9
+        },
+        "V04": {
+          "n": 10,
+          "correct": 6
+        },
+        "V05": {
+          "n": 10,
+          "correct": 5
+        },
+        "V06": {
+          "n": 10,
+          "correct": 6
+        },
+        "V07": {
+          "n": 10,
+          "correct": 6
+        },
+        "V08": {
+          "n": 10,
+          "correct": 6
+        },
+        "V09": {
+          "n": 6,
+          "correct": 6
+        },
+        "V10": {
+          "n": 10,
+          "correct": 7
+        },
+        "V11": {
+          "n": 10,
+          "correct": 9
+        },
+        "V12": {
+          "n": 10,
+          "correct": 8
+        },
+        "V13": {
+          "n": 10,
+          "correct": 9
+        },
+        "V14": {
+          "n": 10,
+          "correct": 7
+        },
+        "V15": {
+          "n": 10,
+          "correct": 10
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 9
+        },
+        "V19": {
+          "n": 10,
+          "correct": 6
+        },
+        "V20": {
+          "n": 10,
+          "correct": 9
+        }
+      },
+      "date": "2026-10-23",
+      "location": "hosted",
+      "mode": "immediate",
+      "reference_recomputed": true,
+      "cost_basis": "See unchanged full200 record; subset cost not re-accounted"
+    },
+    "d3_turbo": {
+      "label": "d3-turbo",
+      "n": 177,
+      "correct": 132,
+      "accuracy": 0.7457627118644068,
+      "usable": 177,
+      "mean_ms": 464.0032361290486,
+      "median_ms": 414.8290000157431,
+      "p95_ms": 845.2934082364659,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 7
+        },
+        "V03": {
+          "n": 10,
+          "correct": 8
+        },
+        "V04": {
+          "n": 10,
+          "correct": 7
+        },
+        "V05": {
+          "n": 10,
+          "correct": 7
+        },
+        "V06": {
+          "n": 10,
+          "correct": 6
+        },
+        "V07": {
+          "n": 10,
+          "correct": 7
+        },
+        "V08": {
+          "n": 10,
+          "correct": 5
+        },
+        "V09": {
+          "n": 6,
+          "correct": 6
+        },
+        "V10": {
+          "n": 10,
+          "correct": 5
+        },
+        "V11": {
+          "n": 10,
+          "correct": 7
+        },
+        "V12": {
+          "n": 10,
+          "correct": 6
+        },
+        "V13": {
+          "n": 10,
+          "correct": 10
+        },
+        "V14": {
+          "n": 10,
+          "correct": 6
+        },
+        "V15": {
+          "n": 10,
+          "correct": 10
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 10
+        },
+        "V19": {
+          "n": 10,
+          "correct": 6
+        },
+        "V20": {
+          "n": 10,
+          "correct": 9
+        }
+      },
+      "date": "2026-10-20",
+      "location": "hosted",
+      "mode": "immediate",
+      "reference_recomputed": true,
+      "cost_basis": "See unchanged full200 record; subset cost not re-accounted"
+    },
+    "jev113": {
+      "label": "Jev 1.13",
+      "n": 177,
+      "correct": 124,
+      "accuracy": 0.7005649717514124,
+      "usable": 175,
+      "mean_ms": 255.1775204891202,
+      "median_ms": 219.86208308953792,
+      "p95_ms": 457.3101579910141,
+      "families": {
+        "V01": {
+          "n": 10,
+          "correct": 9
+        },
+        "V02": {
+          "n": 10,
+          "correct": 8
+        },
+        "V03": {
+          "n": 10,
+          "correct": 8
+        },
+        "V04": {
+          "n": 10,
+          "correct": 5
+        },
+        "V05": {
+          "n": 10,
+          "correct": 4
+        },
+        "V06": {
+          "n": 10,
+          "correct": 6
+        },
+        "V07": {
+          "n": 10,
+          "correct": 3
+        },
+        "V08": {
+          "n": 10,
+          "correct": 5
+        },
+        "V09": {
+          "n": 6,
+          "correct": 6
+        },
+        "V10": {
+          "n": 10,
+          "correct": 6
+        },
+        "V11": {
+          "n": 10,
+          "correct": 7
+        },
+        "V12": {
+          "n": 10,
+          "correct": 7
+        },
+        "V13": {
+          "n": 10,
+          "correct": 7
+        },
+        "V14": {
+          "n": 10,
+          "correct": 7
+        },
+        "V15": {
+          "n": 10,
+          "correct": 10
+        },
+        "V16": {
+          "n": 0,
+          "correct": 0
+        },
+        "V17": {
+          "n": 1,
+          "correct": 1
+        },
+        "V18": {
+          "n": 10,
+          "correct": 9
+        },
+        "V19": {
+          "n": 10,
+          "correct": 6
+        },
+        "V20": {
+          "n": 10,
+          "correct": 10
+        }
+      },
+      "date": "2026-10-20",
+      "location": "hosted",
+      "mode": "immediate",
+      "reference_recomputed": true,
+      "cost_basis": "See unchanged full200 record; subset cost not re-accounted"
+    }
+  },
+  "rank_order": [
+    "amos_large",
+    "fastino_glide",
+    "d3_turbo",
+    "jev113",
+    "local_startlux_autothink4b",
+    "trio_spark14",
+    "local_startlux_instant4b"
+  ],
+  "families": {
+    "V01": {
+      "name": "Attribute binding and set logic",
+      "description": "Find objects that satisfy several visible properties at once.",
+      "n": 10
+    },
+    "V02": {
+      "name": "Conditional counting",
+      "description": "Count only the objects meeting the stated visual rule.",
+      "n": 10
+    },
+    "V03": {
+      "name": "Spatial relationships",
+      "description": "Apply left/right, above/below or relative-position constraints.",
+      "n": 10
+    },
+    "V04": {
+      "name": "Connectivity and reachability",
+      "description": "Follow connected paths or directed arrows between nodes.",
+      "n": 10
+    },
+    "V05": {
+      "name": "Navigation and planning",
+      "description": "Choose a feasible route under movement and obstacle rules.",
+      "n": 10
+    },
+    "V06": {
+      "name": "Rotation and reflection",
+      "description": "Recognize the result of a rotation or mirror transformation.",
+      "n": 10
+    },
+    "V07": {
+      "name": "Geometry, folding and fit",
+      "description": "Reason about shapes, folds, dimensions or what fits.",
+      "n": 10
+    },
+    "V08": {
+      "name": "Visual rule application",
+      "description": "Infer or apply a rule across symbols and pictured patterns.",
+      "n": 10
+    },
+    "V09": {
+      "name": "Sequential state tracking",
+      "description": "Track how successive visible actions change a state.",
+      "n": 10
+    },
+    "V10": {
+      "name": "Constraint satisfaction",
+      "description": "Find the arrangement satisfying all the stated restrictions.",
+      "n": 10
+    },
+    "V11": {
+      "name": "Flowcharts and decision trees",
+      "description": "Follow conditional branches to their final outcome.",
+      "n": 10
+    },
+    "V12": {
+      "name": "Causal and counterfactual reasoning",
+      "description": "Determine what changes when a pictured condition is altered.",
+      "n": 10
+    },
+    "V13": {
+      "name": "Charts and quantitative comparisons",
+      "description": "Read plotted values and compare or calculate the required quantity.",
+      "n": 10
+    },
+    "V14": {
+      "name": "Document reconciliation",
+      "description": "Combine entries across forms, receipts or tables and apply a rule.",
+      "n": 10
+    },
+    "V15": {
+      "name": "Interface state decisions",
+      "description": "Choose an action or identify a state from a screenshot.",
+      "n": 10
+    },
+    "V16": {
+      "name": "Inspection against a reference",
+      "description": "Compare an object or scene against a supplied reference.",
+      "n": 10
+    },
+    "V17": {
+      "name": "Matching across images",
+      "description": "Identify a corresponding object across two or three images.",
+      "n": 10
+    },
+    "V18": {
+      "name": "Image and text consistency",
+      "description": "Check whether a written claim agrees with the visible evidence.",
+      "n": 10
+    },
+    "V19": {
+      "name": "Perspective and knowledge tracking",
+      "description": "Apply line-of-sight constraints or track what an observer has seen.",
+      "n": 10
+    },
+    "V20": {
+      "name": "Insufficient evidence",
+      "description": "Recognize when the image cannot determine the requested answer.",
+      "n": 10
+    }
+  },
+  "question_bank_sha256": "0791918388e328cdd49acd37eb296143f50859d1f554462039db465a81f3f27f",
+  "full200_statistics_sha256": "14cb1c1ecd5dca6415b64c676e833b69b041d8a5ea127adfb758ad0b452bfb75",
+  "paired_startlux": {
+    "n": 177,
+    "only_autothink": 20,
+    "only_instant": 13,
+    "both_correct": 88,
+    "neither_correct": 56,
+    "output_token_counts": {
+      "instant": {
+        "0": 177
+      },
+      "autothink": {
+        "512": 68,
+        "429": 1,
+        "0": 78,
+        "227": 1,
+        "471": 1,
+        "265": 1,
+        "209": 1,
+        "366": 1,
+        "194": 1,
+        "434": 1,
+        "341": 1,
+        "237": 1,
+        "390": 1,
+        "505": 1,
+        "289": 1,
+        "444": 2,
+        "379": 1,
+        "372": 1,
+        "427": 1,
+        "369": 1,
+        "351": 1,
+        "492": 1,
+        "456": 1,
+        "448": 1,
+        "401": 1,
+        "495": 1,
+        "291": 1,
+        "181": 1,
+        "212": 1,
+        "411": 1,
+        "98": 1,
+        "235": 1
+      }
+    }
+  },
+  "turion_image_binding": "Failed four red/blue probes on tested endpoint; no benchmark score",
+  "pixel_policy": "Original reviewed mixed PNG/JPEG bytes submitted unchanged. Internal preprocessing provider-controlled; StartLux advertises262144 processed pixels and one image.",
+  "local_setup": {
+    "runtime": "Ollaya0.17.0",
+    "precision": "Q8_0",
+    "observed_device": "cuda:0",
+    "gpu_model": "Not reported by API",
+    "network": "Direct wired LAN; sequential models and requests",
+    "native_autothink_budget": 512,
+    "thought_text_exposed": false,
+    "speed_exception": "AutoThink only; explicitly authorized adaptive research run"
+  }
+}
