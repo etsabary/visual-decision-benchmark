@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_native_first_attempts": 200,
+  "new_native_usable": 200,
+  "new_native_correct": 94,
+  "separate_extraction_first_attempts": 20,
+  "separate_extraction_correct": 9,
+  "all_dispatches_resolved": true,
+  "raw_responses_reparsed": true,
+  "private_key_reconciled": true,
+  "original_assets_verified": 227,
+  "previous_21_model_records_unchanged": true,
+  "previous_177_subset_unchanged": true,
+  "publication_inference_calls": 0,
+  "privacy": "Aggregate scores and answer-free timing hashes only"
+}

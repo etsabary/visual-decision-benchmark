@@ -22,7 +22,8 @@ def historical_oct28(path):
             if e:
                 saved=later/e['path'];assert b.digest(saved)==e['sha256'],path
                 return saved
-        return path
+        from validate_october30_images import historical as october30_history
+        return october30_history(path)
     saved=archive/entry['path']
     assert b.digest(saved)==entry['sha256'],path
     return saved
@@ -74,7 +75,8 @@ def validate():
     from build_image_site import build
     build()
     for path,base in [(b.ROOT/'docs/report.html',b.ROOT/'_site'),(b.DEST/'report.html',b.ROOT/'_site'/b.NAME)]:
-        text=path.read_text();page=Page();page.feed(text)
+        from validate_october30_images import historical as october30_history
+        text=october30_history(path).read_text();page=Page();page.feed(text)
         assert page.rows==s['rank_order'] and len(page.cells)==420
         assert page.reference_rows==['reference_sol'] and set(page.local_rows)==set(s['local_model_ids'])
         assert set(page.stops)=={'reference_sonnet','reference_opus5','reference_qwen'}

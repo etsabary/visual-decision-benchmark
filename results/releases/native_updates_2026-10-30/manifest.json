@@ -1,0 +1,31 @@
+{
+  "version": "native-image-updates-20261030-v1",
+  "complete_routes": 22,
+  "questions_each": 200,
+  "separate_extraction_screen": 20,
+  "prior_summary_sha256": "14cb1c1ecd5dca6415b64c676e833b69b041d8a5ea127adfb758ad0b452bfb75",
+  "artifacts": {
+    "abilities_1.png": "bc5935d41a53ab8c29d0b3f41129c8328a367d620caf6bef64c2a68bc9ef3058",
+    "abilities_1.svg": "836699cc9fda42ba6c3d42ba078dd5dd2fff4e68884669adfef376605e83a4cb",
+    "abilities_2.png": "0ee6805a38cb0ba0f82636b92b8781a36a61537b908bdc4ebfecaad24ea8512e",
+    "abilities_2.svg": "383a21bb46b65bbc69aa7b07cbb9ff5f1df59d0d134203998352b3f95ea16e65",
+    "abilities_3.png": "d7108f7f986c39de83062715ae43e7a6827bf929e68d58d4a1a1456a430915ac",
+    "abilities_3.svg": "14ac31a40eb2df44c56a867cc1652c0ab70bf18294b63dc61d7f7128c7aeea2c",
+    "abilities_4.png": "5f3411b2efc76d34335c720ec818e15078245b4680d543ab55f7f9f5903a8502",
+    "abilities_4.svg": "96c9d9f3de17381b44fb5297f2f68ae5e91787e51badc9f2b4a482689b7d7472",
+    "analysis.md": "4ffad829c1c2c77833edc640e2708909151c36415729d854805c5882c931e610",
+    "audit_receipt.json": "79958663e75bdba12f4bc139500990b99349bc4d440f08d7a8a301f0cafccd14",
+    "clairic.html": "2b9db6578d1609b1ce8f3f55bb803ca69c25b035bc6ffb803dda3f1c56c4750b",
+    "clairic_compatibility.json": "cc7c9d6315295ed30348265048dc678cc3829d541c0d64b424d37bd700bfd080",
+    "execution_protocol.json": "6cb73f7d8368b08ac4f2d98d5dc2545cb1d7395568f44e2b500474e4a0bf1950",
+    "family_scores.csv": "2dca91776170e60af1281e04cd029b502f0d71d5bedbb3ca092d31ba601e624c",
+    "leaderboard.csv": "4329c34cf39da450571e6418003a86bbd784c3e0982d5c4000dfa77544526b5a",
+    "model_metadata.json": "2697761c523dc225958d58909ba2753c057b8acd562364c9cadf524e21515cd0",
+    "october30_timing_evidence.jsonl": "5e0546646bcb09dee1856cef86a4ccb0bc6c13fb4a14a9a9e50eb60957cdb02f",
+    "original_asset_manifest.json": "994225251d29f2da1aac11ee9e0b870604b2bc3b8485e94ce5a240a2721a669f",
+    "overview.png": "9914b63e1e741721897dc721ae2c1264963161501f6af664754a8b0c8dc1c342",
+    "overview.svg": "118c4a385718013ad208fd63a9f1b00574b9b4a2fa551d0aa850cac2290a3c5c",
+    "report.html": "59797d1526930b4775b5c4cec86e0de84acd284db5585f8d050654a638aabf1d",
+    "summary.json": "8be277a0c6dcf59770f5affa3296a14357b45e3d2920a9861ccee0fc6e91c328"
+  }
+}

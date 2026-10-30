@@ -1,0 +1,29 @@
+{
+  "n": 20,
+  "correct": 9,
+  "accuracy": 0.45,
+  "mean_ms": 608.3436501096003,
+  "median_ms": 469.0967494971119,
+  "p95_ms": 1122.1473110956142,
+  "statuses": {
+    "ok": 19,
+    "invalid_answer": 1
+  },
+  "cost_usd": 0.0023823,
+  "missing_cost": 0,
+  "usage": {
+    "input_tokens": 23823,
+    "output_tokens": 0
+  },
+  "scope": "partial",
+  "state": "paused_failures",
+  "label": "Clairic: extraction number adapter",
+  "date": "2026-10-30",
+  "included_in_full_ranking": false,
+  "full_bank": false,
+  "expected_bank": 200,
+  "reason": "One of20 outputs outside supplied option IDs reached the5% stop at20.",
+  "image_binding": "Five pixel/order probes passed with positive reported image tokens; OpenRouter named assets and state references.",
+  "interface": "POST /api/alpha/extractions; original question, rules and options in state; one integer field requests option ID. No output remapping.",
+  "cost_source": "API-reported OpenRouter usage.cost"
+}

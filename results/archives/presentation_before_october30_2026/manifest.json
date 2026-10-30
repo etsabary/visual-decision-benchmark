@@ -1,0 +1,20 @@
+{
+  "files": {
+    "README.md": {
+      "path": "README.md",
+      "sha256": "d10725676326fec354e90eae63d1b1c42c6927dd0d85a89e48fe51c88c7cc453"
+    },
+    "docs/report.html": {
+      "path": "docs/report.html",
+      "sha256": "064e6fc176b4af3c7c3186de0bfb22e7cb73eca371007dea5ccb08cfc3370dec"
+    },
+    "docs/sitemap.xml": {
+      "path": "docs/sitemap.xml",
+      "sha256": "a729124185c4dcbe0309ec49af507eee54fd91ca671684c6b6aec78d3ee1f21b"
+    },
+    "results/README.md": {
+      "path": "results/README.md",
+      "sha256": "218b1acb789167caa4ac206cfc6cd8fb6b9e450601c95e291bf3e4bb7929f3cc"
+    }
+  }
+}

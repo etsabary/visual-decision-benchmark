@@ -1,0 +1,9 @@
+## October 30: Joey-1 and a stopped extraction screen
+
+**Joey-1 scored 94/200 (47.0%)**, with **457 / 368 / 1,009 ms mean / median / p95**. All 200 first attempts returned usable native decisions. OpenRouter reported **$0.00234504 for 200 questions**, or **$0.01172520 per 1,000**. Five separate image-binding probes cost $0.00001722. The model reported one output-token counter per native decision; it returned no prose or reasoning trace.
+
+Attribute binding and set logic scored **9/10**; sequential visual state tracking and insufficient evidence each scored **7/10**. Geometry and folding scored **2/10**. Navigation, visual rules, constraint satisfaction, causal decisions and perspective each scored **3/10**. Each category contains ten questions. Amos, Fastino and D3 Turbo retain the three highest full-bank scores.
+
+**Clairic remains a partial extraction-interface screen: 9/20 (45.0%)**, with **608 / 469 / 1,122 ms mean / median / p95**. One returned number was outside the supplied option IDs, reaching the agreed 5% unusable-output stop at 20 attempts. Its reported cost was **$0.00238230 for those 20 calls**. It has no full-bank score and no row in the 200-question ranking. [The labelled compatibility record](clairic.html) preserves its measurements.
+
+Both routes passed five synthetic checks of image pixels and image order before scored calls. Joey used the exact original reviewed PNG/JPEG bytes on all 200 questions, including two- and three-image questions. Clairic used OpenRouter named image assets referenced in the state; a native Cloudflare-style image field was ignored by that gateway during admission and was not used for scored calls. No scored calls were retried. No resizing, OCR, captions or hidden solver were added. Provider-controlled image preprocessing remains unmeasured.

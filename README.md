@@ -1,12 +1,12 @@
 # Image-grounded System 1 decision benchmark
 
-The comparison contains **21 complete routes: 18 hosted decision models, two local models and GPT-6 Sol as a non-reasoning LLM reference**. Each complete route covers the same 200 first attempts across 20 categories. All 19 earlier records and three partial LLM speed stops are preserved.
+The comparison contains **22 complete routes: 19 hosted decision models, two local models and GPT-6 Sol as a non-reasoning LLM reference**. Each complete route covers the same 200 first attempts across 20 categories. All 21 earlier records and three partial LLM speed stops are preserved.
 
 **D3 Ultra scored 148/200 (74.0%); Liquid d1.1 scored 144/200 (72.0%).** Both returned 200 usable native decisions and passed the two-second cumulative-median gate. Amos remains highest at 159/200 (79.5%), followed by Fastino GLiDE at 158 (79.0%) and the earlier D3 Turbo at 155 (77.5%). Sol retains 147 (73.5%). One overall answer is half a percentage point; these observed gaps do not establish a universal model ranking.
 
 [Open the colour-coded report](https://etsabary.github.io/visual-decision-benchmark/report.html)
 
-![Accuracy, speed and cost](results/releases/native_updates_2026-10-27/overview.png)
+![Accuracy, speed and cost](results/releases/native_updates_2026-10-30/overview.png)
 
 **Colour key:** blue `#16728c` = hosted decisions; purple `#7c3aed` = local CUDA (earlier runs: RTX 2060 6 GB); gold frame = adaptive AutoThink; pale yellow with transparency = LLM reference with reasoning off. Accuracy cells and speed/cost bands retain their fixed scales.
 
@@ -31,6 +31,16 @@ The four earlier hosted references were recomputed from existing first attempts.
 [Full subset report and named categories](https://etsabary.github.io/visual-decision-benchmark/single_image_subset_2026-10-29/report.html) · [Subset analysis](results/releases/single_image_subset_2026-10-29/analysis.md) · [Evidence](results/releases/single_image_subset_2026-10-29/timing_evidence.csv) · [Question coverage](results/releases/single_image_subset_2026-10-29/subset_items.json).
 
 Turion did not pass image-binding probes on the tested endpoint and has no image score. Trio’s image tariff estimate is approximately $0.00238216, rather than a monetary receipt. Local compute costs are unmeasured.
+
+## October 30: Joey-1 and a stopped extraction screen
+
+**Joey-1 scored 94/200 (47.0%)**, with **457 / 368 / 1,009 ms mean / median / p95**. All 200 first attempts returned usable native decisions. OpenRouter reported **$0.00234504 for 200 questions**, or **$0.01172520 per 1,000**. Five separate image-binding probes cost $0.00001722. The model reported one output-token counter per native decision; it returned no prose or reasoning trace.
+
+Attribute binding and set logic scored **9/10**; sequential visual state tracking and insufficient evidence each scored **7/10**. Geometry and folding scored **2/10**. Navigation, visual rules, constraint satisfaction, causal decisions and perspective each scored **3/10**. Each category contains ten questions. Amos, Fastino and D3 Turbo retain the three highest full-bank scores.
+
+**Clairic remains a partial extraction-interface screen: 9/20 (45.0%)**, with **608 / 469 / 1,122 ms mean / median / p95**. One returned number was outside the supplied option IDs, reaching the agreed 5% unusable-output stop at 20 attempts. Its reported cost was **$0.00238230 for those 20 calls**. It has no full-bank score and no row in the 200-question ranking. [The labelled compatibility record](results/releases/native_updates_2026-10-30/clairic.html) preserves its measurements.
+
+Both routes passed five synthetic checks of image pixels and image order before scored calls. Joey used the exact original reviewed PNG/JPEG bytes on all 200 questions, including two- and three-image questions. Clairic used OpenRouter named image assets referenced in the state; a native Cloudflare-style image field was ignored by that gateway during admission and was not used for scored calls. No scored calls were retried. No resizing, OCR, captions or hidden solver were added. Provider-controlled image preprocessing remains unmeasured.
 
 ## Overall results
 
@@ -57,6 +67,7 @@ Turion did not pass image-binding probes on the tested endpoint and has no image
 | H2O Lightning 4B | Local RTX 2060 6 GB · PNG | 117/200 | 58.5% | 200/200 | 560 ms | 484 ms | 988 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
 | Fovea 4B | Local RTX 2060 6 GB · PNG | 110/200 | 55.0% | 200/200 | 658 ms | 602 ms | 962 ms | Unmeasured local compute | Unmeasured local compute | 2026-10-25 |
 | Cloudflare Clef Omni | Hosted decision · original PNG/JPEG | 105/200 | 52.5% | 200/200 | 562 ms | 455 ms | 1202 ms | $0.031330 | $0.156650 | 2026-10-20 |
+| Joey-1 | Hosted decision · original PNG/JPEG | 94/200 | 47.0% | 200/200 | 457 ms | 368 ms | 1009 ms | $0.002345 | $0.011725 | 2026-10-30 |
 
 ## Apple M2 image speed screens
 
@@ -186,13 +197,13 @@ The frozen external answer key stayed outside inference. Offline checks reproduc
 
 ## Results by named category
 
-![Named category scores, part 1](results/releases/native_updates_2026-10-27/abilities_1.png)
+![Named category scores, part 1](results/releases/native_updates_2026-10-30/abilities_1.png)
 
-![Named category scores, part 2](results/releases/native_updates_2026-10-27/abilities_2.png)
+![Named category scores, part 2](results/releases/native_updates_2026-10-30/abilities_2.png)
 
-![Named category scores, part 3](results/releases/native_updates_2026-10-27/abilities_3.png)
+![Named category scores, part 3](results/releases/native_updates_2026-10-30/abilities_3.png)
 
-![Named category scores, part 4](results/releases/native_updates_2026-10-27/abilities_4.png)
+![Named category scores, part 4](results/releases/native_updates_2026-10-30/abilities_4.png)
 
 ## What the categories test
 

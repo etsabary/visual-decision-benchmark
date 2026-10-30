@@ -36,6 +36,8 @@ def build():
         shutil.copytree(screens,target,dirs_exist_ok=True)
     subset=ROOT/'results/releases/single_image_subset_2026-10-29'
     if subset.exists():shutil.copytree(subset,out/subset.name,dirs_exist_ok=True)
+    october30=ROOT/'results/releases/native_updates_2026-10-30'
+    if october30.exists():shutil.copytree(october30,out/october30.name,dirs_exist_ok=True)
     # Keep original public URLs without copying newly nested images a second
     # time under data/. Only the original data files are website data exports.
     data=out/'data';data.mkdir(exist_ok=True)

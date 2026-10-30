@@ -51,7 +51,8 @@ def validate():
    if not u.scheme and not u.netloc and u.path:assert ((ROOT/'_site' if path.parent==ROOT/'docs' else path.parent)/u.path).exists(),(path,link)
    elif not u.path and u.fragment:assert u.fragment in p.ids,(path,link)
  # The old full200 tables must survive byte-for-byte in the expanded live page.
- old=(ROOT/'results/archives/presentation_before_october29_2026/docs/report.html').read_text();live=(ROOT/'docs/report.html').read_text()
+ from validate_october30_images import historical as october30_history
+ old=(ROOT/'results/archives/presentation_before_october29_2026/docs/report.html').read_text();live=october30_history(ROOT/'docs/report.html').read_text()
  import re
  for table in re.findall(r'<table\b.*?</table>',old,re.S):assert table in live
  for path in DEST.iterdir():
